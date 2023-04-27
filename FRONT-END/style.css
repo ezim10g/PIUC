@@ -1,0 +1,386 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400&family=Lato&family=Noto+Sans:wght@400;700&family=Poppins:wght@300&family=Roboto+Condensed:ital@1&family=Roboto:ital,wght@1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.logo{
+    font-size: 2rem;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+}
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right; /*termina a animação do menu pela direita*/
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+
+.navigation a:hover::after {
+    transform-origin: left; /*começa a aminação pela esquerda*/
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s; /*Velocidade da animação do hover*/
+}
+
+.navigation .btnLogin-popup:hover{
+    background: #ffffff5b;
+    color: rgb(97, 1, 187);
+}
+
+/*********login div *********/
+
+.wrapper{
+
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255) ;
+    border-radius: 20px;
+    backdrop-filter: blur(3px); /*Efeito vidro jateado transparente*/
+    box-shadow: 0 0 30px rgba(0,0,0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    transform: scale(0); /*oculta a div para ela ser mostrada com o botão login do header*/
+    transition: transform .5s ease, height .2s ease; /*Faz a janela aparecer suavemente*/
+
+}
+
+/*recebe o comando do sj pelo botao login*/
+.wrapper.active-popup{
+
+    transform: scale(1);
+    /*quando clica o botao login o comando em js ativa este comando para */
+    /*deixar a janela visivel*/
+}
+
+/*wrapper js*/
+.wrapper.active{
+    height: 520px;
+}
+
+
+
+.wrapper .form-box login {
+    width: 100%;
+    height: 40px;
+   
+}
+
+.wrapper .form-box.login{
+    /*display: none;*/
+    transition: transform .18s ease; /**/
+    transform: translateX(0);
+    /*quando clica no link login da janela registrar */
+    /*a div form-box login volta pro lugar 0*/
+}
+
+/*quando recebe o comando active do js desloca a di form-box para o lado*/
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+  
+}
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register{
+    /*display: none;*/
+    transition: transform .18s ease; /**/
+    transform: translateX(0);
+    /*quando clica no link registrar da janela login */
+    /*a div form-box register volta pro lugar 0*/
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #ffffff9c;
+    font-size: 2em;
+    color: rgb(97, 1, 187);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 0px 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.form-box h2{
+    font-size: 2em;
+    color: rgba(255, 255, 255);
+    text-align: center;
+    user-select: none;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255);
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(-10%);
+    font-size: 1em;
+    color: rgba(255,255,255);
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s; /*animação focus*/
+}
+
+/* animação do label digitar email e senha*/
+.input-box input:focus~label , .input-box input:valid~label{
+    top: -5px;
+    opacity: 0%;
+}
+
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: 0.8em;
+    font-weight: 500;
+    margin: 15px 0 15px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot > label{
+    color:#fff;
+    
+}
+
+.remember-forgot > label input{
+    accent-color:rgb(97, 1, 187);
+    margin-right: 3px;
+}
+
+.remember-forgot > a{
+    color:#fff;
+    text-decoration: none; 
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+/********************* Botão ********************/
+.btn{
+
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+
+    transition: .5s; /*Velocidade da animação do hover*/
+
+}
+
+
+.btn:hover{
+background: #ffffff5b;
+color: rgb(97, 1, 187);
+
+}
+
+.login-register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    margin: 5px 0 10px;
+}
+
+.login-register p a {
+    color:rgb(97, 1, 187);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+/*------------------------------CONTROLE DAS DIVS------------------------------*/
+.titulo-div{
+    position: absolute;
+    top:15px;
+    left: 30px;
+    font-size: 1em;
+    color: rgba(255, 255, 255);
+    text-align: center;
+    user-select: none;
+}
+
+
+.caixa{
+    position: absolute;
+    top: 35vh;
+    left:5vw;
+    width: 90vw; 
+    height:60vh;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255) ;
+    border-radius: 20px;
+    backdrop-filter: blur(3px); /*Efeito vidro jateado transparente*/
+    box-shadow: 0 0 30px rgba(0,0,0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /*Esconde elementos que ultrapassam as bordas*/      
+    transform: scale(0); /*oculta a div para ela ser mostrada com o botão login do header*/
+    transition: transform .5s ease, height .2s ease; /*Faz a janela aparecer suavemente*/
+
+}
+
+/*quando clicar no link o javascript ativa esse atributo deixando a div visível*/
+.caixa.ativar{
+    transform: scale(1);
+    
+}
+
+
+.caixa .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #ffffff9c;
+    font-size: 2em;
+    color: rgb(97, 1, 187);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 0px 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+/*-------------CARDS ----------------------*/
+
+.cards-container{
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.cards{
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    user-select: none;
+    background:  rgba(61, 59, 59, 0.479);
+    border: 1px solid rgba(255, 255, 255) ;
+    border-radius: 10px;
+    backdrop-filter: blur(3px); /*Efeito vidro jateado transparente*/
+    box-shadow: 0 0 30px rgba(0,0,0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 20vh;
+}
