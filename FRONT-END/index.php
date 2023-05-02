@@ -1,4 +1,6 @@
-﻿<!--teste commit -->
+﻿<?php 
+        require_once('../back-end/autenticate.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +34,12 @@
 
                 <div class="form-box login">
                 <h2>Login</h2>
+                <?php
+                    if(isset($_GET['loginerror'])){
+                        $loginerror = $_GET['loginerror'];
+                        echo "<p class='error'> {$loginerror}</p>";
+                    }
+                ?>
                 <form action="#">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
@@ -57,6 +65,12 @@
 
                 <div class="form-box register">
                     <h2>Registrar</h2>
+                    <?php
+                    if(isset($_GET['registererror'])){
+                        $registererror = $_GET['registererror'];
+                        echo "<p class='error'> {$registererror}</p>";
+                    }
+                     ?>
                     <form action="#">
                         <div class="input-box">
                                 <span class="icon">
@@ -135,13 +149,26 @@
                     <h2>DashBoard</h2>                           
                 </div>
 
-                <div class="cards-container">
-                    <div class="cards">12V<br>Tensão</div>         
-                    <div class="cards">30 Km/h<br>Vento</div>         
-                    <div class="cards">250º<br> YAW</div>         
-                    <div class="cards">60<br>RPM</div>         
-                    <div class="cards">85º<br>Ataque</div>   
+                <?php
+
+                if (verificar_autenticacao()) {
+                 echo "
+                 <div class='cards-container'>
+                    <div class='cards'>12V<br>Tensão</div>         
+                    <div class='cards'>30 Km/h<br>Vento</div>         
+                    <div class='cards'>250º<br> YAW</div>         
+                    <div class='cards'>60<br>RPM</div>         
+                    <div class='cards'>85º<br>Ataque</div>   
                 </div>
+                 ";
+                } else {
+                    echo"
+                        <div class='cards-container'>
+                            <p>Faça login para ter acesso!</p>
+                        </div>
+                    ";
+                }
+                 ?>
                
             </div>
         </section>
