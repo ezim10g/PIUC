@@ -13,3 +13,9 @@ git push -u origin master
 git add .
 git commit -m "first commit"
 git push -u origin master
+
+-------------
+
+atualizar o repositorio local
+
+git pull https://github.com/ezim10g/PIUC.git 
