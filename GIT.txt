@@ -16,7 +16,6 @@ git commit -m "first commit"
 git push -u origin master
 
 -------------
-
-atualizar o repositorio local
+Sincronizar o repositorio local com o repositorio remoto
 
 git pull https://github.com/ezim10g/PIUC.git 
