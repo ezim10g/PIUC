@@ -1,3 +1,5 @@
+CRIAR UM REPOSITORIO DO INICIO 
+
 echo "# PIUC" >> README.md
 git init
 git add README.md
