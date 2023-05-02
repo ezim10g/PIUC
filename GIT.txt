@@ -9,6 +9,7 @@ git push -u origin master
 
 
 ------------
+ENVIAR COMMIT 
 
 git add .
 git commit -m "first commit"
