@@ -20,7 +20,9 @@
         $vento = $i;
         $redis->set('vento', $vento); 
         $i++;
+        echo $vento ."<br>";
         sleep(5);
+
       }
       
         
