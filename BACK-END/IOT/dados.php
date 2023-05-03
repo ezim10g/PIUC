@@ -51,13 +51,13 @@
 
       
       echo $redis->get('vento'); //buca o valor da chave nome
-      echo <br>
+      echo "<br>";
       echo $redis->get('tensao'); //buca o valor da chave nome
-      echo <br>
+      echo "<br>";
       echo $redis->get('rpm'); //buca o valor da chave nome
-      echo <br>
+      echo "<br>";
       echo $redis->get('yaw'); //buca o valor da chave nome
-      echo <br>
+      echo "<br>";
       echo $redis->get('pich'); //buca o valor da chave nome
     
     }
