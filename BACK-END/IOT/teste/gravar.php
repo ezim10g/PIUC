@@ -10,7 +10,7 @@
       echo "erro ao conectar";
     }
 
-    ===========================================================
+   
     /*Passar dados para o banco em 5 seg na váriavel vento*/ 
   
     if(isset($_GET['vento'])){
