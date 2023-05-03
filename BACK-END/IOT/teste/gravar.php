@@ -10,6 +10,7 @@
       echo "erro ao conectar";
     }
 
+    ===========================================================
     /*Passar dados para o banco em 5 seg na váriavel vento*/ 
   
     if(isset($_GET['vento'])){
@@ -20,7 +21,9 @@
         $vento = $i;
         $redis->set('vento', $vento); 
         $i++;
+        echo $vento ."<br>";
         sleep(5);
+
       }
       
         
@@ -31,5 +34,3 @@
 
 ?>
 
-
-</html>
