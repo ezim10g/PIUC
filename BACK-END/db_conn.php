@@ -2,8 +2,8 @@
 $hostName = "localhost";
 $username = "root";
 $password = "";
-$database = "PIUC";
-$port = "3307";
+$database = "piuc";
+$port = "3306";
 
 $conn = mysqli_connect($hostName, $username,$password,$database,$port);
 
