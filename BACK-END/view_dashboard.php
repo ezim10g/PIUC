@@ -1,5 +1,5 @@
 <?php
-require_once('../back-end/autenticate.php');
+require_once('autenticate.php');
 function dashboard(){
     if (verificar_autenticacao()) {
             echo "
