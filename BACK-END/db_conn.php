@@ -1,6 +1,4 @@
 <?php
-
-//teste
 $hostName = "localhost";
 $username = "root";
 $password = "";
