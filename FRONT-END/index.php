@@ -1,5 +1,6 @@
 ﻿<?php 
         include "../BACK-END/view_dashboard.php";
+        include "../BACK-END/viewBtnlogin.php";
 
 ?>
 <!DOCTYPE html>
@@ -21,7 +22,10 @@
             <a class="sobreLink">Sobre</a>
             <a class="contatoLink">Contato</a>
             <a class="newsLink">Newsletter</a>
-            <button class="btnLogin-popup">Login</button>
+            <?php
+                login()
+            ?>
+            
         </nav>    
     </header>
 
