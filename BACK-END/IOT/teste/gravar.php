@@ -1,4 +1,5 @@
 
+
 <?php
 
     $redis = new Redis();
@@ -10,8 +11,7 @@
       echo "erro ao conectar";
     }
 
-    //===========================================================
-    /*Passar dados para o banco em 5 seg na váriavel vento*/ 
+       /*Passar dados para o banco em 5 seg na váriavel vento*/ 
   
     if(isset($_GET['vento'])){
 
@@ -19,18 +19,18 @@
 
       while (TRUE) {
         $vento = $i;
-        $redis->set('vento', $vento); 
+        $redis->set('vento', $vento, 60); 
         $i++;
         echo $vento ."<br>";
         sleep(5);
 
+
+        if(isset($_GET['parar'])){
+                exit();
+        }
+
       }
-      
-        
+
+
     }
-
-
-
-
-?>
 
