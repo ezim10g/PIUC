@@ -12,11 +12,11 @@
 
 //ler dados do banco de dados
 
-    if(isset($_GET['vento'])){
-      
+    if(isset($_GET['ler'])){
+      echo "ler ok";
       while(true){
         echo $redis->get('vento'); //buca o valor da chave nome
-        sleep(2);
+        sleep(1);
       }
 
     }
@@ -24,4 +24,3 @@
 ?>
 
 
-</html>
