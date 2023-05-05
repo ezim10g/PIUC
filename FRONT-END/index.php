@@ -41,7 +41,7 @@
                         echo "<p class='error'> {$loginerror}</p>";
                     }
                 ?>
-                <form action="#">
+                <form action="./BACK-END/login.php">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
                         <input type="email" required>
@@ -72,7 +72,7 @@
                         echo "<p class='error'> {$registererror}</p>";
                     }
                      ?>
-                    <form action="#">
+                    <form action="./BACK-END/register.php" method="post">
                         <div class="input-box">
                                 <span class="icon">
                                     <ion-icon name="person"></ion-icon>
