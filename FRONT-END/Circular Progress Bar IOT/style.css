@@ -27,11 +27,8 @@ body {
   place-items: center;
 }
 
-.circular-progress-tensao,
-.circular-progress-vento,
-.circular-progress-yaw,
-.circular-progress-pitch,
-.circular-progress-rpm {
+
+.circular-progress{
 
   position: relative;
   height: 250px;
@@ -41,11 +38,7 @@ body {
   place-items: center;
 }
 
-.circular-progress-tensao:before,
-.circular-progress-vento:before,
-.circular-progress-yaw:before,
-.circular-progress-pitch:before,
-.circular-progress-rpm:before {
+.circular-progress:before {
 
   content: "";
   position: absolute;
@@ -55,11 +48,8 @@ body {
   border-radius: 50%;
 }
 
-.value-container-tensao,
-.value-container-vento,
-.value-container-yaw,
-.value-container-pitch,
-.value-container-rpm {
+
+.value-container {
   
   position: relative;
   font-family: "Poppins", sans-serif;
