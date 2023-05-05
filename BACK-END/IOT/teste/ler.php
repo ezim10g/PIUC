@@ -6,6 +6,9 @@
 
             if(isset($_GET['mostrar'])){
                 echo $redis->get('vento');
+                echo "|";
+                echo $redis->get('rpm');
+
             }
 
 ?>   
