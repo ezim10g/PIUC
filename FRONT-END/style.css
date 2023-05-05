@@ -1,22 +1,23 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400&family=Lato&family=Noto+Sans:wght@400;700&family=Poppins:wght@300&family=Roboto+Condensed:ital@1&family=Roboto:ital,wght@1,300&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('background.jpg') no-repeat;
+    background: url('assets/background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -30,7 +31,7 @@ header{
 
 }
 
-.logo{
+.logo {
     font-size: 2rem;
     color: #fff;
     user-select: none;
@@ -64,7 +65,7 @@ header{
     transform: scaleX(1);
 }
 
-.navigation .btnLogin-popup{
+.navigation .btnLogin-popup {
     width: 130px;
     height: 50px;
     background: transparent;
@@ -79,14 +80,14 @@ header{
     transition: .5s; /*Velocidade da animação do hover*/
 }
 
-.navigation .btnLogin-popup:hover{
+.navigation .btnLogin-popup:hover {
     background: #ffffff5b;
     color: rgb(97, 1, 187);
 }
 
 /*********login div *********/
 
-.wrapper{
+.wrapper {
 
     position: relative;
     width: 400px;
@@ -315,10 +316,10 @@ color: rgb(97, 1, 187);
 
 .caixa{
     position: absolute;
-    top: 35vh;
+    top: 18vh;
     left:5vw;
     width: 90vw; 
-    height:60vh;
+    height: 70vh;
     background: transparent;
     border: 1px solid rgba(255, 255, 255) ;
     border-radius: 20px;
@@ -330,8 +331,45 @@ color: rgb(97, 1, 187);
     overflow: hidden; /*Esconde elementos que ultrapassam as bordas*/      
     transform: scale(0); /*oculta a div para ela ser mostrada com o botão login do header*/
     transition: transform .5s ease, height .2s ease; /*Faz a janela aparecer suavemente*/
+}
+
+.inicio .titulo-div .infoEolica {
+    width: 98%;
+    height: 100%;
+    position: relative;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.781);
+    color: black;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    /*height: 10vh;*/
+    border-radius: 10px;
+}
+
+.inicio .caixa .img1 {
+    width: 80%;
+    display: inline-block;
+    background-color: aqua;
 
 }
+
+.inicio .caixa .img2 {
+    width: 80%;
+    display: inline-block;
+    background-color: aqua;
+}
+
+/*.inicio .titulo-div img {
+    border-radius: 10px;
+    width: 30%;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}*/
 
 /*quando clicar no link o javascript ativa esse atributo deixando a div visível*/
 .caixa.ativar{
@@ -355,6 +393,10 @@ color: rgb(97, 1, 187);
     border-radius: 0px 0px 0px 20px;
     cursor: pointer;
     z-index: 1;
+}
+
+.infoEolica {
+    margin-top: 20px;
 }
 
 
@@ -383,4 +425,17 @@ color: rgb(97, 1, 187);
     align-items: center;
     width: 10vw;
     height: 20vh;
+}
+
+/*********************Footer****************/
+
+.copyright {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }

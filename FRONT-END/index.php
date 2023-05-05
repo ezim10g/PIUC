@@ -15,9 +15,10 @@
     <header>        
         <h2 class="logo">Logo</h2>
         <nav class="navigation">
-            <a class="inicioLink" >Inicio</a>
-            <a class="sobreLink" >Sobre</a>
-            <a class="dashLink">Dash Board</a>
+            <a class="inicioLink">Home</a>
+            <a class="sobreLink">Projeto</a>
+            <a class="dashLink">DashBoard</a>
+            <a class="sobreLink">Sobre</a>
             <a class="contatoLink">Contato</a>
             <a class="newsLink">Newsletter</a>
             <button class="btnLogin-popup">Login</button>
@@ -115,11 +116,29 @@
                 <span class="icon-close">
                     <ion-icon name="close"></ion-icon>
                 </span>
-                <div class="titulo-div">
-                    <h2>Inicio</h2>
 
-                
+                <div class="titulo-div">
+
+                    <h2>Introdução a energia eólica!</h2>
+
+                    <p class="infoEolica">Energia eólica é a eletricidade gerada pela força do vento. Ela responde por 8,6% da energia produzida no Brasil, ganhando cada vez mais espaço na matriz elétrica do país.
+                    <br>
+                    <br>
+                    
+                    A estrutura em que ocorre a conversão da energia cinética em eletricidade é chamada de aerogerador ou turbina eólica. Trata-se de uma energia consideravelmente mais barata do que as demais, e que não gera emissão de poluentes na atmosfera. Por outro lado, as estruturas instaladas causam ruídos e impactam diretamente a fauna local, podendo levar à morte de pássaros e morcegos.
+
+                    <br>
+                    </p>             
                 </div>
+
+                <div class="img1">
+                <img src="./assets/turbina_eolica_flutuante3.jpg" alt="">
+                </div>
+
+                <div class="img2">
+                <img src="./assets/EnergiaEolica_PictureAlliance_GettyImages.jpg" alt="">
+                </div>
+                
             </div>
         </section>
 
@@ -198,6 +217,11 @@
                 </div>                
             </div>
         </section>
+
+        <!--footer -->
+        <footer class="copyright">
+        <p>&copy; Copyright: 2023 windpower.eziore.com.br</p>
+        </footer>
   
     </main>        
 
