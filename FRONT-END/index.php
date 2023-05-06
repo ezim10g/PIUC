@@ -144,6 +144,7 @@
 
         
         <!--SOBRE-->
+        
         <section class="sobre">
             <div class="caixa">
                 <span class="icon-close">
@@ -156,6 +157,10 @@
                 </div>
             </div>
         </section>
+
+
+
+
 
         <!--DASH BOARD -->
         <section class="dash">
