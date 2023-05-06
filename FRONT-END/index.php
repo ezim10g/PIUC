@@ -185,10 +185,13 @@
                     <h2>DashBoard</h2>                           
                 </div>
 
-                <?php
-                    Dashboard();
-                 ?>
-               
+                <div class='cards-container'>
+                    <div class='cards'>12V<br>Tensão</div>         
+                    <div class='cards'>30 Km/h<br>Vento</div>         
+                    <div class='cards'>250º<br> YAW</div>         
+                    <div class='cards'>60<br>RPM</div>         
+                    <div class='cards'>85º<br>Ataque</div>   
+                </div>
             </div>
         </section>
 
