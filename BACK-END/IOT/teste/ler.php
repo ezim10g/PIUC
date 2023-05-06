@@ -8,7 +8,7 @@
                 $vento = $redis->get('vento');                        
                 $rpm = $redis->get('rpm');
 
-                $data = array('vento' => $vento, 'rpm' => $rpm);
+                $data = array('vento' => $vento, 'tensao' => $vento ,'rpm' => $rpm, 'yaw' => $yaw , 'pitch' => $pitch);
 
                 $json = json_encode($data);
                 

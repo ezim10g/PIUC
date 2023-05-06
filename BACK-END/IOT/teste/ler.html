@@ -11,8 +11,14 @@
 
     Vento:
     <label id="vento">0</label><br>
-    RPM: 
+    Tensão: 
+    <label id="tensao">0</label><br>
+    Rpm: 
     <label id="rpm">0</label><br>
+    Yaw: 
+    <label id="yaw">0</label><br>
+    Pitch: 
+    <label id="pitch">0</label><br>
 
 
 
@@ -21,7 +27,10 @@
     function atualizarLabel() {
         $.get( "ler.php/?mostrar", function( data) {
             $( "#vento" ).html( data.vento );
+            $( "#tensao" ).html( data.tensao );
             $( "#rpm" ).html( data.rpm );
+            $( "#yaw" ).html( data.yaw );
+            $( "#pitch" ).html( data.pitch );
 
         });
     }
