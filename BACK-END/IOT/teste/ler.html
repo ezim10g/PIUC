@@ -11,21 +11,22 @@
 
     Vento:
     <label id="vento">0</label><br>
+    RPM: 
+    <label id="rpm">0</label><br>
 
 
 
 <script>
-function atualizarLabel() {
-    $.get( "ler.php/?mostrar", function( data ) {
-        $( "#vento" ).html( data );
 
-    });
-}
+    function atualizarLabel() {
+        $.get( "ler.php/?mostrar", function( data) {
+            $( "#vento" ).html( data.vento );
+            $( "#rpm" ).html( data.rpm );
 
-setInterval(atualizarLabel, 1000);
+        });
+    }
 
-
-
+    setInterval(atualizarLabel, 1000);
 
 </script>
 
