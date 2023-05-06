@@ -1,5 +1,7 @@
 ﻿<?php 
         include "../BACK-END/view_dashboard.php";
+        include "../BACK-END/viewBtnlogin.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,12 +18,14 @@
         <h2 class="logo">Logo</h2>
         <nav class="navigation">
             <a class="inicioLink">Home</a>
-            <a class="sobreLink">Projeto</a>
             <a class="dashLink">DashBoard</a>
             <a class="sobreLink">Sobre</a>
             <a class="contatoLink">Contato</a>
             <a class="newsLink">Newsletter</a>
-            <button class="btnLogin-popup">Login</button>
+            <?php
+                login()
+            ?>
+            
         </nav>    
     </header>
 
@@ -44,12 +48,12 @@
                 <form action="../BACK-END/login.php" method="post">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                         <label>Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" required>
+                        <input type="password" name="senha" required>
                         <label>Senha</label>
                     </div>
                     <div class="remember-forgot">
@@ -77,21 +81,21 @@
                                 <span class="icon">
                                     <ion-icon name="person"></ion-icon>
                                 </span>
-                                <input type="text" required>
+                                <input type="text" name="usuario" required>
                                 <label>Usuário</label>
                         </div>   
                         <div class="input-box">
                             <span class="icon">
                                 <ion-icon name="mail"></ion-icon>
                             </span>
-                            <input type="email" required>
+                            <input type="email" name="email" required>
                             <label>Email</label>
                         </div>
                         <div class="input-box">
                             <span class="icon">
                                 <ion-icon name="lock-closed"></ion-icon>
                             </span>
-                            <input type="password" required>
+                            <input type="password" name="senha" required>
                             <label>Senha</label>
                         </div>
                         <div class="remember-forgot">
@@ -117,27 +121,10 @@
                     <ion-icon name="close"></ion-icon>
                 </span>
 
-                <div class="titulo-div">
+                    <div class="titulo-div">
 
-                    <h2>Introdução a energia eólica!</h2>
-
-                    <p class="infoEolica">Energia eólica é a eletricidade gerada pela força do vento. Ela responde por 8,6% da energia produzida no Brasil, ganhando cada vez mais espaço na matriz elétrica do país.
-                    <br>
-                    <br>
-                    
-                    A estrutura em que ocorre a conversão da energia cinética em eletricidade é chamada de aerogerador ou turbina eólica. Trata-se de uma energia consideravelmente mais barata do que as demais, e que não gera emissão de poluentes na atmosfera. Por outro lado, as estruturas instaladas causam ruídos e impactam diretamente a fauna local, podendo levar à morte de pássaros e morcegos.
-
-                    <br>
-                    </p>             
-                </div>
-
-                <div class="img1">
-                <img src="./assets/turbina_eolica_flutuante3.jpg" alt="">
-                </div>
-
-                <div class="img2">
-                <img src="./assets/EnergiaEolica_PictureAlliance_GettyImages.jpg" alt="">
-                </div>
+                        <h2>Home</h2>
+                    </div>      
                 
             </div>
         </section>

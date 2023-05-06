@@ -333,31 +333,20 @@ color: rgb(97, 1, 187);
     transition: transform .5s ease, height .2s ease; /*Faz a janela aparecer suavemente*/
 }
 
-.inicio .titulo-div .infoEolica {
-    width: 98%;
-    height: 100%;
-    position: relative;
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.781);
-    color: black;
-    display: block;
+.conteudo {
+    display: flex;
     align-items: center;
     justify-content: center;
-    /*height: 10vh;*/
+    /*background-color: rgba(255, 255, 255, 0.356);*/
+}
+
+.conteudo img {
     border-radius: 10px;
 }
 
-.inicio .caixa .img1 {
-    width: 80%;
-    display: inline-block;
-    background-color: aqua;
-
-}
-
-.inicio .caixa .img2 {
-    width: 80%;
-    display: inline-block;
-    background-color: aqua;
+.nameFigcaption {
+    color: #fff;
+    text-align: center
 }
 
 /*.inicio .titulo-div img {
