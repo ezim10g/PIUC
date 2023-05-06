@@ -122,27 +122,39 @@
                     <ion-icon name="close"></ion-icon>
                 </span>
 
-                <div class="titulo-div">
+                    <div class="titulo-div">
 
-                    <h2>Introdução a energia eólica!</h2>
+                        <h2>Introdução a energia eólica!</h2>
+                    </div>
 
-                    <p class="infoEolica">Energia eólica é a eletricidade gerada pela força do vento. Ela responde por 8,6% da energia produzida no Brasil, ganhando cada vez mais espaço na matriz elétrica do país.
+                    <div class="conteudo">
+
+                    <p>Energia eólica é a eletricidade gerada pela força do vento. Ela responde por 8,6% da energia produzida no Brasil, ganhando cada vez mais espaço na matriz elétrica do país.
                     <br>
                     <br>
                     
                     A estrutura em que ocorre a conversão da energia cinética em eletricidade é chamada de aerogerador ou turbina eólica. Trata-se de uma energia consideravelmente mais barata do que as demais, e que não gera emissão de poluentes na atmosfera. Por outro lado, as estruturas instaladas causam ruídos e impactam diretamente a fauna local, podendo levar à morte de pássaros e morcegos.
 
                     <br>
-                    </p>             
-                </div>
 
-                <div class="img1">
-                <img src="./assets/turbina_eolica_flutuante3.jpg" alt="">
-                </div>
+                        <div class="img1">
+                        <figure class="nameFigcaption">
+                        <img src="./assets/turbina_eolica_flutuante3.jpg" width="80%" alt="">
+                        <figcaption>Energia Eólica OffShore</figcaption>
+                        </figure>
 
-                <div class="img2">
-                <img src="./assets/EnergiaEolica_PictureAlliance_GettyImages.jpg" alt="">
-                </div>
+                        </div>
+
+                        <div class="img2">
+                        <figure class="nameFigcaption">
+                        <img src="./assets/EnergiaEolica_PictureAlliance_GettyImages.jpg" width="80%" alt="">
+                        <figcaption>Energia Eólica OnShore</figcaption>
+                        </figure>
+
+                        </div>
+
+                    </p>  
+                    </div>           
                 
             </div>
         </section>
