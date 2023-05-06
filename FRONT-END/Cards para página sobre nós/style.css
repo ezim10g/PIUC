@@ -36,7 +36,7 @@ body { /*Pintar o fundo*/
     background: #fff;
     border-radius: 50px;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0. 15);
-
+    
 }
 
 .container .Cards:hover { /*Com hover damos a animação*/
@@ -51,7 +51,7 @@ body { /*Pintar o fundo*/
     background: #333;
     border-radius: 12px;
     overflow: hidden;
-    transition: 0.5s;
+    transition: 0.05s;
 }
 
 .container .Cards .imgBx img { /*Colocar a imagem no lugar certo*/
@@ -87,7 +87,7 @@ body { /*Pintar o fundo*/
     height: 35px;
     overflow: hidden;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.05s;
 }
 
 .container .Cards:hover .content {
