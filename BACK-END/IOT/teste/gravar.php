@@ -20,7 +20,7 @@
         $redis->set('yaw', $yaw); 
 
         $pitch = $_GET['pitch'];
-        $redis->set('pitch', $ataque); 
+        $redis->set('pitch', $pitch); 
         
     }
 
