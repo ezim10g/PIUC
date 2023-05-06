@@ -36,4 +36,7 @@ if(isset($_POST['usuario']) && isset($_POST['email']) && isset($_POST['senha']))
     }
 
 
+}else{
+    header("location: ../FRONT-END/index.php?registererror=erro");
+    exit();
 }

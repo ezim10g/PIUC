@@ -1,5 +1,6 @@
 ﻿<?php 
         include "../BACK-END/view_dashboard.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,12 +45,12 @@
                 <form action="../BACK-END/login.php" method="post">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                         <label>Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" required>
+                        <input type="password" name="senha" required>
                         <label>Senha</label>
                     </div>
                     <div class="remember-forgot">
@@ -77,21 +78,21 @@
                                 <span class="icon">
                                     <ion-icon name="person"></ion-icon>
                                 </span>
-                                <input type="text" required>
+                                <input type="text" name="usuario" required>
                                 <label>Usuário</label>
                         </div>   
                         <div class="input-box">
                             <span class="icon">
                                 <ion-icon name="mail"></ion-icon>
                             </span>
-                            <input type="email" required>
+                            <input type="email" name="email" required>
                             <label>Email</label>
                         </div>
                         <div class="input-box">
                             <span class="icon">
                                 <ion-icon name="lock-closed"></ion-icon>
                             </span>
-                            <input type="password" required>
+                            <input type="password" name="senha" required>
                             <label>Senha</label>
                         </div>
                         <div class="remember-forgot">
