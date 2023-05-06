@@ -1,6 +1,10 @@
 
 <?php
 
+/*
+O dispositivo Iot envia os parametros para esta pagina usando o metodo get /?gravar...
+*/
+
     $redis = new Redis();
     $redis->connect('127.0.0.1'); //conecta na porta padrao
     

@@ -23,7 +23,9 @@
 
 
 <script>
-
+/* este script envia um metodo get para a pagina php.ler, os dados são retornado via json
+esses dados são inseridos nos elementos html através do id usando jquery
+*/
     function atualizarLabel() {
         $.get( "ler.php/?mostrar", function( data) {
             $( "#vento" ).html( data.vento );
@@ -35,7 +37,7 @@
         });
     }
 
-    setInterval(atualizarLabel, 200);
+    setInterval(atualizarLabel, 40);
 
 </script>
 

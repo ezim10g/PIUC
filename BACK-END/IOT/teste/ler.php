@@ -1,6 +1,10 @@
-
-
 <?php
+
+/*
+a pagina do dash borad envia um metodo get 'mostrar' solicitando os dados
+esta pagina lêr os dados no redis criando um array com esses dados e envia em forma de json
+
+*/
             $redis = new Redis();
                $redis->connect('127.0.0.1');            
 
