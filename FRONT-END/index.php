@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleCircular.css">
     <title>PIUC Energia eólica</title>
 </head>
 <body>
@@ -139,9 +140,10 @@
                 </span>
                 <div class="titulo-div">
                     <h2>Sobre nós</h2>
-
-                
                 </div>
+                
+    
+  
             </div>
         </section>
 
@@ -159,14 +161,47 @@
                 <div class="titulo-div">
                     <h2>DashBoard</h2>                           
                 </div>
+            <div class="grupo-circular">
+                <section class="main">
+      <div class="containerCircular">
+        <div class="circular-progress" id="circular-progress-tensao">
+          <div class="value-container" id="value-container-tensao">-</div>
+        </div>
+      </div>
+    </section>
 
-                <div class='cards-container'>
-                    <div class='cards'>12V<br>Tensão</div>         
-                    <div class='cards'>30 Km/h<br>Vento</div>         
-                    <div class='cards'>250º<br> YAW</div>         
-                    <div class='cards'>60<br>RPM</div>         
-                    <div class='cards'>85º<br>Ataque</div>   
-                </div>
+    <section class="main">
+      <div class="containerCircular">
+        <div class="circular-progress" id="circular-progress-vento">
+          <div class="value-container" id="value-container-vento">-</div>
+        </div>
+      </div>
+    </section>
+
+      <section class="main">
+      <div class="containerCircular">
+        <div class="circular-progress" id="circular-progress-yaw">
+          <div class="value-container" id="value-container-yaw">-</div>
+        </div>
+      </div>
+    </section>
+
+      <section class="main">
+      <div class="containerCircular">
+        <div class="circular-progress" id="circular-progress-rpm">
+          <div class="value-container" id="value-container-rpm">-</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="containerCircular">
+        <div class="circular-progress" id="circular-progress-pitch">
+          <div class="value-container" id="value-container-pitch">-</div>
+        </div>
+      </div>
+    </section>
+                </div>        
             </div>
         </section>
 
@@ -206,5 +241,7 @@
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <!-- Script -->
+      <script src="scriptCircular.js"></script>
 </body>
 </html>
