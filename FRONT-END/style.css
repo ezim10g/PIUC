@@ -340,36 +340,13 @@ color: rgb(97, 1, 187);
     /*background-color: rgba(255, 255, 255, 0.356);*/
 }
 
-.conteudo p {
-    position: absolute;
-    top: 5.5rem;
-    text-align: center;
-    size: 1rem;
-    
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.356);
-    color: black;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    /*height: 10vh;*/
+.conteudo img {
     border-radius: 10px;
-}
-
-.conteudo img {
-    display: inline-block;
-    /*background-color: aqua;*/
-
-}
-
-.conteudo img {
-    display: inline-block;
-    /*background-color: aqua;*/
 }
 
 .nameFigcaption {
     color: #fff;
-    text-align: center;
+    text-align: center
 }
 
 /*.inicio .titulo-div img {
