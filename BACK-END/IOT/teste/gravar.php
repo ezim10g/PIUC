@@ -21,6 +21,8 @@
 
         $pitch = $_GET['pitch'];
         $redis->set('pitch', $pitch); 
+
+        echo "ok";
         
     }
 
