@@ -112,17 +112,13 @@ header {
 }
 
 /*recebe o comando do sj pelo botao login*/
-.wrapper.active-popup{
+.wrapper.ativar{
 
     transform: scale(1);
     /*quando clica o botao login o comando em js ativa este comando para */
     /*deixar a janela visivel*/
 }
 
-/*wrapper js*/
-.wrapper.active{
-    height: 520px;
-}
 
 
 
