@@ -29,16 +29,26 @@
   .sub-menu-profile-container{
     position: absolute;
     top: 100px;
-    right: 60px;
+    right: 5%;
     width: 320px;
+    height: 320;
+    
   }
 
   .sub-menu-profile{
     background-color: transparent;
+    
+    overflow: hidden;
+    display: none;
+  }
+
+  .submenuactive{
     padding: 20px 20px 10px 20px;
     border-radius: 15px;
     backdrop-filter: blur(3px); 
     border: 2px solid white;
+   
+    display:block;
   }
 
   .user-info{

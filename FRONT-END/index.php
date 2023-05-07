@@ -249,5 +249,6 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       <!-- Script -->
       <script src="scriptCircular.js"></script>
+      <script src="./profile.js"></script>
 </body>
 </html>
