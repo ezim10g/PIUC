@@ -140,7 +140,3 @@ news_lnk.addEventListener('click',()=>{
 news_iconClose.addEventListener('click',()=>{
     news.classList.remove('ativar');
 });
-
-
-
-
