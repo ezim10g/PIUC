@@ -37,6 +37,11 @@ header {
     user-select: none;
 }
 
+.navigation{
+    display: flex;
+    align-items: center;
+}
+
 .navigation a {
     position: relative;
     font-size: 1.1em;
@@ -67,7 +72,7 @@ header {
 
 .navigation .btnLogin-popup {
     width: 130px;
-    height: 50px;
+    height: 60px;
     background: transparent;
     border: 1px solid #fff;
     outline: none;

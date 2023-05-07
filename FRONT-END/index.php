@@ -1,6 +1,7 @@
 ﻿<?php 
         include "../BACK-END/view_dashboard.php";
-        include "../BACK-END/viewBtnlogin.php";
+        
+        require_once('../BACK-END/autenticate.php');
 
 ?>
 <!DOCTYPE html>
@@ -11,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleCircular.css">
+    <link rel="stylesheet" href="profile.css">
     <title>PIUC Energia eólica</title>
 </head>
 <body>
@@ -24,7 +26,11 @@
             <a class="contatoLink">Contato</a>
             <a class="newsLink">Newsletter</a>
             <?php
-                login()
+                if (!verificar_autenticacao()) {
+                    include "../BACK-END/view_Btnlogin.php";
+                }else{
+                    include "../BACK-END/view_profileMenu.php";
+                }
             ?>
             
         </nav>    
