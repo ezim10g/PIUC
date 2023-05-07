@@ -36,10 +36,10 @@
   }
 
   .sub-menu-profile{
-    background-color: transparent;
-    
+    background-color: aliceblue;
     overflow: hidden;
-    display: none;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease; 
   }
 
   .submenuactive{
@@ -47,8 +47,8 @@
     border-radius: 15px;
     backdrop-filter: blur(3px); 
     border: 2px solid white;
-   
-    display:block;
+    transform: scale(1);
+    
   }
 
   .user-info{
