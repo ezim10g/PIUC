@@ -26,7 +26,6 @@ O dispositivo Iot envia os parametros para esta pagina usando o metodo get /?gra
         $pitch = $_GET['pitch'];
         $redis->set('pitch', $pitch); 
 
-        echo "ok";
         
     }
 
