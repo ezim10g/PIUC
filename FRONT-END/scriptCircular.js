@@ -9,17 +9,18 @@ class CircularProgressBar{
 
   setProgresso(progress){
     this.idValueProgress.textContent = progress + this.medida;
-    //pega o valor atual do card no html removendo da siglas colhendo somente os numeros
-    this.valorAnterior = this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',); 
-    console.log(this.valorAnterior); 
-    //em construção
-
+ 
     this.idProgressBar.style.backgroundImage = `conic-gradient(
       #DC143C ${progress * this.graus -270 }deg,
        #4936f5  ${progress * this.graus -50 }deg,
        #1fc1de ${progress * this.graus}deg,
        #cadcff ${progress * this.graus+50}deg            
   )`;
+  }
+
+  getValue(){
+     //pega o valor atual do card no html removendo da siglas colhendo somente os numeros
+    return this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',); 
   }
 
 }
@@ -42,6 +43,9 @@ function atualizarLabel() {
     circularProgressBarPitch.setProgresso(data.pitch);
 
   });
+  //EM CONSTRUÇÃO .............. 
+  console.log(circularProgressBarRPM.getValue());
 }
 
 setInterval(atualizarLabel, 200);
+
