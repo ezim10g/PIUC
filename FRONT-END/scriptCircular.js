@@ -10,17 +10,20 @@ class CircularProgressBar{
   setProgresso(progress){
     this.idValueProgress.textContent = progress + this.medida;
     this.idProgressBar.style.backgroundImage = `conic-gradient(
-      red ${progress * this.graus -270 }deg,
-       #4936f5  ${progress * this.graus -90 }deg,
+      #DC143C ${progress * this.graus -270 }deg,
+       #4936f5  ${progress * this.graus -50 }deg,
        #1fc1de ${progress * this.graus}deg,
-       #07db1f ${progress * this.graus+20}deg,
-      #cadcff ${progress * this.graus+50}deg
+       #cadcff ${progress * this.graus+50}deg
+       
+      
+   
       
   )`;
   }
 
 }
-
+//
+//   #cadcff ${progress * this.graus+50}deg
 
 let circularProgressBarTensao = new CircularProgressBar(12, " V","circular-progress-tensao","value-container-tensao");
 let circularProgressBarVento = new CircularProgressBar(100, " Km","circular-progress-vento","value-container-vento");
