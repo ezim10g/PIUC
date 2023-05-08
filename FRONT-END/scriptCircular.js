@@ -28,7 +28,7 @@ class CircularProgressBar{
 let circularProgressBarTensao = new CircularProgressBar(12, " V","circular-progress-tensao","value-container-tensao");
 let circularProgressBarVento = new CircularProgressBar(100, " Km","circular-progress-vento","value-container-vento");
 let circularProgressBarYAW = new CircularProgressBar(360, "º","circular-progress-yaw","value-container-yaw");
-let circularProgressBarRPM = new CircularProgressBar(800, " Rpm","circular-progress-rpm","value-container-rpm");
+let circularProgressBarRPM = new CircularProgressBar(1500, " Rpm","circular-progress-rpm","value-container-rpm");
 let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progress-pitch","value-container-pitch");
 
 
