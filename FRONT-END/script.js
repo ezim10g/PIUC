@@ -82,3 +82,4 @@ loginLink.addEventListener('click',()=>{
 iconClose.addEventListener('click',()=>{
     wrapper.classList.remove('active');
 });
+

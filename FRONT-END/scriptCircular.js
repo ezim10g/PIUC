@@ -18,8 +18,30 @@ class CircularProgressBar{
 }
 
 
-let circularProgressBarTensao = new CircularProgressBar(12, "V","circular-progress-tensao","value-container-tensao");
-let circularProgressBarVento = new CircularProgressBar(12, "km","circular-progress-vento","value-container-vento");
-let circularProgressBarYAW = new CircularProgressBar(12, "º","circular-progress-yaw","value-container-yaw");
-let circularProgressBarRPM = new CircularProgressBar(12, "rpm","circular-progress-rpm","value-container-rpm");
-let circularProgressBarPitch = new CircularProgressBar(12, "º","circular-progress-pitch","value-container-pitch");
+
+
+
+let circularProgressBarTensao = new CircularProgressBar(12, " V","circular-progress-tensao","value-container-tensao");
+let circularProgressBarVento = new CircularProgressBar(100, " km","circular-progress-vento","value-container-vento");
+let circularProgressBarYAW = new CircularProgressBar(360, "º","circular-progress-yaw","value-container-yaw");
+let circularProgressBarRPM = new CircularProgressBar(800, " rpm","circular-progress-rpm","value-container-rpm");
+let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progress-pitch","value-container-pitch");
+
+
+
+
+/* Esta função envia um metodo get para a pagina php.ler, os dados são retornado via json
+esses dados são inseridos nos elementos html através do id usando jquery
+*/
+function atualizarLabel() {
+  $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
+    circularProgressBarTensao.setProgresso(data.tensao);
+    circularProgressBarVento.setProgresso(data.vento);
+    circularProgressBarYAW.setProgresso(data.yaw);
+    circularProgressBarRPM.setProgresso(data.rpm);
+    circularProgressBarPitch.setProgresso(data.pitch);
+
+  });
+}
+
+setInterval(atualizarLabel, 200);

@@ -250,5 +250,8 @@
       <!-- Script -->
       <script src="scriptCircular.js"></script>
       <script src="./profile.js"></script>
+      <!-- Import JQuery-->
+      <script src="../BACK-END/IOT/jquery-3.6.4.min.js"></script>
+
 </body>
 </html>
