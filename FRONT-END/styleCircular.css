@@ -2,7 +2,7 @@
 /*PROBLEMA DE POSICIONAMENTO DAS DIVS RESULVIDO*/
 
 .grupo-circular {
-  /*background-color: #ff000096;*/
+  background-color: #ff000096;
   height: 100%;
   width: 100%;
   display: flex;
