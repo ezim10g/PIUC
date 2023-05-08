@@ -33,6 +33,8 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 /* Esta função envia um metodo get para a pagina php.ler, os dados são retornado via json
 esses dados são inseridos nos elementos html através do id usando jquery
 */
+
+//PS: Por questões de segurança o metodo get só responde se a pagina estiver no mesmo domínio
 function atualizarLabel() {
   $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
     circularProgressBarTensao.setProgresso(data.tensao);
