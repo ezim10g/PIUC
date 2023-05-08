@@ -155,8 +155,6 @@
 
 
 
-
-
         <!--DASH BOARD -->
         <section class="dash">
             <div class="caixa">
@@ -168,7 +166,7 @@
                     <h2>DashBoard</h2>                           
                 </div>
                           
-
+                    <!-- PROBLEMA DE POSICIONAMENTO DAS DIVS RESULVIDO-->
             
                 <div class="containerCircular">
                     <div class="circular-progress" id="circular-progress-vento">
