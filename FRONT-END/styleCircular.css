@@ -1,11 +1,8 @@
 
 .grupo-circular {
   /*background-color: #ff000096;*/
-  border-radius: 15px;
-  height: 88%;
-  width: 95%;
-  margin-top:10%;
-  margin-bottom: 7%;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
