@@ -9,7 +9,7 @@ class CircularProgressBar{
 
   setProgresso(progress){
     this.idValueProgress.textContent = progress + this.medida;
-    //pega o valor atual do card no html
+    //pega o valor atual do card no html removendo da siglas colhendo somente os numeros
     this.valorAnterior = this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',); 
     console.log(this.valorAnterior); 
     //em construção
