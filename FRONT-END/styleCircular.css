@@ -1,6 +1,6 @@
-
+/*
 .grupo-circular {
-  /*background-color: #ff000096;*/
+  
   height: 100%;
   width: 100%;
   display: flex;
@@ -53,3 +53,46 @@
   font-size: 50px;
   color: #231c3d;
 }
+*/
+
+.containerCircular {
+  background-color: #ffffff2a;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 20px;
+  display: flex;
+  row-gap: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.circular-progress{
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#0586ff 3.6deg, #5353533a 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+
+.value-container {
+  position: relative;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+
