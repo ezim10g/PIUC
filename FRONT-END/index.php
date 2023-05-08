@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleCircular.css">
+    <link rel="stylesheet" href="styleCards.css">
     <link rel="stylesheet" href="profile.css">
     <title>PIUC Energia eólica</title>
 </head>
@@ -148,7 +149,87 @@
                     <h2>Sobre nós</h2>
                 </div>
                 
+                <div class="container">
+
+<div class="Cards" style="--clr:#009688;">
+    <div class="imgBx">
+        <img src="./imagens/ezio.png"></div>
+    <div class="content">
+        <h2>Ezio Vieira </h2>
+        <p class="p">Técnico em desenvolvimento de sistemas - Senai
+        </p>
+        <div class="link">
+            <a href="https://github.com/ezim10g"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+            <a href="mailto:ezim10g@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+            <a href=" https://wa.me/5511973800160?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="Cards" style="--clr:#ff3e7f;">
+    <div class="imgBx">
+        <img src="./imagens/davyd.png"></div>
+    <div class="content">
+        <h2>Davyd Cristiano </h2>
+        <p class="p">Técnico em desenvolvimento de sistemas - Senai
+        </p>
+        <div class="link">
+            <a href="https://github.com/davydcristiano"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+            <a href="mailto:davyd.senai@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+            <a href=" https://wa.me/5511967396200?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="Cards" style="--clr:#03a9f4;">
+    <div class="imgBx">
+        <img src="./imagens/caua.png"></div>
+    <div class="content">
+        <h2>Cauã Rossi </h2>
+        <p class="p">Técnico em desenvolvimento de sistemas - Senai
+        </p>
+        <div class="link">
+            <a href="https://github.com/CauaRossi"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+            <a href="mailto:cauarossi007@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+            <a href=" https://wa.me/5511952865053?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+
+        </div>
+    </div>
     
+</div>
+
+<div class="Cards" style="--clr:#4b03f4;">
+    <div class="imgBx">
+        <img src="./imagens/emerson .png"></div>
+    <div class="content">
+        <h2>Emerson Sotero </h2>
+        <p class="p">Técnico em desenvolvimento de sistemas - Senai
+        </p>
+        <div class="link">
+            <a href="https://github.com/EmersonSotero"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+            <a href="mailto:emersonsotero121@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+            <a href=" https://wa.me/5511959318255?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+
+
+        </div>
+    </div>
+
+
+</div>
   
             </div>
         </section>
