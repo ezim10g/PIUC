@@ -1,10 +1,10 @@
-
-/*PROBLEMA DE POSICIONAMENTO DAS DIVS RESULVIDO*/
-
 .grupo-circular {
-  background-color: #ff000096;
-  height: 100%;
-  width: 100%;
+  /*background-color: #ff000096;*/
+  border-radius: 15px;
+  height: 88%;
+  width: 95%;
+  margin-top:10%;
+  margin-bottom: 7%;
   display: flex;
   justify-content: space-around;
   align-items: center;
