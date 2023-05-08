@@ -167,39 +167,39 @@
                 </div>
                           
                     <!-- PROBLEMA DE POSICIONAMENTO DAS DIVS RESULVIDO-->
-            
-                <div class="containerCircular">
-                    <div class="circular-progress" id="circular-progress-vento">
-                        <div class="value-container" id="value-container-vento">-</div>
-                    </div>
-                </div>
-            
-                <div class="containerCircular">
-                    <div class="circular-progress" id="circular-progress-tensao">
-                        <div class="value-container" id="value-container-tensao">-</div>
-                    </div>
-                </div>
-                
-                <div class="containerCircular">
-                    <div class="circular-progress" id="circular-progress-rpm">
-                        <div class="value-container" id="value-container-rpm">-</div>
-                    </div>
-                </div>        
+                    <section class="grupo-circular">                   
+                        <div class="containerCircular">
+                            <div class="circular-progress" id="circular-progress-vento">
+                                <div class="value-container" id="value-container-vento">-</div>
+                            </div>
+                        </div>
+                    
+                        <div class="containerCircular">
+                            <div class="circular-progress" id="circular-progress-tensao">
+                                <div class="value-container" id="value-container-tensao">-</div>
+                            </div>
+                        </div>
+                        
+                        <div class="containerCircular">
+                            <div class="circular-progress" id="circular-progress-rpm">
+                                <div class="value-container" id="value-container-rpm">-</div>
+                            </div>
+                        </div>        
 
-                <div class="containerCircular">
-                    <div class="circular-progress" id="circular-progress-yaw">
-                        <div class="value-container" id="value-container-yaw">-</div>
-                    </div>
-                </div>
-                   
-                <div class="containerCircular">
-                    <div class="circular-progress" id="circular-progress-pitch">
-                        <div class="value-container" id="value-container-pitch">-</div>
-                    </div>
-                </div>
+                        <div class="containerCircular">
+                            <div class="circular-progress" id="circular-progress-yaw">
+                                <div class="value-container" id="value-container-yaw">-</div>
+                            </div>
+                        </div>
+                        
+                        <div class="containerCircular">
+                            <div class="circular-progress" id="circular-progress-pitch">
+                                <div class="value-container" id="value-container-pitch">-</div>
+                            </div>
+                        </div>
               
 
-                </div>        
+                    </section>      
             </div>
         </section>
 
