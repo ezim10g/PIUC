@@ -29,8 +29,8 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 
 
 
-/* Esta função envia um metodo get usando jquery  para a pagina php.ler, os dados são recebidos em um objeto "array" json.
-*/
+// Esta função envia um metodo get usando jquery  para a pagina php.ler, os dados são recebidos em um objeto "array" json.
+
 
 //PS: Por questões de segurança o metodo get só responde se a pagina estiver no mesmo domínio
 function atualizarLabel() {

@@ -1,23 +1,23 @@
 
 .grupo-circular {
   /*background-color: #ff000096;*/
-  height: 100%;
-  width: 100%;
+  border-radius: 15px;
+  height: 88%;
+  width: 95%;
+  margin-top:10%;
+  margin-bottom: 7%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+ 
   
 }
 
 
 .containerCircular {
-  height: 50%;
-  width: 300px;
+  height: 35%;
+  width: 35%;
   background-color: #ffffff2a;
-  position: relative;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
   border-radius: 8px;
   box-shadow: 20px 20px 40px rgba(60, 60, 150, 0.25);
   display: grid;
@@ -28,21 +28,22 @@
 .circular-progress{
 
   position: relative;
-  height: 250px;
-  width: 250px;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
   display: grid;
   place-items: center;
 }
 
-.circular-progress:before {
+.circular-progress::before{
 
   content: "";
   position: absolute;
-  height: 84%;
-  width: 84%;
-  background-color: #ffffff;
+  height:80%;
+  width: 80%;
   border-radius: 50%;
+  background-color: #ffffff;
+
 }
 
 
@@ -50,6 +51,7 @@
   
   position: relative;
   font-family: "Poppins", sans-serif;
-  font-size: 50px;
+  font-size: 2.5vw;
   color: #231c3d;
+  
 }
