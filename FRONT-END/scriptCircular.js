@@ -28,26 +28,26 @@ class CircularProgressBar{
     if(this.valorAntigo === '-'){
       this.valorAntigo = 0;
       this.setProgresso(0);
-      console.log("era (-) agora é recebido:"+ recebido)
-      lerRedis()
+      //console.log("era (-) agora é recebido:"+ recebido)
+      //lerRedis()
     }else{
       //console.log("era:"+ this.valorAntigo +"agora é recebido:"+ recebido)
       
      
-      console.log("Valor Antigo:");
+      //console.log("-------- inicio --------- novos");
 
-        let delay = 100;
+        let delay = 10;
 
         if(recebido != this.valorAntigo){
           const intervalMais = setInterval(() => {
             if (recebido > this.valorAntigo) {     
              
               this.setProgresso(++this.valorAntigo);
-              console.log(this.valorAntigo + '++');
+              //console.log(this.valorAntigo + '++');
               
             }else{
               clearInterval(intervalMais);  
-              console.log("elsemais");
+              //console.log("else mais");
       
             }
           
@@ -58,11 +58,11 @@ class CircularProgressBar{
             if (recebido < this.valorAntigo) { 
                         
               this.setProgresso(--this.valorAntigo);
-              console.log(this.valorAntigo + '--');
+              //console.log(this.valorAntigo + '--');
               
             }else{
               clearInterval(intervalMenos);
-              console.log("elsemais");  
+              //console.log("else menos");  
       
             }
            
@@ -96,16 +96,25 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 //PS: Por questões de segurança o metodo get só responde se a pagina estiver no mesmo domínio
 
 function lerRedis() {
+
+  
+
+  circularProgressBarVento.getValue(Math.floor(Math.random() *100));
+  circularProgressBarTensao.getValue(Math.floor(Math.random() *12));
+  circularProgressBarRPM.getValue(Math.floor(Math.random() *1500));   
+  circularProgressBarYAW.getValue(Math.floor(Math.random() *360)); 
+  circularProgressBarPitch.getValue(Math.floor(Math.random() *90));
+  /*
   $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
     circularProgressBarVento.getValue(data.vento);
    // circularProgressBarTensao.getValue(data.tensao);
-    circularProgressBarRPM.getValue(data.rpm);    
+    //circularProgressBarRPM.getValue(data.rpm);    
    // circularProgressBarYAW.getValue(data.yaw);    
    // circularProgressBarPitch.getValue(data.pitch);
 
   });
   //EM CONSTRUÇÃO .............. 
- 
+ */
 }
 
 
@@ -113,3 +122,4 @@ function lerRedis() {
 
 
 
+setInterval(lerRedis, 1000);
