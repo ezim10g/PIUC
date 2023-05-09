@@ -29,42 +29,57 @@ class CircularProgressBar{
       this.valorAntigo = 0;
       this.setProgresso(0);
       console.log("era (-) agora é recebido:"+ recebido)
-      setTimeout(lerRedis, 3000); 
+      lerRedis()
     }else{
       //console.log("era:"+ this.valorAntigo +"agora é recebido:"+ recebido)
       
-      
+     
       console.log("Valor Antigo:");
 
-        let delay = 10;
+        let delay = 100;
 
-          const intervalId = setInterval(() => {
-              if (recebido > this.valorAntigo) {              
-                this.setProgresso(++this.valorAntigo);
-                console.log(this.valorAntigo + '++');
-                
-              }else{
-
-                if (recebido < this.valorAntigo) {              
-                  this.setProgresso(--this.valorAntigo);
-                  console.log(this.valorAntigo + '--');
-                  
-                }else{
-                  clearInterval(intervalId);           
-                }
-                    
-              }
-
-           
-
+        if(recebido != this.valorAntigo){
+          const intervalMais = setInterval(() => {
+            if (recebido > this.valorAntigo) {     
+             
+              this.setProgresso(++this.valorAntigo);
+              console.log(this.valorAntigo + '++');
+              
+            }else{
+              clearInterval(intervalMais);  
+              console.log("elsemais");
+      
+            }
+          
           }, delay); 
 
 
-          setTimeout(lerRedis, 3000); 
+          const intervalMenos = setInterval(() => {
+            if (recebido < this.valorAntigo) { 
+                        
+              this.setProgresso(--this.valorAntigo);
+              console.log(this.valorAntigo + '--');
+              
+            }else{
+              clearInterval(intervalMenos);
+              console.log("elsemais");  
+      
+            }
+           
+          }, delay); 
+        }
+
+        ///inicia chamandoa função no console
+                  
+
+
+
+
+        
     }
     
-     
-
+    
+    
      
   } 
  
@@ -83,10 +98,10 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 function lerRedis() {
   $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
     circularProgressBarVento.getValue(data.vento);
-    circularProgressBarTensao.getValue(data.tensao);
+   // circularProgressBarTensao.getValue(data.tensao);
     circularProgressBarRPM.getValue(data.rpm);    
-    circularProgressBarYAW.getValue(data.yaw);    
-    circularProgressBarPitch.getValue(data.pitch);
+   // circularProgressBarYAW.getValue(data.yaw);    
+   // circularProgressBarPitch.getValue(data.pitch);
 
   });
   //EM CONSTRUÇÃO .............. 
@@ -94,7 +109,7 @@ function lerRedis() {
 }
 
 
-const intervaloGeral = setTimeout(lerRedis, 3000);
+//lerRedis();
 
 
 
