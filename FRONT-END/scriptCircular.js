@@ -5,6 +5,7 @@ class CircularProgressBar{
     this.graus = 360 / valorMax;
     this.idProgressBar = document.getElementById(idProgressBar);
     this.idValueProgress = document.getElementById(idValueProgress);
+    this.valor = 0;
   }
 
   setProgresso(progress){
@@ -18,9 +19,23 @@ class CircularProgressBar{
   )`;
   }
 
-  getValue(){
+  getValue(valorAtual){
      //pega o valor atual do card no html removendo da siglas colhendo somente os numeros
-    return this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',); 
+    //let valor = this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',);
+    let valorAntigo = this.valor;
+    this.valor = valorAtual;
+
+    if(valorAntigo < this.valor){
+      let count = valorAtual - valorAntigo;
+
+      for(i = valorAntigo; valorAtual > i; i++){
+          this.setProgresso(i);
+
+      }
+    }
+    
+    
+
   }
 
 }
@@ -34,18 +49,19 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 
 // Esta função envia um metodo get usando jquery  para a pagina php.ler, os dados são recebidos em um objeto "array" json.
 //PS: Por questões de segurança o metodo get só responde se a pagina estiver no mesmo domínio
-function atualizarLabel() {
+
+function lerRedis() {
   $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
-    circularProgressBarVento.setProgresso(data.vento);
-    circularProgressBarTensao.setProgresso(data.tensao);    
-    circularProgressBarYAW.setProgresso(data.yaw);
-    circularProgressBarRPM.setProgresso(data.rpm);
-    circularProgressBarPitch.setProgresso(data.pitch);
+    circularProgressBarVento.getValue(data.vento);
+    circularProgressBarTensao.getValue(data.tensao);    
+    circularProgressBarYAW.getValue(data.yaw);
+    circularProgressBarRPM.getValue(data.rpm);
+    circularProgressBarPitch.getValue(data.pitch);
 
   });
   //EM CONSTRUÇÃO .............. 
-  console.log(circularProgressBarRPM.getValue());
+ 
 }
 
-setInterval(atualizarLabel, 200);
+setInterval(lerRedis, 200);
 
