@@ -5,7 +5,7 @@ class CircularProgressBar{
     this.graus = 360 / valorMax;
     this.idProgressBar = document.getElementById(idProgressBar);
     this.idValueProgress = document.getElementById(idValueProgress);
-    this.valor = 0;
+    this.valorAntigo = this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',);
   }
 
   setProgresso(progress){
@@ -21,22 +21,28 @@ class CircularProgressBar{
 
   getValue(valorAtual){
      //pega o valor atual do card no html removendo da siglas colhendo somente os numeros
-    //let valor = this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',);
-    let valorAntigo = this.valor;
-    this.valor = valorAtual;
+    if(this.valorAntigo === '-'){this.valorAntigo = 0}
+    //console.log(this.valorAntigo);
+    
+    let count = Math.abs(valorAtual - this.valorAntigo);
+    console.log("count " + count + " valor Atual " + valorAtual);
 
-    if(valorAntigo < this.valor){
-      let count = valorAtual - valorAntigo;
-
-      for(i = valorAntigo; valorAtual > i; i++){
-          this.setProgresso(i);
-
+    if(count != valorAtual){
+    
+      while (count < valorAtual) {
+          this.setProgresso(++count);
+          console.log(count + '++');
       }
-    }
-    
-    
+      
+      while(count > valorAtual){
+        this.setProgresso(--count);
+        console.log(count + '--');
+      }
+        
+      count = valorAtual;
+    } else this.setProgresso(count)   
 
-  }
+  } 
 
 }
 
@@ -53,16 +59,16 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 function lerRedis() {
   $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
     circularProgressBarVento.getValue(data.vento);
-    circularProgressBarTensao.getValue(data.tensao);    
-    circularProgressBarYAW.getValue(data.yaw);
-    circularProgressBarRPM.getValue(data.rpm);
-    circularProgressBarPitch.getValue(data.pitch);
+  //  circularProgressBarTensao.getValue(data.tensao);
+   // circularProgressBarRPM.getValue(data.rpm);    
+   // circularProgressBarYAW.getValue(data.yaw);    
+   // circularProgressBarPitch.getValue(data.pitch);
 
   });
   //EM CONSTRUÇÃO .............. 
  
 }
 
-setInterval(lerRedis, 200);
+setInterval(lerRedis, 3000);
 
 
