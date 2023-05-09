@@ -138,8 +138,7 @@
         </section>
 
         
-        <!--SOBRE-->
-        
+        <!--SOBRE-->        
         <section class="sobre">
             <div class="caixa">
                 <span class="icon-close">
@@ -233,8 +232,6 @@
   
             </div>
         </section>
-
-
 
         <!--DASH BOARD -->
         <section class="dash">
