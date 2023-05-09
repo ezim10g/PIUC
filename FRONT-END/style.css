@@ -9,12 +9,15 @@
 
 body {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    background-color: #042844;
+    /*min-height: 1500px;*/
     min-height: 100vh;
-    background: url('assets/background.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
+    /*background: url('assets/background.jpg') no-repeat;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
 }
 
 header {
@@ -94,7 +97,9 @@ header {
 
 .wrapper {
 
-    position: relative;
+    position: absolute;
+    top: 18vh;
+    left: 40%;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -108,6 +113,7 @@ header {
     overflow: hidden; 
     transform: scale(0); /*oculta a div para ela ser mostrada com o botão login do header*/
     transition: transform .5s ease, height .2s ease; /*Faz a janela aparecer suavemente*/
+    z-index: 20000;
 
 }
 
@@ -332,6 +338,7 @@ color: rgb(97, 1, 187);
     overflow: hidden; /*Esconde elementos que ultrapassam as bordas*/      
     transform: scale(0); /*oculta a div para ela ser mostrada com o botão login do header*/
     transition: transform .5s ease, height .2s ease; /*Faz a janela aparecer suavemente*/
+    z-index: 20000;
 }
 
 .conteudo {
@@ -390,6 +397,85 @@ color: rgb(97, 1, 187);
 }
 
 
+/****************** Effect Parallax ****************/
+
+.imgBGx {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBGx::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    /*background: linear-gradient(to top, #042844, transparent);*/
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.imgBGx::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: #042844;*/
+    z-index: 10000;
+    pointer-events: none;
+    mix-blend-mode: color;
+}
+
+.imgBGx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#bgfundo {
+    animation: moveToLeft 70s ease-in-out;
+}
+
+@keyframes moveToLeft {
+    0% {
+       transform: translateX(0px);
+     }
+    50% {
+       transform: translateX(150px);
+     }
+      100% {
+       transform: translateX(0px);
+     }
+   }
+
+#bgwind {
+    animation: moveToRight 60s ease-in-out;
+}
+
+@keyframes moveToRight {
+    0% {
+       transform: translateX(0px);
+     }
+    50% {
+       transform: translateX(-150px);
+     }
+      100% {
+       transform: translateX(0px);
+     }
+   }
+
+
 
 /*********************Footer****************/
 
@@ -402,4 +488,5 @@ color: rgb(97, 1, 187);
     bottom: 0;
     width: 100%;
     text-align: center;
+    z-index: 2;
 }

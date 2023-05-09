@@ -312,9 +312,19 @@
         <p>&copy; Copyright: 2023 windpower.eziore.com.br</p>
         </footer>
   
-    </main>        
+        
+    </main>      
+    
+    <section class="imgBGx">
+
+        <img src="assets/bg.png" id="bg">
+        <img src="assets/bgfundo.png" id="bgfundo">
+        <img src="assets/bgwind.png" id="bgwind">
+
+    </section>
 
     <script src="script.js"></script>
+    <script src="./scriptParallax.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       <!-- Script -->
