@@ -83,10 +83,10 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 function lerRedis() {
   $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
     circularProgressBarVento.getValue(data.vento);
-    //circularProgressBarTensao.getValue(data.tensao);
-   // circularProgressBarRPM.getValue(data.rpm);    
-    //circularProgressBarYAW.getValue(data.yaw);    
-    //circularProgressBarPitch.getValue(data.pitch);
+    circularProgressBarTensao.getValue(data.tensao);
+    circularProgressBarRPM.getValue(data.rpm);    
+    circularProgressBarYAW.getValue(data.yaw);    
+    circularProgressBarPitch.getValue(data.pitch);
 
   });
   //EM CONSTRUÇÃO .............. 
