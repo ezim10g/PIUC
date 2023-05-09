@@ -6,6 +6,7 @@ class CircularProgressBar{
     this.idProgressBar = document.getElementById(idProgressBar);
     this.idValueProgress = document.getElementById(idValueProgress);
     this.valorAntigo = this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',);
+    
   }
 
   setProgresso(progress){
@@ -19,31 +20,54 @@ class CircularProgressBar{
   )`;
   }
 
-  getValue(valorAtual){
+
+
+  getValue(recebido){
+    
      //pega o valor atual do card no html removendo da siglas colhendo somente os numeros
-    if(this.valorAntigo === '-'){this.valorAntigo = 0}
-    //console.log(this.valorAntigo);
-    
-    let count = Math.abs(valorAtual - this.valorAntigo);
-    console.log("count " + count + " valor Atual " + valorAtual);
-
-    if(count != valorAtual){
-    
-      while (count < valorAtual) {
-          this.setProgresso(++count);
-          console.log(count + '++');
-      }
+    if(this.valorAntigo === '-'){
+      this.valorAntigo = 0;
+      this.setProgresso(0);
+      console.log("era (-) agora é recebido:"+ recebido)
+      setTimeout(lerRedis, 3000); 
+    }else{
+      //console.log("era:"+ this.valorAntigo +"agora é recebido:"+ recebido)
       
-      while(count > valorAtual){
-        this.setProgresso(--count);
-        console.log(count + '--');
-      }
-        
-      count = valorAtual;
-    } else this.setProgresso(count)   
+      
+      console.log("Valor Antigo:");
 
+        let delay = 10;
+
+          const intervalId = setInterval(() => {
+              if (recebido > this.valorAntigo) {              
+                this.setProgresso(++this.valorAntigo);
+                console.log(this.valorAntigo + '++');
+                
+              }else{
+
+                if (recebido < this.valorAntigo) {              
+                  this.setProgresso(--this.valorAntigo);
+                  console.log(this.valorAntigo + '--');
+                  
+                }else{
+                  clearInterval(intervalId);           
+                }
+                    
+              }
+
+           
+
+          }, delay); 
+
+
+          setTimeout(lerRedis, 3000); 
+    }
+    
+     
+
+     
   } 
-
+ 
 }
 
 let circularProgressBarVento = new CircularProgressBar(100, " Km","circular-progress-vento","value-container-vento");
@@ -59,16 +83,18 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 function lerRedis() {
   $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
     circularProgressBarVento.getValue(data.vento);
-    circularProgressBarTensao.getValue(data.tensao);
-    circularProgressBarRPM.getValue(data.rpm);    
-    circularProgressBarYAW.getValue(data.yaw);    
-    circularProgressBarPitch.getValue(data.pitch);
+    //circularProgressBarTensao.getValue(data.tensao);
+   // circularProgressBarRPM.getValue(data.rpm);    
+    //circularProgressBarYAW.getValue(data.yaw);    
+    //circularProgressBarPitch.getValue(data.pitch);
 
   });
   //EM CONSTRUÇÃO .............. 
  
 }
 
-setInterval(lerRedis, 3000);
+
+const intervaloGeral = setTimeout(lerRedis, 3000);
+
 
 
