@@ -26,4 +26,3 @@ function validateNameUser($data){
     }
 }
 
-
