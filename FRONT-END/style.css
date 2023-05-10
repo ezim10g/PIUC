@@ -31,6 +31,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    cursor: pointer;
 
 }
 
@@ -425,8 +426,7 @@ color: rgb(97, 1, 187);
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+
     /*background: #042844;*/
     z-index: 10000;
     pointer-events: none;
@@ -442,38 +442,6 @@ color: rgb(97, 1, 187);
     object-fit: cover;
     pointer-events: none;
 }
-
-#bgfundo {
-    animation: moveToLeft 70s ease-in-out;
-}
-
-@keyframes moveToLeft {
-    0% {
-       transform: translateX(0px);
-     }
-    50% {
-       transform: translateX(150px);
-     }
-      100% {
-       transform: translateX(0px);
-     }
-   }
-
-#bgwind {
-    animation: moveToRight 60s ease-in-out;
-}
-
-@keyframes moveToRight {
-    0% {
-       transform: translateX(0px);
-     }
-    50% {
-       transform: translateX(-150px);
-     }
-      100% {
-       transform: translateX(0px);
-     }
-   }
 
 
 
