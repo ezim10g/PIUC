@@ -15,3 +15,8 @@ try{
     $conn = null;
 }
 
+function PrepareSQL($sql){
+    global $conn;
+    $stmt = $conn-> prepare($sql);
+    return $stmt;
+}
