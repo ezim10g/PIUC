@@ -47,20 +47,18 @@ class UsuarioDAO{
         $stmt-> execute();
     }
 
-    function getEmail($email){
+    function getALL($email){
         $sql = "SELECT * FROM usuario WHERE email = :email";
         $stmt = PrepareSQL($sql);
         $stmt-> bindParam(':email', $email, PDO::PARAM_STR);
         $stmt-> execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        $senha = $result['senhaUsuario'];
-        return $senha;
+        return $result;
     }
 
-    
 }
 
 
 $user = new UsuarioDAO();
 
-echo $user->getEmail('Emerson231@gmail.com');
+echo var_dump($user->getALL('Emerson231@gmail.com'));
