@@ -1,5 +1,5 @@
 <?php
- include "db_conn.php";
+ 
 
 class UsuarioDAO{
 

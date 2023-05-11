@@ -1,5 +1,4 @@
 <?php
- include "db_conn.php";
 
  class PerfilDAO{
 
@@ -13,5 +12,4 @@
 
  }
 
- $perfil = new PerfilDAO();
- $perfil->setPErfil(13);
+

@@ -1,6 +1,8 @@
 <?php
+include "../DAO/db_conn.php";
 include '../util/validateData.php';
 include '../DAO/UsuarioDAO.php';
+include "../DAO/PerfilDAO.php";
 class Usuario{
 
     public $id;
@@ -52,6 +54,10 @@ class Usuario{
         if($this->ValidarNome($nome) && $this->ValidarEmail($email)){
             $senha = $this->CodificarSenha($senha);
             $this->usuarioDAO->setUsuario($nome,$email,$senha);
+            $perfil = new PerfilDAO();
+            $result = $this->usuarioDAO->getALL($email);
+            $id = $result['idUsuario'];
+            $perfil->setPerfil($id);
             return true;
         }else{
             return false;
