@@ -34,7 +34,7 @@ dataPost DATETIME NOT NULL
 
 CREATE TABLE perfil(
 idPerfil INT PRIMARY KEY AUTO_INCREMENT,
-idUsuario INT,
+idUsuario INT UNIQUE,
 idTipoPerfil INT,
 fotoPerfil VARCHAR(255),
 newsLetter BOOLEAN,
@@ -76,3 +76,11 @@ idComentario INT NOT NULL,
 FOREIGN KEY(idPerfil) REFERENCES perfil(idPerfil),
 FOREIGN KEY(idComentario) REFERENCES comentario(idComentario)
 )
+
+CREATE VIEW vw_infoUsuario AS SELECT 
+usuario.nomeUsuario AS nome,
+usuario.email,
+perfil.idTipoPerfil AS tipoPerfil,
+perfil.fotoPerfil,
+perfil.newsLetter 
+FROM usuario INNER JOIN perfil ON usuario.idUsuario = perfil.idUsuario; 
