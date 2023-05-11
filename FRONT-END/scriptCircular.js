@@ -1,4 +1,3 @@
-
 class CircularProgressBar{
 
   constructor(valorMax, medida,idProgressBar, idValueProgress){
@@ -6,8 +5,8 @@ class CircularProgressBar{
     this.graus = 360 / valorMax;
     this.idProgressBar = document.getElementById(idProgressBar);
     this.idValueProgress = document.getElementById(idValueProgress);
-    this.valorAntigo = 0;
-    
+    this.valorAntigo = this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',);
+    this.flag = true;
   }
 
   setProgresso(progress){
@@ -19,11 +18,76 @@ class CircularProgressBar{
        #1fc1de ${progress * this.graus}deg,
        #cadcff ${progress * this.graus+50}deg            
   )`;
-  
   }
 
 
- 
+  getValue(recebido){
+    
+    
+    if(this.valorAntigo === '-'){
+      this.valorAntigo = 0;
+      this.setProgresso(0);
+     
+      if(this.valorMax == 90) {lerRedis();}
+    }else{
+      //console.log("era:"+ this.valorAntigo +"agora é recebido:"+ recebido)
+      
+     
+      console.log("-------- inicio --------- novos");
+      if(recebido == this.valorAntigo && this.flag == true){
+        if(this.valorMax == 90) {lerRedis();}
+      }
+
+        let delay = 5;
+
+        if(recebido > this.valorAntigo && this.flag == true){
+          this.flag = false;
+
+          const intervalMais = setInterval(() => {
+
+            if (recebido > this.valorAntigo) {     
+              this.setProgresso(++this.valorAntigo);
+              console.log(this.valorAntigo + '++');
+              
+            }else{
+              clearInterval(intervalMais);  
+              console.log("else mais");
+              this.flag = true;
+              if(this.valorMax == 90) {lerRedis();}
+      
+            }
+          
+          }, delay); 
+
+        
+        }else if(recebido < this.valorAntigo && this.flag == true){
+          this.flag = false;
+
+          const intervalMenos = setInterval(() => {
+
+            if (recebido < this.valorAntigo) {                         
+              this.setProgresso(--this.valorAntigo);
+              console.log(this.valorAntigo + '--');
+              
+            }else{
+              clearInterval(intervalMenos);
+              console.log("else menos");  
+              this.flag = true;
+              if(this.valorMax == 90) {lerRedis();}
+             
+            }
+           
+          }, delay); 
+        }
+
+        
+        
+    }
+    
+    
+    
+     
+  } 
 }
 
 let circularProgressBarVento = new CircularProgressBar(100, " Km","circular-progress-vento","value-container-vento");
@@ -34,76 +98,25 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 
 
 
+
 function lerRedis() {
 
-  let dadosAtuais = {"vento": 0, "tensao":0, "yaw": 0, "rpm": 0, "pitch": 0};
-  let dadosNovos = [];
-  let delay = 100; 
- let ventoInterval;
 
-    $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) { 
-      
-      let diferencaVento;
-      dadosNovos = data;     
-      diferencaVento = Math.abs(dadosNovos.vento - dadosAtuais.vento);
-      console.log(diferencaVento);
-
-     
-      if(dadosAtuais.vento < dadosNovos.vento){
-         
-          ventoInterval = setInterval(() => {
-            if(dadosAtuais.vento < dadosNovos.vento){
-              dadosAtuais.vento =  (dadosAtuais.vento) % diferencaVento +1;
-              circularProgressBarVento.setProgresso(dadosAtuais.vento);
-              console.log('++')
-            }else{
-             clearInterval(ventoInterval);
-            console.log('else')
-            }
-          }, delay);
-            
-           
-
-      }
-       
-
-
-
-      
-    
-      
-      
-
-     // lerRedis();
-
-    });
-
-}
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////
-
-
-function gravarAleatorio(){
-  let vento = (Math.floor(Math.random() *100));
-  let tensao = (Math.floor(Math.random() *12));
-  let rpm = (Math.floor(Math.random() *1500));   
-  let yaw = (Math.floor(Math.random() *360)); 
-  let pitch = (Math.floor(Math.random() *90)); 
-
-  $.get( "../BACK-END/IOT/gravar.php/?gravar=&vento="+vento+"&tensao="+tensao+"&rpm="+rpm+"&yaw="+yaw+"&pitch="+pitch+"", function( data) { 
   
-   
-   
+  $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
+    circularProgressBarVento.getValue(data.vento);
+    circularProgressBarTensao.getValue(data.tensao);
+    circularProgressBarRPM.getValue(data.rpm);    
+    circularProgressBarYAW.getValue(data.yaw);    
+    circularProgressBarPitch.getValue(data.pitch);
+
   });
 
 
-
 }
+
+
+
+
+
+
