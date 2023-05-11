@@ -32,10 +32,8 @@ class CircularProgressBar{
      
       
     }else{
-      //console.log("era:"+ this.valorAntigo +"agora é recebido:"+ recebido)
-      
-     
-      console.log("-------- inicio --------- novos");
+          
+      //console.log("-------- inicio --------- novos");
       if(recebido == this.valorAntigo && this.flag == true){
        
       }
@@ -49,14 +47,11 @@ class CircularProgressBar{
 
             if (recebido > this.valorAntigo) {     
               this.setProgresso(++this.valorAntigo);
-              console.log(this.valorAntigo + '++');
-              
+              //console.log(this.valorAntigo + '++');              
             }else{
               clearInterval(intervalMais);  
-              console.log("else mais");
-              this.flag = true;
-              
-      
+              //console.log("else mais");
+              this.flag = true;                    
             }
           
           }, delay); 
@@ -69,25 +64,19 @@ class CircularProgressBar{
 
             if (recebido < this.valorAntigo) {                         
               this.setProgresso(--this.valorAntigo);
-              console.log(this.valorAntigo + '--');
-              
+              //console.log(this.valorAntigo + '--');              
             }else{
               clearInterval(intervalMenos);
-              console.log("else menos");  
-              this.flag = true;
-                     
+              //console.log("else menos");  
+              this.flag = true;                     
             }
            
           }, delay); 
         }
-
-        
-        
+            
     }
     
-    
-    
-     
+           
   } 
 }
 
@@ -102,7 +91,7 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 
 function lerRedis() {
 
-
+ // console.log("Request ");
   
   $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
     circularProgressBarVento.getValue(data.vento);
@@ -110,7 +99,7 @@ function lerRedis() {
     circularProgressBarRPM.getValue(data.rpm);    
     circularProgressBarYAW.getValue(data.yaw);    
     circularProgressBarPitch.getValue(data.pitch);
-
+   // console.log("Response ok");
   });
 
 
