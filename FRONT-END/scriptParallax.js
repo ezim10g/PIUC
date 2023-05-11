@@ -20,13 +20,13 @@ function animateLeft(obj, from, to){
         var box = obj;
         box.style.marginLeft = from + "px";
         setTimeout(function(){
-            animateLeft(obj, from + 1, to);
-        }, 25) 
+            animateLeft(obj, from + 0.1, to);
+        }, 50) 
     }
  }
  
  function animateMe() {
 
- animateLeft(document.getElementById('bgwind'), 100, 900);
+ animateLeft(document.getElementById('bgwind'), 0, 900);
 
  }

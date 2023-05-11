@@ -19,7 +19,7 @@
 <body onload="animateMe();">
     <!--HEADER-->
     <header>        
-        <h2 class="logo">Logo</h2>
+        <h2 class="logo"> Logo </h2>
         <nav class="navigation">
             <a class="inicioLink">Home</a>
             <a class="dashLink">DashBoard</a>
@@ -317,9 +317,9 @@
     
     <section class="imgBGx">
 
-        <img src="assets/bg.png" id="bg">
-        <img src="assets/bgfundo.png" id="bgfundo">
-        <img src="assets/bgwind.png" id="bgwind">
+        <img src="./assets/./windpower.gif" id="bg">
+        <!-- <img src="assets/bgfundo.png" id="bgfundo"> 
+        <img src="assets/bgwind.png" id="bgwind"> -->
 
     </section>
 
