@@ -1,12 +1,14 @@
+
 class CircularProgressBar{
 
-  constructor(valorMax, medida,idProgressBar, idValueProgress){
+   constructor(valorMax, medida,idProgressBar, idValueProgress){
     this.medida = medida;
     this.graus = 360 / valorMax;
     this.idProgressBar = document.getElementById(idProgressBar);
     this.idValueProgress = document.getElementById(idValueProgress);
     this.valorAntigo = this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',);
-    this.flag = true;
+    this.flag = true;    
+    
   }
 
   setProgresso(progress){
@@ -28,17 +30,17 @@ class CircularProgressBar{
       this.valorAntigo = 0;
       this.setProgresso(0);
      
-      if(this.valorMax == 90) {lerRedis();}
+      
     }else{
       //console.log("era:"+ this.valorAntigo +"agora é recebido:"+ recebido)
       
      
       console.log("-------- inicio --------- novos");
       if(recebido == this.valorAntigo && this.flag == true){
-        if(this.valorMax == 90) {lerRedis();}
+       
       }
 
-        let delay = 5;
+        let delay = 4;
 
         if(recebido > this.valorAntigo && this.flag == true){
           this.flag = false;
@@ -53,7 +55,7 @@ class CircularProgressBar{
               clearInterval(intervalMais);  
               console.log("else mais");
               this.flag = true;
-              if(this.valorMax == 90) {lerRedis();}
+              
       
             }
           
@@ -73,8 +75,7 @@ class CircularProgressBar{
               clearInterval(intervalMenos);
               console.log("else menos");  
               this.flag = true;
-              if(this.valorMax == 90) {lerRedis();}
-             
+                     
             }
            
           }, delay); 
@@ -115,7 +116,7 @@ function lerRedis() {
 
 }
 
-
+const atualizarDados = setInterval(lerRedis, 1000);
 
 
 
