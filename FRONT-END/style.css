@@ -416,7 +416,7 @@ color: rgb(97, 1, 187);
     bottom: 0;
     width: 100%;
     height: 100px;
-    /*background: linear-gradient(to top, #042844, transparent);*/
+    background: linear-gradient(to top, #042844, transparent);
     pointer-events: none;
     z-index: 10000;
 }
@@ -426,8 +426,9 @@ color: rgb(97, 1, 187);
     position: absolute;
     top: 0;
     left: 0;
-
-    /*background: #042844;*/
+    width: 100%;
+    height: 100%;
+    background: #042844;
     z-index: 10000;
     pointer-events: none;
     mix-blend-mode: color;
@@ -456,5 +457,5 @@ color: rgb(97, 1, 187);
     bottom: 0;
     width: 100%;
     text-align: center;
-    z-index: 2;
+    z-index: 20000;
 }
