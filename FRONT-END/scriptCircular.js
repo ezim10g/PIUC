@@ -36,22 +36,9 @@ let circularProgressBarRPM = new CircularProgressBar(1500, " Rpm","circular-prog
 let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progress-pitch","value-container-pitch");
 
 
-// Esta função envia um metodo get usando jquery  para a pagina php.ler, os dados são recebidos em um objeto "array" json.
-//PS: Por questões de segurança o metodo get só responde se a pagina estiver no mesmo domínio
+var anterior = {"vento" : 0, "tensao" : 0, "rpm" : 0 , "yaw" : 0 , "pitch" : 0};
 
 function lerRedis() {
-  
-  /*
-
-  circularProgressBarVento.getValue(Math.floor(Math.random() *100));
-  circularProgressBarTensao.getValue(Math.floor(Math.random() *12));
-  circularProgressBarRPM.getValue(Math.floor(Math.random() *1500));   
-  circularProgressBarYAW.getValue(Math.floor(Math.random() *360)); 
-  circularProgressBarPitch.getValue(Math.floor(Math.random() *90));
-  */
-  
-  var anterior = {"vento" : 0, "tensao" : 0, "rpm" : 0 , "yaw" : 0 , "pitch" : 0};
-    
 
     $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) { 
   
@@ -62,8 +49,7 @@ function lerRedis() {
       circularProgressBarPitch.setProgresso(data.pitch);
       
      // setTimeout(lerRedis,500);
-     
-     console.log(data.vento - anterior.vento);      
+      
       
 
       lerRedis();
@@ -74,3 +60,19 @@ function lerRedis() {
 
 }
 
+
+function gravarAleatorio(){
+  let vento = (Math.floor(Math.random() *100));
+  let tensao = (Math.floor(Math.random() *12));
+  let rpm = (Math.floor(Math.random() *1500));   
+  let yaw = (Math.floor(Math.random() *360)); 
+  let pitch = (Math.floor(Math.random() *90)); 
+
+  $.get( "../BACK-END/IOT/gravar.php/?gravar=&vento="+vento+"&tensao="+tensao+"&rpm="+rpm+"&yaw="+yaw+"&pitch"+pitch, function( data) { 
+  
+   
+  });
+
+
+
+}
