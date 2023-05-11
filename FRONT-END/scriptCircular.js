@@ -1,6 +1,3 @@
-let intervaloMais;
-let intervaloMenos;
-     
 
 class CircularProgressBar{
 
@@ -36,29 +33,62 @@ let circularProgressBarRPM = new CircularProgressBar(1500, " Rpm","circular-prog
 let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progress-pitch","value-container-pitch");
 
 
-var anterior = {"vento" : 0, "tensao" : 0, "rpm" : 0 , "yaw" : 0 , "pitch" : 0};
 
 function lerRedis() {
 
+  let dadosAtuais = {"vento": 0, "tensao":0, "yaw": 0, "rpm": 0, "pitch": 0};
+  let dadosNovos = [];
+  let delay = 100; 
+ let ventoInterval;
+
     $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) { 
-  
-      circularProgressBarVento.setProgresso(data.vento); 
-      circularProgressBarTensao.setProgresso(data.tensao);
-      circularProgressBarRPM.setProgresso(data.rpm);   
-      circularProgressBarYAW.setProgresso(data.yaw);     
-      circularProgressBarPitch.setProgresso(data.pitch);
       
-     // setTimeout(lerRedis,500);
+      let diferencaVento;
+      dadosNovos = data;     
+      diferencaVento = Math.abs(dadosNovos.vento - dadosAtuais.vento);
+      console.log(diferencaVento);
+
+     
+      if(dadosAtuais.vento < dadosNovos.vento){
+         
+          ventoInterval = setInterval(() => {
+            if(dadosAtuais.vento < dadosNovos.vento){
+              dadosAtuais.vento =  (dadosAtuais.vento) % diferencaVento +1;
+              circularProgressBarVento.setProgresso(dadosAtuais.vento);
+              console.log('++')
+            }else{
+             clearInterval(ventoInterval);
+            console.log('else')
+            }
+          }, delay);
+            
+           
+
+      }
+       
+
+
+
+      
+    
       
       
 
-      lerRedis();
+     // lerRedis();
 
     });
-  
-  
 
 }
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////
 
 
 function gravarAleatorio(){
@@ -68,8 +98,9 @@ function gravarAleatorio(){
   let yaw = (Math.floor(Math.random() *360)); 
   let pitch = (Math.floor(Math.random() *90)); 
 
-  $.get( "../BACK-END/IOT/gravar.php/?gravar=&vento="+vento+"&tensao="+tensao+"&rpm="+rpm+"&yaw="+yaw+"&pitch"+pitch, function( data) { 
+  $.get( "../BACK-END/IOT/gravar.php/?gravar=&vento="+vento+"&tensao="+tensao+"&rpm="+rpm+"&yaw="+yaw+"&pitch="+pitch+"", function( data) { 
   
+   
    
   });
 
