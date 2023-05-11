@@ -57,8 +57,3 @@ class UsuarioDAO{
     }
 
 }
-
-
-$user = new UsuarioDAO();
-
-echo var_dump($user->getALL('Emerson231@gmail.com'));

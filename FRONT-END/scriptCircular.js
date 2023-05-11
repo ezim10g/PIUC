@@ -1,3 +1,7 @@
+let intervaloMais;
+let intervaloMenos;
+     
+
 class CircularProgressBar{
 
   constructor(valorMax, medida,idProgressBar, idValueProgress){
@@ -5,7 +9,7 @@ class CircularProgressBar{
     this.graus = 360 / valorMax;
     this.idProgressBar = document.getElementById(idProgressBar);
     this.idValueProgress = document.getElementById(idValueProgress);
-    this.valorAntigo = this.idValueProgress.textContent.replace(/(º)|( Rpm)|(V)|(Km)/,'',);
+    this.valorAntigo = 0;
     
   }
 
@@ -18,70 +22,10 @@ class CircularProgressBar{
        #1fc1de ${progress * this.graus}deg,
        #cadcff ${progress * this.graus+50}deg            
   )`;
+  
   }
 
 
-
-  getValue(recebido){
-    
-     //pega o valor atual do card no html removendo da siglas colhendo somente os numeros
-    if(this.valorAntigo === '-'){
-      this.valorAntigo = 0;
-      this.setProgresso(0);
-      //console.log("era (-) agora é recebido:"+ recebido)
-      //lerRedis()
-    }else{
-      //console.log("era:"+ this.valorAntigo +"agora é recebido:"+ recebido)
-      
-     
-      //console.log("-------- inicio --------- novos");
-
-        let delay = 10;
-
-        if(recebido != this.valorAntigo){
-          const intervalMais = setInterval(() => {
-            if (recebido > this.valorAntigo) {     
-             
-              this.setProgresso(++this.valorAntigo);
-              //console.log(this.valorAntigo + '++');
-              
-            }else{
-              clearInterval(intervalMais);  
-              //console.log("else mais");
-      
-            }
-          
-          }, delay); 
-
-
-          const intervalMenos = setInterval(() => {
-            if (recebido < this.valorAntigo) { 
-                        
-              this.setProgresso(--this.valorAntigo);
-              //console.log(this.valorAntigo + '--');
-              
-            }else{
-              clearInterval(intervalMenos);
-              //console.log("else menos");  
-      
-            }
-           
-          }, delay); 
-        }
-
-        ///inicia chamandoa função no console
-                  
-
-
-
-
-        
-    }
-    
-    
-    
-     
-  } 
  
 }
 
@@ -96,30 +40,37 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 //PS: Por questões de segurança o metodo get só responde se a pagina estiver no mesmo domínio
 
 function lerRedis() {
-
   
+  /*
 
   circularProgressBarVento.getValue(Math.floor(Math.random() *100));
   circularProgressBarTensao.getValue(Math.floor(Math.random() *12));
   circularProgressBarRPM.getValue(Math.floor(Math.random() *1500));   
   circularProgressBarYAW.getValue(Math.floor(Math.random() *360)); 
   circularProgressBarPitch.getValue(Math.floor(Math.random() *90));
-  /*
-  $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
-    circularProgressBarVento.getValue(data.vento);
-   // circularProgressBarTensao.getValue(data.tensao);
-    //circularProgressBarRPM.getValue(data.rpm);    
-   // circularProgressBarYAW.getValue(data.yaw);    
-   // circularProgressBarPitch.getValue(data.pitch);
+  */
+  
+  var anterior = {"vento" : 0, "tensao" : 0, "rpm" : 0 , "yaw" : 0 , "pitch" : 0};
+    
 
-  });
-  //EM CONSTRUÇÃO .............. 
- */
+    $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) { 
+  
+      circularProgressBarVento.setProgresso(data.vento); 
+      circularProgressBarTensao.setProgresso(data.tensao);
+      circularProgressBarRPM.setProgresso(data.rpm);   
+      circularProgressBarYAW.setProgresso(data.yaw);     
+      circularProgressBarPitch.setProgresso(data.pitch);
+      
+     // setTimeout(lerRedis,500);
+     
+     console.log(data.vento - anterior.vento);      
+      
+
+      lerRedis();
+
+    });
+  
+  
+
 }
 
-
-//lerRedis();
-
-
-
-setInterval(lerRedis, 1000);

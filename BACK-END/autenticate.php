@@ -4,7 +4,7 @@ session_start();
 function verificar_autenticacao() {
     
 
-    if (isset($_SESSION['token']) && isset($_COOKIE['token']) && $_SESSION['token'] === $_COOKIE['token']) {
+    if (isset($_SESSION['token'])) {
         return true;
     } else {
         return false;
