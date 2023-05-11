@@ -12,12 +12,12 @@ body {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    background-color: #042844;
+   /* background-color: #042844;*/
     /*min-height: 1500px;*/
     min-height: 100vh;
-    /*background: url('assets/background.jpg') no-repeat;*/
-    /*background-size: cover;*/
-    /*background-position: center;*/
+    background: url('assets/bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -416,7 +416,7 @@ color: rgb(97, 1, 187);
     bottom: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to top, #042844, transparent);
+  /*  background: linear-gradient(to top, #042844, transparent);  MASCARA DA BRUMA NOTURNA*/
     pointer-events: none;
     z-index: 10000;
 }
@@ -428,7 +428,7 @@ color: rgb(97, 1, 187);
     left: 0;
     width: 100%;
     height: 100%;
-    background: #042844;
+ /*   background: #042844; *//*MASCARA NOTURNA*/
     z-index: 10000;
     pointer-events: none;
     mix-blend-mode: color;
@@ -458,4 +458,36 @@ color: rgb(97, 1, 187);
     width: 100%;
     text-align: center;
     z-index: 20000;
+}
+
+#bgfundo {
+    animation: moveToLeft 70s ease-in-out;
+}
+
+@keyframes moveToLeft {
+    0% {
+       transform: translateX(0px);
+     }
+    50% {
+       transform: translateX(150px);
+     }
+      100% {
+       transform: translateX(0px);
+     }
+   }
+
+#bgwind {
+    animation: moveToRight 60s ease-in-out;
+}
+
+@keyframes moveToRight {
+    0% {
+       transform: translateX(0px);
+     }
+    50% {
+       transform: translateX(-150px);
+     }
+      100% {
+       transform: translateX(0px);
+     }
 }

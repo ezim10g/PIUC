@@ -10,6 +10,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Import JQuery-->
+     <script src="../BACK-END/IOT/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleCircular.css">
     <link rel="stylesheet" href="styleCards.css">
@@ -317,21 +319,24 @@
     
     <section class="imgBGx">
 
-        <img src="./assets/./windpower.gif" id="bg">
-        <!-- <img src="assets/bgfundo.png" id="bgfundo"> 
-        <img src="assets/bgwind.png" id="bgwind"> -->
+        <!--<img src="./assets/./windpower.gif" id="bg">-->
+        <img  src="assets/bgfundo.svg" id="bgfundo"> 
+        <img  src="assets/bgwind.svg" id="bgwind"> 
 
     </section>
 
-    <script src="script.js"></script>
-    <script src="./scriptParallax.js"></script>
+    
+   
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       <!-- Script -->
-      <script src="scriptCircular.js"></script>
+      <script src="script.js"></script>
       <script src="./profile.js"></script>
-      <!-- Import JQuery-->
-      <script src="../BACK-END/IOT/jquery-3.6.4.min.js"></script>
+      <script src="scriptCircular.js"></script>
+    
+      
+     
 
 </body>
+
 </html>
