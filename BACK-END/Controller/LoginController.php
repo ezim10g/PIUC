@@ -1,10 +1,9 @@
 <?php
 session_start();
 include "../Model/Usuario.php";
-if(isset($_POST['email']) && isset($_POST['senha'])){
 
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+function LogarController($email,$senha){
+
     $usuario = new Usuario();
 
     if($usuario->LogarUsuario($email,$senha)){
@@ -20,7 +19,12 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
         header("location: ../../FRONT-END/index.php?loginerror=algum problema com os dados!");
         exit(); 
     }
+}
+
+if(isset($_POST['email']) && isset($_POST['senha'])){
+    LogarController($_POST['email'],$_POST['senha']);
 }else{
     header("location: ../../FRONT-END/index.php?loginerror=insira os dados corretamente!");
     exit();
 }
+
