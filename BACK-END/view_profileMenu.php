@@ -16,7 +16,7 @@
                 <ul>
                     <li><a class="itens-submenu" href="#">Perfil</a></li>
                     <li><a class="itens-submenu" href="#">Respostas</a></li>
-                    <li><a class="itens-submenu" href="../BACK-END/logout.php">Sair</a></li>
+                    <li><a class="itens-submenu" href="../BACK-END/Controller/LogoutController.php">Sair</a></li>
                 </ul>
             </div>
         </div>

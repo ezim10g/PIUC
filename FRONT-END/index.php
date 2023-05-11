@@ -19,7 +19,7 @@
 <body onload="animateMe();">
     <!--HEADER-->
     <header>        
-        <h2 class="logo">Logo</h2>
+        <h2 class="logo"> Logo </h2>
         <nav class="navigation">
             <a class="inicioLink">Home</a>
             <a class="dashLink">DashBoard</a>
@@ -53,7 +53,7 @@
                         echo "<p class='error'> {$loginerror}</p>";
                     }
                 ?>
-                <form action="../BACK-END/login.php" method="post">
+                <form action="../BACK-END/Controller/LoginController.php" method="post">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
                         <input type="email" name="email" required>
@@ -84,7 +84,7 @@
                         echo "<p class='error'> {$registererror}</p>";
                     }
                      ?>
-                    <form action="../BACK-END/register.php" method="post">
+                    <form action="../BACK-END/Controller/RegisterController.php" method="post">
                         <div class="input-box">
                                 <span class="icon">
                                     <ion-icon name="person"></ion-icon>
@@ -317,9 +317,9 @@
     
     <section class="imgBGx">
 
-        <img src="assets/bg.png" id="bg">
-        <img src="assets/bgfundo.png" id="bgfundo">
-        <img src="assets/bgwind.png" id="bgwind">
+        <img src="./assets/./windpower.gif" id="bg">
+        <!-- <img src="assets/bgfundo.png" id="bgfundo"> 
+        <img src="assets/bgwind.png" id="bgwind"> -->
 
     </section>
 

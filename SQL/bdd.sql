@@ -34,10 +34,12 @@ dataPost DATETIME NOT NULL
 
 CREATE TABLE perfil(
 idPerfil INT PRIMARY KEY AUTO_INCREMENT,
+idUsuario INT,
 idTipoPerfil INT,
 fotoPerfil VARCHAR(255),
 newsLetter BOOLEAN,
 FOREIGN KEY(idTipoPerfil) REFERENCES tipo_perfil(idTipoPerfil)
+FOREIGN KEY(idUsuario) REFERENCES Usuario(idUsuario)
 );
 
 CREATE TABLE perfil_tag(

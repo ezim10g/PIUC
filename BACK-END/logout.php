@@ -1,5 +1,6 @@
 <?php
-setcookie('token', "", time() - 604800, '/', '', true, true);
+session_start();
+session_unset();
 header("location: ../FRONT-END/index.php?aviso=logout");
         exit();
 ?>
