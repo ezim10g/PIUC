@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="profile.css">
     <title>PIUC Energia eólica</title>
 </head>
-<body onload="animateMe();">
+<body>
     <!--HEADER-->
     <header>        
         <h2 class="logo"> Logo </h2>
