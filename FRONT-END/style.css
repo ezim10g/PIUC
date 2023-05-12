@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 body {
@@ -18,6 +19,7 @@ body {
     background: url('assets/bg.png') no-repeat;
     background-size: cover;
     background-position: center;
+   
 }
 
 header {
@@ -459,6 +461,8 @@ color: rgb(97, 1, 187);
     text-align: center;
     z-index: 20000;
 }
+
+/*********************Animações****************/
 
 #bgfundo {
     animation: moveToLeft 70s ease-in-out;
