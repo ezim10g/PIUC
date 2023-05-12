@@ -14,7 +14,7 @@
 
             <div class="sub-menu-options">
                 <ul>
-                    <li><a class="itens-submenu" href="../BACK-END/view_perfil.php">Perfil</a></li>
+                    <li><a class="itens-submenu" id="btnPerfil">Perfil</a></li>
                     <li><a class="itens-submenu" href="#">Respostas</a></li>
                     <li><a class="itens-submenu" href="../BACK-END/Controller/LogoutController.php">Sair</a></li>
                 </ul>

@@ -309,6 +309,13 @@
             </div>
         </section>
 
+        <!--Perfil -->
+        <?php
+        if (verificar_autenticacao()){
+           include "../BACK-END/view_perfil.php" ;
+        }
+        ?>
+
         <!--footer -->
         <footer class="copyright">
         <p>&copy; Copyright: 2023 windpower.eziore.com.br</p>

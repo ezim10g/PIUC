@@ -2,7 +2,7 @@ const perfil = document.getElementById("profileBtn");
 const submenu = document.getElementById("submenuperfil");
 let cont = 0;
 if(perfil){
-    perfil.addEventListener('click', () =>{
+    perfil.addEventListener("click", () =>{
         if(cont == 0){
             submenu.classList.add("submenuactive");
             cont = 1;
@@ -14,4 +14,12 @@ if(perfil){
         
 
     });
+}
+
+const img = document.getElementById("img-icom");
+
+
+
+function imgicon(){
+    console.log("bah");
 }

@@ -30,7 +30,8 @@ const sobreMenu = ['.sobreLink', '.sobre .caixa', '.sobre .caixa .icon-close'];
 const dashMenu = ['.dashLink', '.dash .caixa', '.dash .caixa .icon-close'];
 const contatoMenu = ['.contatoLink', '.contato .caixa', '.contato .caixa .icon-close'];
 const newsMenu = ['.newsLink', '.news .caixa', '.news .caixa .icon-close'];
-const loginMenu = [`.btnLogin-popup`, `.login .wrapper`, `.login .wrapper .icon-close`]
+const loginMenu = [`.btnLogin-popup`, `.login .wrapper`, `.login .wrapper .icon-close`];
+const abaPerfil = [`.btnPerfil`, `.aba-perfil .caixa`, `.aba-perfil .caixa .icon-close`];
 
 const arrayMenuFixos = [];
 const arrayMenuConteudoFixos = [];
@@ -44,6 +45,7 @@ arrayMenutemp.push(dashMenu);
 arrayMenutemp.push(contatoMenu);
 arrayMenutemp.push(newsMenu);
 arrayMenutemp.push(loginMenu);
+arrayMenutemp.push(abaPerfil);
 
 arrayMenutemp.forEach(element => {
     const teste = document.querySelector(element[0]);
