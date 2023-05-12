@@ -323,10 +323,11 @@
   
         
     </main>      
+   
     
     <section class="imgBGx">
 
-        <!--<img src="./assets/./windpower.gif" id="bg">-->
+     <!--   <img src="./assets/./windpower.gif" id="bg">-->
         <img  src="assets/bgfundo.png" id="bgfundo"> 
         <img  src="assets/bgwind.png" id="bgwind"> 
 

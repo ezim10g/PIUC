@@ -116,7 +116,7 @@ header {
     overflow: hidden; 
     transform: scale(0); /*oculta a div para ela ser mostrada com o botão login do header*/
     transition: transform .5s ease, height .2s ease; /*Faz a janela aparecer suavemente*/
-    z-index: 20000;
+    z-index: 1;
 
 }
 
@@ -341,7 +341,7 @@ color: rgb(97, 1, 187);
     overflow: hidden; /*Esconde elementos que ultrapassam as bordas*/      
     transform: scale(0); /*oculta a div para ela ser mostrada com o botão login do header*/
     transition: transform .5s ease, height .2s ease; /*Faz a janela aparecer suavemente*/
-    z-index: 20000;
+    z-index: 1;
 }
 
 .conteudo {
@@ -420,7 +420,7 @@ color: rgb(97, 1, 187);
     height: 100px;
   /*  background: linear-gradient(to top, #042844, transparent);  MASCARA DA BRUMA NOTURNA*/
     pointer-events: none;
-    z-index: 10000;
+    z-index: -1;
 }
 
 .imgBGx::after {
@@ -431,7 +431,7 @@ color: rgb(97, 1, 187);
     width: 100%;
     height: 100%;
  /*   background: #042844; *//*MASCARA NOTURNA*/
-    z-index: 10000;
+    z-index: -1;
     pointer-events: none;
     mix-blend-mode: color;
 }
@@ -459,11 +459,11 @@ color: rgb(97, 1, 187);
     bottom: 0;
     width: 100%;
     text-align: center;
-    z-index: 20000;
+    z-index: 1;
 }
 
 /*********************Animações****************/
-
+/*
 #bgfundo {
     animation: moveToLeft 70s ease-in-out;
 }
@@ -495,3 +495,4 @@ color: rgb(97, 1, 187);
        transform: translateX(0px);
      }
 }
+*/
