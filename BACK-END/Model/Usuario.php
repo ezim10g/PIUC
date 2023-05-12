@@ -71,7 +71,7 @@ class Usuario{
                 $this->id = $result['idUsuario'];
                 $this->nome = $result['nomeUsuario'];
                 $this->email = $result['email'];
-                $this->id = $result['senhaUsuario'];
+                $this->id = $result['idUsuario'];
                 return true;
             }else{
                 return false;
@@ -79,6 +79,12 @@ class Usuario{
         }else{
             return false;
         }
+    }
+
+    function getInfoPerfil(){
+        $result = $this->usuarioDAO->getInfo($this->id);
+        return $result;
+
     }
 }
 

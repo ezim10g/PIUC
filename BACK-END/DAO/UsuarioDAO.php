@@ -1,6 +1,6 @@
 <?php
  
-
+ 
 class UsuarioDAO{
 
     function __construct(){
@@ -52,6 +52,15 @@ class UsuarioDAO{
         $stmt = PrepareSQL($sql);
         $stmt-> bindParam(':email', $email, PDO::PARAM_STR);
         $stmt-> execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    function getInfo($id){
+        $sql = "SELECT * FROM vw_infoUsuario WHERE idUsuario = :id";
+        $stmt = PrepareSQL($sql);
+        $stmt -> bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt -> execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }

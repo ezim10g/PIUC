@@ -78,9 +78,10 @@ FOREIGN KEY(idComentario) REFERENCES comentario(idComentario)
 )
 
 CREATE VIEW vw_infoUsuario AS SELECT 
+usuario.idUsuario,
 usuario.nomeUsuario AS nome,
 usuario.email,
 perfil.idTipoPerfil AS tipoPerfil,
 perfil.fotoPerfil,
-perfil.newsLetter 
+perfil.newsLetter
 FROM usuario INNER JOIN perfil ON usuario.idUsuario = perfil.idUsuario; 
