@@ -16,10 +16,11 @@ if(perfil){
     });
 }
 
-const img = document.getElementById("img-icom");
-
-
-
-function imgicon(){
-    console.log("bah");
+const imagemPerfil = document.getElementById("cam-icon");
+if(imagemPerfil){
+    imagemPerfil.addEventListener('click',() =>{
+        console.log("foi")
+    })
+}else{
+    console.log("erro")
 }
