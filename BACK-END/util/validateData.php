@@ -19,7 +19,7 @@ function ValidateEmail($data){
 }
 
 function validateNameUser($data){
-    if(strlen($usuario) > 25){
+    if(strlen($data) > 25){
         return true;
     }else{
         return false;
