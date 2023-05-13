@@ -16,7 +16,7 @@ body {
    /* background-color: #042844;*/
     /*min-height: 1500px;*/
     min-height: 100vh;
-    background: url('assets/bg.png') no-repeat;
+    background: url('assets/bg.png') no-repeat;   
     background-size: cover;
     background-position: center;
    
@@ -410,6 +410,7 @@ color: rgb(97, 1, 187);
     display: flex;
     justify-content: center;
     align-items: center;
+  
 }
 
 .imgBGx::before {
@@ -437,6 +438,7 @@ color: rgb(97, 1, 187);
 }
 
 .imgBGx img {
+   
     position: absolute;
     top: 0;
     left: 0;
@@ -444,6 +446,10 @@ color: rgb(97, 1, 187);
     height: 100%;
     object-fit: cover;
     pointer-events: none;
+
+   
+    
+
 }
 
 
@@ -463,36 +469,40 @@ color: rgb(97, 1, 187);
 }
 
 /*********************Animações****************/
-/*
+
 #bgfundo {
-    animation: moveToLeft 70s ease-in-out;
+    animation: moveToLeft 10s ease-in ;
+    animation-iteration-count: 1
+    
 }
 
 @keyframes moveToLeft {
     0% {
-       transform: translateX(0px);
+       transform: translateX(-30px);
      }
-    50% {
-       transform: translateX(150px);
-     }
+
       100% {
        transform: translateX(0px);
      }
    }
 
 #bgwind {
-    animation: moveToRight 60s ease-in-out;
+    animation: moveToRight 6s ease-in ;
+    animation-iteration-count: 1
+
 }
+
 
 @keyframes moveToRight {
     0% {
-       transform: translateX(0px);
+       transform: translateX(35px);
      }
-    50% {
-       transform: translateX(-150px);
-     }
+   
       100% {
        transform: translateX(0px);
      }
 }
-*/
+
+
+/**************svg***************/
+

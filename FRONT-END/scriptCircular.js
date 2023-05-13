@@ -94,6 +94,7 @@ function lerRedis() {
 
  // console.log("Request ");
   
+ 
   $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
     circularProgressBarVento.getValue(data.vento);
     circularProgressBarTensao.setProgresso(data.tensao);

@@ -16,11 +16,13 @@
     <link rel="stylesheet" href="styleCircular.css">
     <link rel="stylesheet" href="styleCards.css">
     <link rel="stylesheet" href="profile.css">
+    
     <title>PIUC Energia eólica</title>
 </head>
 <body>
     <!--HEADER-->
-    <header>        
+    <header>   
+             
         <h2 class="logo"> Logo </h2>
         <nav class="navigation">
             <a class="inicioLink">Home</a>
@@ -322,10 +324,18 @@
 
      <!--   <img src="./assets/./windpower.gif" id="bg">-->
         <img  src="assets/bgfundo.png" id="bgfundo"> 
-        <img  src="assets/bgwind.png" id="bgwind"> 
+        <img  src="assets/bgwind.png" id="bgwind">
 
     </section>
 
+   
+
+        
+    
+
+   
+ 
+  
     
    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -339,5 +349,6 @@
      
 
 </body>
+
 
 </html>
