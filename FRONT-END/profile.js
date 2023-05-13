@@ -16,11 +16,8 @@ if(perfil){
     });
 }
 
-const imagemPerfil = document.getElementById("cam-icon");
-if(imagemPerfil){
-    imagemPerfil.addEventListener('click',() =>{
-        console.log("foi")
-    })
-}else{
-    console.log("erro")
-}
+
+$("#cam-icon").click(function(){
+    console.log("ok")
+  });
+

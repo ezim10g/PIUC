@@ -1,12 +1,13 @@
 <section class="aba-perfil">
 
-        <div class=" caixa">
+        <div class="caixa">
                 <span class="icon-close">
                         <ion-icon name="close"></ion-icon>
                 </span>
                 <div class="titulo-div">
-                        <h2>Newsletter</h2>
+                        <h2>Perfil</h2>
                 </div>
+
                 <div id="fotoPerfil">
                         <img src="../FRONT-END/assets/<?php echo $_SESSION['fotoPerfil']; ?>" class="img-perfil"
                                 id="imgPerfil" alt="imagem de perfil">
