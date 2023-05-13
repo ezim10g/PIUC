@@ -1,4 +1,4 @@
 
-<button class='btnLogin-popup'>Login</button>;
+<button class='btnLogin-popup'>Login</button>
  
                  
