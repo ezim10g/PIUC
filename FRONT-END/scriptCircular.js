@@ -34,7 +34,7 @@ class CircularProgressBar{
       
     }else{
           
-      console.log("-------- inicio --------- novos");
+      //console.log("-------- inicio --------- novos");
       if(recebido == this.valorAntigo && this.flag == true){
        
       }
@@ -54,11 +54,11 @@ class CircularProgressBar{
                 }                                            
               }else          
               this.setProgresso(++this.valorAntigo);               
-              console.log(this.valorAntigo + '++');
+           //   console.log(this.valorAntigo + '++');
                          
             }else{
               clearInterval(intervalMais);  
-              console.log("else mais");
+             // console.log("else mais");
               this.flag = true;                    
             }
           
@@ -79,11 +79,11 @@ class CircularProgressBar{
                 }
               }else                         
               this.setProgresso(--this.valorAntigo);
-              console.log(this.valorAntigo + '--'); 
+             // console.log(this.valorAntigo + '--'); 
                          
             }else{
               clearInterval(intervalMenos);
-              console.log("else menos");  
+           //   console.log("else menos");  
               this.flag = true;                     
             }
            
