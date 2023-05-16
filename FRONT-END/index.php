@@ -285,6 +285,98 @@
             </div>
         </section>
 
+        <!--DASH BOARD DARK -->
+        <section class="dash-dark">
+            <div class="caixa">
+                <span class="icon-close">
+                    <ion-icon name="close"></ion-icon>
+                </span>
+
+                <div class="titulo-div">
+                    <h2>DashBoard - Dark</h2>                           
+                </div>
+                          
+                    <!-- PROBLEMA DE POSICIONAMENTO DAS DIVS RESULVIDO-->
+                    <section class="container">                   
+                        
+                        <div class="card">
+                            <div class="percent" style="--clr:#04fc43;--num:100">
+                            <div class="dot"></div> 
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>100<span>%</span></h2>
+                                    <p>HTML</p>
+                                </div>
+                            </div> 
+                            </div> 
+
+
+                            <div class="card">
+                                <div class="percent" style="--clr:#fc04fc;--num:80">
+                                <div class="dot"></div> 
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>80<span>%</span></h2>
+                                    <p>MYSQL</p>
+                                </div>
+                                </div> 
+                            </div> 
+
+
+                            <div class="card">
+                                <div class="percent" style="--clr:#ebfc04;--num:60">
+                                <div class="dot"></div> 
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>60<span>%</span></h2>
+                                    <p>JAVASCRIPT</p>
+                                </div>
+                                </div> 
+                            </div> 
+
+
+                            <div class="card">
+                                <div class="percent" style="--clr:#00d9ff;--num:40">
+                                <div class="dot"></div> 
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>40<span>%</span></h2>
+                                    <p>CSS</p>
+                                </div>
+                                </div> 
+                            </div> 
+
+
+                            <div class="card">
+                                <div class="percent" style="--clr:#ff002b;--num:20">
+                                <div class="dot"></div> 
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>20<span>%</span></h2>
+                                    <p>REDIS</p>
+                                </div>
+                                </div> 
+                            </div>     
+
+                    </section>      
+            </div>
+        </section>
+
         <!--CONTATO -->
         <section class="contato">
             <div class="caixa">
