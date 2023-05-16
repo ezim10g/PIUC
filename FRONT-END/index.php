@@ -307,8 +307,9 @@
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>100<span>%</span></h2>
-                                    <p>HTML</p>
+                                    
+                                    <h2>100 <span>km/h</span></h2>  
+                                    <p>Vento</p>         
                                 </div>
                             </div> 
                             </div> 
@@ -322,8 +323,8 @@
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>80<span>%</span></h2>
-                                    <p>MYSQL</p>
+                                    <h2>8.00<span> v</span></h2>
+                                    <p>Tensão</p>
                                 </div>
                                 </div> 
                             </div> 
@@ -337,8 +338,8 @@
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>60<span>%</span></h2>
-                                    <p>JAVASCRIPT</p>
+                                    <h2>60<span>Rpm</span></h2>
+                                    <p>Rotações</p>
                                 </div>
                                 </div> 
                             </div> 
@@ -352,8 +353,8 @@
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>40<span>%</span></h2>
-                                    <p>CSS</p>
+                                    <h2>40<span>º</span></h2>
+                                    <p>YAW</p>
                                 </div>
                                 </div> 
                             </div> 
@@ -367,8 +368,8 @@
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>20<span>%</span></h2>
-                                    <p>REDIS</p>
+                                    <h2>20<span>º</span></h2>
+                                    <p>Pitch</p>
                                 </div>
                                 </div> 
                             </div>     
