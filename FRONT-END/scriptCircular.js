@@ -25,12 +25,12 @@ class CircularProgressBar{
 
 
   getValue(recebido){
-    
-    
+  
+
     if(this.valorAntigo === '-'){
       this.valorAntigo = 0;
       this.setProgresso(0);
-     
+
       
     }else{
           
@@ -38,20 +38,27 @@ class CircularProgressBar{
       if(recebido == this.valorAntigo && this.flag == true){
        
       }
-
         let delay = 4;
 
         if(recebido > this.valorAntigo && this.flag == true){
           this.flag = false;
-
+          
           const intervalMais = setInterval(() => {
 
             if (recebido > this.valorAntigo) {     
-              this.setProgresso(++this.valorAntigo);
-              //console.log(this.valorAntigo + '++');              
+              if(this == circularProgressBarTensao){                
+                if(( recebido - this.valorAntigo) > 0.02){
+                    this.setProgresso((this.valorAntigo += 0.02).toFixed(2));                    
+                }else{                 
+                  this.setProgresso(this.valorAntigo +=  recebido - this.valorAntigo);                             
+                }                                            
+              }else          
+              this.setProgresso(++this.valorAntigo);               
+           //   console.log(this.valorAntigo + '++');
+                         
             }else{
               clearInterval(intervalMais);  
-              //console.log("else mais");
+             // console.log("else mais");
               this.flag = true;                    
             }
           
@@ -60,15 +67,23 @@ class CircularProgressBar{
         
         }else if(recebido < this.valorAntigo && this.flag == true){
           this.flag = false;
-
+         
           const intervalMenos = setInterval(() => {
 
-            if (recebido < this.valorAntigo) {                         
+            if (recebido < this.valorAntigo) { 
+              if(this == circularProgressBarTensao){              
+                if((this.valorAntigo - recebido) > 0.02){
+                    this.setProgresso((this.valorAntigo -= 0.02).toFixed(2));
+                }else{                  
+                  this.setProgresso(this.valorAntigo -= this.valorAntigo - recebido);                               
+                }
+              }else                         
               this.setProgresso(--this.valorAntigo);
-              //console.log(this.valorAntigo + '--');              
+             // console.log(this.valorAntigo + '--'); 
+                         
             }else{
               clearInterval(intervalMenos);
-              //console.log("else menos");  
+           //   console.log("else menos");  
               this.flag = true;                     
             }
            
@@ -96,8 +111,8 @@ function lerRedis() {
   
  
   $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
-    circularProgressBarVento.getValue(data.vento);
-    circularProgressBarTensao.setProgresso(data.tensao);
+    circularProgressBarVento.getValue(data.vento);    
+    circularProgressBarTensao.getValue(data.tensao);
     circularProgressBarRPM.getValue(data.rpm);    
     circularProgressBarYAW.getValue(data.yaw);    
     circularProgressBarPitch.getValue(data.pitch);
