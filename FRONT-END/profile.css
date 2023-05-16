@@ -98,42 +98,105 @@
 
   #fotoPerfil{
     width: 300px;
-    height: 300px;
     display:flex;
+    
   }
 
   #fotoPerfil #imgPerfil{
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     border: 3px solid rgb(93, 6, 119);
   }
 
   #fotoPerfil #cam-icon{
     position:relative;
-    width: 30%;
-    height: 30%;
+    width: 90px;
+    height: 90px;
     top: 210px;
     right: 100px;
     border-radius: 50%;
     cursor: pointer;
   }
 
-  .container-info{
-    display: flex;
-    flex-direction: row;
-    width: 600px;
-
-    background-color: aqua;
-    
-  }
 
   .infoPerfil{
     box-sizing: border-box;
     width: 300px;
-    height: 100%;
-    padding:  40px 10px 10px 40px ;
+    height: 300px;
+    padding:  40px 20px 0px 20px ;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.199);
+    border: 1px solid white;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
 
   }
 
+  .infoPerfil button{
+    background-color: #2b98a7; /* Green */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+  }
+
+  .buttons{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content:space-between;
+    margin: 10px 0 10px 0;
+  }
+
+.Perfil{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+align-items: center;
+padding: 0px 15% 0 15%;
+
+}
+
+.choose-imagens{
+    position: absolute;
+    width: 70vw; 
+    height: 50vh;
+    background: #00000075;
+    border: 1px solid rgba(255, 255, 255) ;
+    border-radius: 20px;
+    backdrop-filter: blur(3px); /*Efeito vidro jateado transparente*/
+    box-shadow: 0 0 30px rgba(0,0,0, .5);
+    transform: scale(0); /*oculta a div para ela ser mostrada com o botão login do header*/
+    transition: transform .5s ease, height .2s ease;
+    color: white;
+    padding: 20px;
+}
+
+.ativar{
+  transform: scale(1);
+}
+
+.fotos-perfil{
+  display: flex;
+  width: 100%;
+  height: 90%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   
+}
+
+.fotos-perfil img{
+  width: 30%;
+  height: fit-content;
+  border: 1px solid white;
+}
