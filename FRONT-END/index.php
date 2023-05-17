@@ -151,61 +151,68 @@
                 <div class="titulo-div">
                     <h2>Sobre nós</h2>
                 </div>
-                
-                <div class="container">
 
-                    <div class="Cards" style="--clr:#009688;">
+                <div class="container-geral">   
+                
+                <div class="container0">
+                    <div class="container1"></div>
+                    <div class="container2"></div>
+                </div>
+
+                <div class="container">
+                
+                    <div class="Cards" style="--clr:#000000;">
                         <div class="imgBx">
                             <img src="./imagens/ezio.png"></div>
                         <div class="content">
-                            <h2>Ezio Vieira </h2>
-                            <p class="p">Técnico em desenvolvimento de sistemas - Senai
-                            </p>
+                            <h2>Ezio Vieira</h2>
+                            <p class="p">Técnico em desenvolvimento de sistemas - Senai 
+
+                            </p> 
                             <div class="link">
-                                <a href="https://github.com/ezim10g"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="https://github.com/ezim10g"><img src="./imagens/github.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href="mailto:ezim10g@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="mailto:ezim10g@gmail.com"><img src="./imagens/gmail.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href=" https://wa.me/5511973800160?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href=" https://wa.me/5511973800160?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
 
                             </div>
                         </div>
                     </div>
 
-                    <div class="Cards" style="--clr:#ff3e7f;">
+                    <div class="Cards" style="--clr:#000000;">
                         <div class="imgBx">
                             <img src="./imagens/davyd.png"></div>
                         <div class="content">
-                            <h2>Davyd Cristiano </h2>
+                            <h2>Davyd Cristiano</h2>
                             <p class="p">Técnico em desenvolvimento de sistemas - Senai
                             </p>
                             <div class="link">
-                                <a href="https://github.com/davydcristiano"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="https://github.com/davydcristiano"><img src="./imagens/github.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href="mailto:davyd.senai@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="mailto:davyd.senai@gmail.com"><img src="./imagens/gmail.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href=" https://wa.me/5511967396200?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href=" https://wa.me/5511967396200?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
 
                             </div>
                         </div>
                     </div>
 
-
-                    <div class="Cards" style="--clr:#03a9f4;">
+                    <div class="Cards" style="--clr:#000000;">
                         <div class="imgBx">
                             <img src="./imagens/caua.png"></div>
                         <div class="content">
-                            <h2>Cauã Rossi </h2>
+                            <h2>Cauã Rossi</h2>
                             <p class="p">Técnico em desenvolvimento de sistemas - Senai
                             </p>
                             <div class="link">
-                                <a href="https://github.com/CauaRossi"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="https://github.com/CauaRossi"><img src="./imagens/github.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href="mailto:cauarossi007@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="mailto:cauarossi007@gmail.com"><img src="./imagens/gmail.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href=" https://wa.me/5511952865053?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href=" https://wa.me/5511952865053?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
 
                             </div>
@@ -213,19 +220,19 @@
                         
                     </div>
 
-                    <div class="Cards" style="--clr:#4b03f4;">
+                    <div class="Cards" style="--clr:#000000;">
                         <div class="imgBx">
                             <img src="./imagens/emerson .png"></div>
                         <div class="content">
-                            <h2>Emerson Sotero </h2>
+                            <h2>Emerson Sotero</h2>
                             <p class="p">Técnico em desenvolvimento de sistemas - Senai
                             </p>
                             <div class="link">
-                                <a href="https://github.com/EmersonSotero"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="https://github.com/EmersonSotero"><img src="./imagens/github.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href="mailto:emersonsotero121@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="mailto:emersonsotero121@gmail.com"><img src="./imagens/gmail.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href=" https://wa.me/5511959318255?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href=" https://wa.me/5511959318255?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
 
                             </div>
@@ -233,7 +240,10 @@
 
 
                     </div>
-  
+                
+
+                </div>
+
             </div>
         </section>
 
