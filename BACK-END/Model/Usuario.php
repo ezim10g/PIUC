@@ -86,5 +86,10 @@ class Usuario{
         return $result;
 
     }
+
+    function setFotoPerfil($fotoPerfil, $id){
+        $perfil = new PerfilDAO();
+        $perfil->setFotoPerfil($fotoPerfil, $id);
+    }
 }
 

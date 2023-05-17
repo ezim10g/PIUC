@@ -1,3 +1,6 @@
+
+
+
 const perfil = document.getElementById("profileBtn");
 const submenu = document.getElementById("submenuperfil");
 let cont = 0;
@@ -16,8 +19,8 @@ if(perfil){
     });
 }
 
-
+const imagensdiv = document.getElementById("imgSelect");
 $("#cam-icon").click(function(){
-    console.log("ok")
+    imagensdiv.classList.add("ativar");
   });
 

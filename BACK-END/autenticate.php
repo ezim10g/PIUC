@@ -1,4 +1,7 @@
 <?php
+$time = 2 * 60 * 60; // Defini 2 horas
+
+session_set_cookie_params($time);
 session_start();
 //função que retorna true se o usuário estiver autenticado e false se não
 function verificar_autenticacao() {
@@ -14,9 +17,7 @@ function verificar_autenticacao() {
 
 /*
 
-$time = 2 * 60 * 60; // Defini 2 horas
 
-session_set_cookie_params($time);
 session_start();
 
 
