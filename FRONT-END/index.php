@@ -310,7 +310,7 @@
                     <section class="container">                   
                         
                         <div class="card">
-                            <div class="percent" style="--clr:#04fc43;--num:100">
+                            <div class="percent" id="percent-vento" style="--clr:#04fc43;--num:100">
                             <div class="dot"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
@@ -318,7 +318,7 @@
                                 </svg>
                                 <div class="number">
                                     
-                                    <h2>100 <span>km/h</span></h2>  
+                                    <h2 id="valor-vento">-<span>km/h</span></h2>  
                                     <p>Vento</p>         
                                 </div>
                             </div> 

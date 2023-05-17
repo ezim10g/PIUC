@@ -1,7 +1,9 @@
 
-class CircularProgressBar{
+var dark = true;
 
-   constructor(valorMax, medida,idProgressBar, idValueProgress){
+class CircularProgressBar{
+  
+  constructor(valorMax, medida,idProgressBar, idValueProgress){
     this.medida = medida;
     this.graus = 360 / valorMax;
     this.idProgressBar = document.getElementById(idProgressBar);
@@ -15,12 +17,21 @@ class CircularProgressBar{
   setProgresso(progress){
     this.idValueProgress.textContent = progress + this.medida;
  
-    this.idProgressBar.style.backgroundImage = `conic-gradient(
-      #DC143C ${progress * this.graus -270 }deg,
-       #4936f5  ${progress * this.graus -50 }deg,
-       #1fc1de ${progress * this.graus}deg,
-       #cadcff ${progress * this.graus+50}deg            
-  )`;
+    if(!dark){
+      this.idProgressBar.style.backgroundImage = `conic-gradient(
+        #DC143C ${progress * this.graus -270 }deg,
+        #4936f5  ${progress * this.graus -50 }deg,
+        #1fc1de ${progress * this.graus}deg,
+        #cadcff ${progress * this.graus+50}deg            
+        )`;
+  
+    }
+    
+    if(dark){
+      this.idProgressBar.style.setProperty('--num', progress);
+    }
+   
+
   }
 
 
@@ -103,6 +114,7 @@ let circularProgressBarRPM = new CircularProgressBar(1500, " Rpm","circular-prog
 let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progress-pitch","value-container-pitch");
 
 
+let circularProgressBarVentoDark = new CircularProgressBar(100, " Km","percent-vento","valor-vento");
 
 
 function lerRedis() {
