@@ -14,6 +14,7 @@
      <script src="../BACK-END/IOT/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleCircular.css">
+    <link rel="stylesheet" href="styleCircularDark.css">
     <link rel="stylesheet" href="styleCards.css">
     <link rel="stylesheet" href="profile.css">
     
@@ -306,80 +307,85 @@
                     <h2>DashBoard - Dark</h2>                           
                 </div>
                           
-                    <!-- PROBLEMA DE POSICIONAMENTO DAS DIVS RESULVIDO-->
+                    <!-- PROBLEMA DE POSICIONAMENTO DAS DIVS RESOLVIDO-->
                     <section class="container">                   
                         
                         <div class="card">
-                            <div class="percent" id="percent-vento" style="--clr:#04fc43;--num:100">
-                            <div class="dot"></div> 
+                            <div class="percent" id="line-vento" style="--clr:#04fc43;--num:90">
+                            <div class="dot" id="dot-vento"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    
-                                    <h2 id="valor-vento">100<span>km/h</span></h2>  
-                                    <p>Vento</p>         
+                                    <p>Vento</p>     
+                                    <h2 id="valor-vento">-</h2>  
+                                    <span><h3>km/h</h3></span>
+                                        
                                 </div>
                             </div> 
                             </div> 
 
 
                             <div class="card">
-                                <div class="percent" style="--clr:#fc04fc;--num:80">
-                                <div class="dot"></div> 
+                                <div class="percent" id="line-tensao" style="--clr:#fc04fc;--num:80">
+                                <div class="dot" id="dot-tensao"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>80<span> v</span></h2>
                                     <p>Tensão</p>
+                                    <h2 id="valor-tensao">-</h2>
+                                    <span><h3>volts</h3></span>
                                 </div>
                                 </div> 
                             </div> 
 
 
                             <div class="card">
-                                <div class="percent" style="--clr:#ebfc04;--num:60">
-                                <div class="dot"></div> 
+                                <div class="percent" id="line-rpm" style="--clr:#ebfc04;--num:60">
+                                <div class="dot" id="dot-rpm"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>60<span>Rpm</span></h2>
                                     <p>Rotações</p>
+                                    <h2 id="valor-rpm">-</h2>
+                                    <span><h3>Rpm</h3></span>
                                 </div>
                                 </div> 
                             </div> 
 
 
                             <div class="card">
-                                <div class="percent" style="--clr:#00d9ff;--num:40">
-                                <div class="dot"></div> 
+                                <div class="percent"  id="line-yaw" style="--clr:#00d9ff;--num:40">
+                                <div class="dot" id="dot-yaw"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>40<span>º</span></h2>
-                                    <p>YAW</p>
+                                    <p>YAW</p>   
+                                    <h2 id="valor-yaw" >-</h2>
+                                    <span><h3>Graus</h3></span>
                                 </div>
                                 </div> 
                             </div> 
 
 
                             <div class="card">
-                                <div class="percent" style="--clr:#ff002b;--num:20">
-                                <div class="dot"></div> 
+                                <div class="percent"  id="line-pitch" style="--clr:#ff002b;--num:20">
+                                <div class="dot" id="dot-pitch"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>20<span>º</span></h2>
                                     <p>Pitch</p>
+                                    <h2 id="valor-pitch">-</h2>                                    
+                                    <span><h3>Graus</h3></span>
                                 </div>
                                 </div> 
                             </div>     
