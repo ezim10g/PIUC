@@ -91,5 +91,10 @@ class Usuario{
         $perfil = new PerfilDAO();
         $perfil->setFotoPerfil($fotoPerfil, $id);
     }
+
+    function getFotoPerfil($id){
+        $result = $this->usuarioDAO->getInfo($id);
+        return $result;
+    }
 }
 
