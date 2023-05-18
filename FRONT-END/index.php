@@ -308,7 +308,7 @@
                                 </svg>
                                 <div class="number">
                                     
-                                    <h2 id="valor-vento">-<span>km/h</span></h2>  
+                                    <h2 id="valor-vento">100<span>km/h</span></h2>  
                                     <p>Vento</p>         
                                 </div>
                             </div> 
@@ -323,7 +323,7 @@
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>8.00<span> v</span></h2>
+                                    <h2>80<span> v</span></h2>
                                     <p>Tensão</p>
                                 </div>
                                 </div> 

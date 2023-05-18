@@ -116,6 +116,8 @@ let circularProgressBarPitch = new CircularProgressBar(90, "º","circular-progre
 
 let circularProgressBarVentoDark = new CircularProgressBar(100, " Km","percent-vento","valor-vento");
 
+//razão de 12 = 8.34  manda circularProgressBarVentoDark.setProgresso(8.34*12)
+
 
 function lerRedis() {
 
