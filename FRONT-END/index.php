@@ -14,6 +14,7 @@
      <script src="../BACK-END/IOT/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleCircular.css">
+    <link rel="stylesheet" href="styleCircularDark.css">
     <link rel="stylesheet" href="styleCards.css">
     <link rel="stylesheet" href="profile.css">
     
@@ -151,61 +152,68 @@
                 <div class="titulo-div">
                     <h2>Sobre nós</h2>
                 </div>
-                
-                <div class="container">
 
-                    <div class="Cards" style="--clr:#009688;">
+                <div class="container-geral">   
+                
+                <div class="container0">
+                    <div class="container1"></div>
+                    <div class="container2"></div>
+                </div>
+
+                <div class="container">
+                
+                    <div class="Cards" style="--clr:#000000;">
                         <div class="imgBx">
                             <img src="./imagens/ezio.png"></div>
                         <div class="content">
-                            <h2>Ezio Vieira </h2>
-                            <p class="p">Técnico em desenvolvimento de sistemas - Senai
-                            </p>
+                            <h2>Ezio Vieira</h2>
+                            <p class="p">Técnico em desenvolvimento de sistemas - Senai 
+
+                            </p> 
                             <div class="link">
-                                <a href="https://github.com/ezim10g"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="https://github.com/ezim10g"><img src="./imagens/github.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href="mailto:ezim10g@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="mailto:ezim10g@gmail.com"><img src="./imagens/gmail.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href=" https://wa.me/5511973800160?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href=" https://wa.me/5511973800160?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
 
                             </div>
                         </div>
                     </div>
 
-                    <div class="Cards" style="--clr:#ff3e7f;">
+                    <div class="Cards" style="--clr:#000000;">
                         <div class="imgBx">
                             <img src="./imagens/davyd.png"></div>
                         <div class="content">
-                            <h2>Davyd Cristiano </h2>
+                            <h2>Davyd Cristiano</h2>
                             <p class="p">Técnico em desenvolvimento de sistemas - Senai
                             </p>
                             <div class="link">
-                                <a href="https://github.com/davydcristiano"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="https://github.com/davydcristiano"><img src="./imagens/github.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href="mailto:davyd.senai@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="mailto:davyd.senai@gmail.com"><img src="./imagens/gmail.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href=" https://wa.me/5511967396200?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href=" https://wa.me/5511967396200?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
 
                             </div>
                         </div>
                     </div>
 
-
-                    <div class="Cards" style="--clr:#03a9f4;">
+                    <div class="Cards" style="--clr:#000000;">
                         <div class="imgBx">
                             <img src="./imagens/caua.png"></div>
                         <div class="content">
-                            <h2>Cauã Rossi </h2>
+                            <h2>Cauã Rossi</h2>
                             <p class="p">Técnico em desenvolvimento de sistemas - Senai
                             </p>
                             <div class="link">
-                                <a href="https://github.com/CauaRossi"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="https://github.com/CauaRossi"><img src="./imagens/github.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href="mailto:cauarossi007@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="mailto:cauarossi007@gmail.com"><img src="./imagens/gmail.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href=" https://wa.me/5511952865053?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href=" https://wa.me/5511952865053?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
 
                             </div>
@@ -213,19 +221,19 @@
                         
                     </div>
 
-                    <div class="Cards" style="--clr:#4b03f4;">
+                    <div class="Cards" style="--clr:#000000;">
                         <div class="imgBx">
                             <img src="./imagens/emerson .png"></div>
                         <div class="content">
-                            <h2>Emerson Sotero </h2>
+                            <h2>Emerson Sotero</h2>
                             <p class="p">Técnico em desenvolvimento de sistemas - Senai
                             </p>
                             <div class="link">
-                                <a href="https://github.com/EmersonSotero"><img src="./imagens/github.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="https://github.com/EmersonSotero"><img src="./imagens/github.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href="mailto:emersonsotero121@gmail.com"><img src="./imagens/gmail.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href="mailto:emersonsotero121@gmail.com"><img src="./imagens/gmail.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
-                                <a href=" https://wa.me/5511959318255?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40px" class="media-object  img-responsive img-thumbnail"></a>
+                                <a href=" https://wa.me/5511959318255?text=sua%20mensagem"><img src="./imagens/whatsapp.png" width="40%" class="media-object  img-responsive img-thumbnail"></a>
 
 
                             </div>
@@ -233,7 +241,10 @@
 
 
                     </div>
-  
+                
+
+                </div>
+
             </div>
         </section>
 
@@ -296,80 +307,85 @@
                     <h2>DashBoard - Dark</h2>                           
                 </div>
                           
-                    <!-- PROBLEMA DE POSICIONAMENTO DAS DIVS RESULVIDO-->
+                    <!-- PROBLEMA DE POSICIONAMENTO DAS DIVS RESOLVIDO-->
                     <section class="container">                   
                         
                         <div class="card">
-                            <div class="percent" style="--clr:#04fc43;--num:100">
-                            <div class="dot"></div> 
+                            <div class="percent" id="line-vento" style="--clr:#04fc43;--num:90">
+                            <div class="dot" id="dot-vento"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    
-                                    <h2>100 <span>km/h</span></h2>  
-                                    <p>Vento</p>         
+                                    <p>Vento</p>     
+                                    <h2 id="valor-vento">-</h2>  
+                                    <span><h3>km/h</h3></span>
+                                        
                                 </div>
                             </div> 
                             </div> 
 
 
                             <div class="card">
-                                <div class="percent" style="--clr:#fc04fc;--num:80">
-                                <div class="dot"></div> 
+                                <div class="percent" id="line-tensao" style="--clr:#fc04fc;--num:80">
+                                <div class="dot" id="dot-tensao"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>8.00<span> v</span></h2>
                                     <p>Tensão</p>
+                                    <h2 id="valor-tensao">-</h2>
+                                    <span><h3>volts</h3></span>
                                 </div>
                                 </div> 
                             </div> 
 
 
                             <div class="card">
-                                <div class="percent" style="--clr:#ebfc04;--num:60">
-                                <div class="dot"></div> 
+                                <div class="percent" id="line-rpm" style="--clr:#ebfc04;--num:60">
+                                <div class="dot" id="dot-rpm"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>60<span>Rpm</span></h2>
                                     <p>Rotações</p>
+                                    <h2 id="valor-rpm">-</h2>
+                                    <span><h3>Rpm</h3></span>
                                 </div>
                                 </div> 
                             </div> 
 
 
                             <div class="card">
-                                <div class="percent" style="--clr:#00d9ff;--num:40">
-                                <div class="dot"></div> 
+                                <div class="percent"  id="line-yaw" style="--clr:#00d9ff;--num:40">
+                                <div class="dot" id="dot-yaw"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>40<span>º</span></h2>
-                                    <p>YAW</p>
+                                    <p>YAW</p>   
+                                    <h2 id="valor-yaw" >-</h2>
+                                    <span><h3>Graus</h3></span>
                                 </div>
                                 </div> 
                             </div> 
 
 
                             <div class="card">
-                                <div class="percent" style="--clr:#ff002b;--num:20">
-                                <div class="dot"></div> 
+                                <div class="percent"  id="line-pitch" style="--clr:#ff002b;--num:20">
+                                <div class="dot" id="dot-pitch"></div> 
                                 <svg>
                                     <circle cx="70" cy="70" r="70"></circle>
                                     <circle cx="70" cy="70" r="70"></circle>
                                 </svg>
                                 <div class="number">
-                                    <h2>20<span>º</span></h2>
                                     <p>Pitch</p>
+                                    <h2 id="valor-pitch">-</h2>                                    
+                                    <span><h3>Graus</h3></span>
                                 </div>
                                 </div> 
                             </div>     
