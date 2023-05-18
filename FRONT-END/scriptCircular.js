@@ -29,6 +29,8 @@ class CircularProgressBar{
     
     if(dark){
       this.idProgressBar.style.setProperty('--num', progress);
+      this.idProgressBar.style.animation = "none";
+      setTimeout(() => this.idProgressBar.style.animation = 'animateDot 2s linear forwards', 5);
     }
    
 
