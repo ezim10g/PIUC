@@ -308,7 +308,7 @@
                 </div>
                           
                     <!-- PROBLEMA DE POSICIONAMENTO DAS DIVS RESOLVIDO-->
-                    <section class="container">                   
+                    <section class="container-dark">                   
                         
                         <div class="card">
                             <div class="percent" id="line-vento" style="--clr:#04fc43;--num:90">

@@ -1,6 +1,6 @@
 ﻿/************************************************************css do login dark ***************************************************************************/
 
-.container{
+.container-dark{
     position: relative;
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@
     gap: 20px;
 }
 
-.container .card {
+.container-dark .card {
     position: relative;
     width: auto;
     height: auto;
@@ -22,20 +22,20 @@
 
 }
 
-.container .card .percent {
+.container-dark .card .percent {
     position: relative;
     width: 150px;
     height: 150px;
 }
 
-.container .card .percent svg {
+.container-dark .card .percent svg {
     position: relative;
     width: 150px;
     height: 150px; 
     transform: rotate(270deg);
 }
 
-.container .card .percent svg circle {
+.container-dark .card .percent svg circle {
     width: 100px;
     height: 100px;  
     fill: transparent;
@@ -46,7 +46,7 @@
 }
 
 
-.container .card .percent svg circle:nth-child(2){
+.container-dark .card .percent svg circle:nth-child(2){
     stroke: var(--clr);
     stroke-dasharray: 440;    
     stroke-dashoffset: calc(440 - (440 * var(--num)/100));   
