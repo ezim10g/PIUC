@@ -24,3 +24,11 @@ $("#cam-icon").click(function(){
     imagensdiv.classList.add("ativar");
   });
 
+const infoPerfil = document.getElementById("container-infoPerfil");
+$("#btnEditar").click(function(){
+    console.log("ok");
+    if(infoPerfil){
+        console.log("okok");
+    }
+    infoPerfil.innerHTML = "<form action='../BACK-END/Controller/editarPerfil.php' method='post'><label>Novo Email</label><input type='email' name='email'><label>Novo Nome</label><input type='text' name='nome' ><label>Envio de NewsLetter?</label><select name='newsLetter'><option value='sim'>Sim!</option><option value='nao'>Não!</option></select></form>";
+});

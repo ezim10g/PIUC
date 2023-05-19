@@ -192,11 +192,18 @@ padding: 0px 15% 0 15%;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: #2b98a7;
   
 }
 
-.fotos-perfil img{
-  width: 30%;
-  height: fit-content;
-  border: 1px solid white;
+.foto-escolha {
+  width: 100%;
+  height: 90%;
+  background-color: #00000065;
+  padding-right: 10px;
+}
+
+.foto-escolha img{
+  width: 200px;
+  height: 200px;
 }
