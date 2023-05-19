@@ -185,7 +185,7 @@
                         <div class="imgBx">
                             <img src="./imagens/davyd.png"></div>
                         <div class="content">
-                            <h2>Davyd Cristiano</h2>
+                            <h2>Davyd C</h2>
                             <p class="p">Técnico em desenvolvimento de sistemas - Senai
                             </p>
                             <div class="link">
@@ -224,7 +224,7 @@
                         <div class="imgBx">
                             <img src="./imagens/emerson .png"></div>
                         <div class="content">
-                            <h2>Emerson Sotero</h2>
+                            <h2>Emerson S</h2>
                             <p class="p">Técnico em desenvolvimento de sistemas - Senai
                             </p>
                             <div class="link">
