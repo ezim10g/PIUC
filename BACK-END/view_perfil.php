@@ -7,7 +7,7 @@
                 <div class="titulo-div">
                         <h2>Perfil</h2>
                 </div>
-                <div class="Perfil">
+                <div class="Perfil" id="container-perfil">
 
                         <div id="fotoPerfil">
                                 <img src="../FRONT-END/assets/<?php echo $_SESSION['fotoPerfil']; ?>" class="img-perfil"
@@ -15,7 +15,7 @@
                                 <img src="../FRONT-END/assets/cam-icon.webp" alt="" id="cam-icon">
                         </div>
 
-                        <div class="infoPerfil">
+                        <div class="infoPerfil" id="container-infoPerfil">
 
                                 <p><strong>Nome de Usuário:</strong>
                                         <?php echo $_SESSION['nome']; ?>
@@ -42,7 +42,7 @@
                                         }
                                         ; ?>
                                 </p>
-                                <div class="buttons"><button>Editar Perfil</button><button>Excluir Conta</button></div>
+                                <div class="buttons"><button id="btnEditar">Editar Perfil</button><button>Excluir Conta</button></div>
 
                         </div>
                 </div>
@@ -53,17 +53,17 @@
                         <form action="../BACK-END/Controller/MudarFotoPerfil.php" method="post">
                         <div class="fotos-perfil">
                              <div class="foto-escolha">
-                                        <input type="radio" name="foto" id="" value="profile.jpg">
+                                        <input type="radio" name="foto"value="profile.jpg">
                                         <img src="../FRONT-END/assets/profile.jpg" alt="">
 
                                 </div>
                                 <div class="foto-escolha">
-                                        <input type="radio" name="foto" id="" value="profile2.png">
+                                        <input type="radio" name="foto"  value="profile2.png">
                                         <img src="../FRONT-END/assets/profile2.png" alt="">
 
                                 </div>
                                 <div class="foto-escolha">
-                                        <input type="radio" name="foto" id="" value="profile3.png">
+                                        <input type="radio" name="foto"  value="profile3.png">
                                         <img src="../FRONT-END/assets/profile3.png" alt="">
                                 </div>   
                         </div>

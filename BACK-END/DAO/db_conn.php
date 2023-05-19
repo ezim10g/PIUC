@@ -11,7 +11,7 @@ try{
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "funcionou";
 }catch(PDOException $erro){
-    echo "erro ao conectar ao banco de dados: " . e->$getMessage();
+    echo "erro ao conectar ao banco de dados: " . $e->$getMessage();
     $conn = null;
 }
 
