@@ -207,10 +207,10 @@ function lerRedis() {
  }else{
     $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
       circularProgressBarVentoDark.getValueDark(data.vento);
-      circularProgressBarTensaoDark.getValueDark(data.vento);
-      circularProgressBarYAWDark.getValueDark(data.vento);
-      circularProgressBarRPMDark.getValueDark(data.vento);
-      circularProgressBarPitchDark.getValueDark(data.vento);
+      circularProgressBarTensaoDark.getValueDark(data.tensao);
+      circularProgressBarRPMDark.getValueDark(data.rpm);
+      circularProgressBarYAWDark.getValueDark(data.yaw);      
+      circularProgressBarPitchDark.getValueDark(data.pitch);
     });
     
  }
