@@ -1,8 +1,8 @@
 <section class="aba-perfil">
 
-        <div class="caixa">
-                <span class="icon-close">
-                        <ion-icon name="close"></ion-icon>
+        <div class="caixa" id="conteudo-perfil">
+                <span class="icon-close" id="btnFechar">
+                        <ion-icon name="close" ></ion-icon>
                 </span>
                 <div class="titulo-div">
                         <h2>Perfil</h2>
@@ -77,3 +77,7 @@
 
         </div>
 </section>
+<script>
+
+
+</script>

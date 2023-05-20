@@ -88,9 +88,3 @@ iconClose.addEventListener('click',()=>{
     wrapper.classList.remove('active');
 });
 
-$(".btnPerfil").click(function(){
-    $(".aba-perfil .caixa").addClass("ativar");
-    submenu.classList.remove("submenuactive");
-    cont = 0;
-  });
-

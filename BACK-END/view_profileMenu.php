@@ -5,7 +5,7 @@
         <p><?php echo $_SESSION['nome'];?></p>
     </div>
 </div>
-<div  class="sub-menu-profile-container">
+
         <div class="sub-menu-profile" id="submenuperfil">
             <div class="user-info">
             <img src="../FRONT-END/assets/<?php echo $_SESSION['fotoPerfil'];?>" class="profile-img" alt="imagem de perfil">
@@ -19,5 +19,5 @@
                     <li><a class="itens-submenu" href="../BACK-END/Controller/LogoutController.php">Sair</a></li>
                 </ul>
             </div>
-        </div>
+        
     </div>
