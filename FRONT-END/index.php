@@ -186,7 +186,7 @@
                         <div class="imgBx">
                             <img src="./imagens/davyd.png"></div>
                         <div class="content">
-                            <h2>Davyd Cristiano</h2>
+                            <h2>Davyd C</h2>
                             <p class="p">Técnico em desenvolvimento de sistemas - Senai
                             </p>
                             <div class="link">
@@ -225,7 +225,7 @@
                         <div class="imgBx">
                             <img src="./imagens/emerson .png"></div>
                         <div class="content">
-                            <h2>Emerson Sotero</h2>
+                            <h2>Emerson S</h2>
                             <p class="p">Técnico em desenvolvimento de sistemas - Senai
                             </p>
                             <div class="link">
@@ -308,7 +308,7 @@
                 </div>
                           
                     <!-- PROBLEMA DE POSICIONAMENTO DAS DIVS RESOLVIDO-->
-                    <section class="container">                   
+                    <section class="container-dark">                   
                         
                         <div class="card">
                             <div class="percent" id="line-vento" style="--clr:#04fc43;--num:90">
