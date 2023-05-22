@@ -401,10 +401,37 @@
                     <ion-icon name="close"></ion-icon>
                 </span>
                 <div class="titulo-div">
-                    <h2>Contato</h2>
-
-                
+                    <h2>Contato</h2>                                                       
                 </div>
+
+                <div class="form-box login">
+                    <form action="">
+
+                        <div class="input-box">              
+                            <span class="icon"> <ion-icon name="person"></ion-icon></span>
+                            <input type="text" name="nome" size="50%" required>
+                            <label>Nome</label>                                               
+                        </div>   
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="email" name="email" required>
+                            <label>Email</label>
+                        </div>                                                                                                          
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="information-circle-outline"></ion-icon></span>
+                            <input type="text" name="Assunto" required>
+                            <label>Assunto</label>
+                        </div>                                                                                                          
+                        
+                        <textarea name="mensagem" rows="5" maxlength="300" placeholder="Mensagem"></textarea>  
+                       
+                                
+                       
+                            
+                    
+                    </form>
+                </div>    
+                
             </div>
         </section>
 
@@ -412,10 +439,10 @@
         <section class="news">
             <div class="caixa">
                 <span class="icon-close">
-                    <ion-icon name="close"></ion-icon>
+                    <ion-icon name="close"></ion-icon>                   
                 </span>
                 <div class="titulo-div">
-                    <h2>Newsletter</h2>                                
+                    <h2>Newsletter</h2>                                              
                 </div>                
             </div>
         </section>

@@ -209,6 +209,25 @@ header {
     transition: 0.5s; /*animação focus*/
 }
 
+textarea{
+    position: relative;
+    margin-top: 2vh;
+    padding-inline: 2vw;
+    padding-block: 1vh;
+    background: transparent;
+    color: rgba(255,255,255);
+    border-color: rgb(255, 255, 255);
+    outline-width: 0;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    resize: none;
+   
+}
+textarea::placeholder {
+    color: rgba(255,255,255);
+  }
+
 /* animação do label digitar email e senha*/
 .input-box input:focus~label , .input-box input:valid~label{
     top: -5px;
