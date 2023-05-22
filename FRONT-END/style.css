@@ -211,7 +211,8 @@ header {
 
 textarea{
     position: relative;
-    margin-top: 2vh;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
     padding-inline: 2vw;
     padding-block: 1vh;
     background: transparent;
@@ -226,7 +227,8 @@ textarea{
 }
 textarea::placeholder {
     color: rgba(255,255,255);
-  }
+}
+
 
 /* animação do label digitar email e senha*/
 .input-box input:focus~label , .input-box input:valid~label{

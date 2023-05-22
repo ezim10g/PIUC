@@ -418,13 +418,14 @@
                             <label>Email</label>
                         </div>                                                                                                          
                         <div class="input-box">
-                            <span class="icon"><ion-icon name="information-circle-outline"></ion-icon></span>
+                            <span class="icon"><ion-icon name="information-circle"></ion-icon></span>
                             <input type="text" name="Assunto" required>
                             <label>Assunto</label>
                         </div>                                                                                                          
                         
-                        <textarea name="mensagem" rows="5" maxlength="300" placeholder="Mensagem"></textarea>  
-                       
+                        <textarea name="mensagem" rows="6" maxlength="300" placeholder="Mensagem"></textarea>  
+                      
+                        <button type="submit" class="btn">Enviar</button>
                                 
                        
                             
