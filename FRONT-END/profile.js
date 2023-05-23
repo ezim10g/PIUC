@@ -44,11 +44,6 @@ const menuPerfilInfo = document.getElementById('conteudo-perfil');
 
 const btnFecharPerfil = document.getElementById('btnFechar');
 
-btnFecharPerfil.addEventListener('click', ()=>{
-    console.log
-    
-});
-
 $('#btnFechar').click(function(){
     $(".aba-perfil .caixa").removeClass("ativar")
 })
