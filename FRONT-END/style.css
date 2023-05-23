@@ -531,17 +531,17 @@ color: rgb(97, 1, 187);
 @media screen and (max-width: 860px) {
 
     .navigation a {        
-        font-size: 1.1em;        
+        font-size: 0.9em;        
         margin-left: 2vw;
     }
 
     .logo {
-        font-size: 1.1rem;     
+        font-size: 1.5rem;     
     }
 
     .navigation .btnLogin-popup {
-        width: 80px;
-        height: 35px;
+        width: 90px;
+        height: 45px;
         font-size: 1.1em;
         margin-left: 2vw;
        
@@ -584,5 +584,9 @@ color: rgb(97, 1, 187);
    
  }
 
+ .navigation a {        
+    font-size: 0.9em;        
+   
+}
   
 }
