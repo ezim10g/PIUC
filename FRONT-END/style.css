@@ -525,3 +525,64 @@ color: rgb(97, 1, 187);
 }
 
 
+/*****************************************media query************************************/
+
+/*Diminuir o espaço e diminuir as letras*/
+@media screen and (max-width: 860px) {
+
+    .navigation a {        
+        font-size: 0.9em;        
+        margin-left: 2vw;
+    }
+
+    .logo {
+        font-size: 1.5rem;     
+    }
+
+    .navigation .btnLogin-popup {
+        width: 80px;
+        height: 35px;
+        font-size: 0.9em;
+        margin-left: 2vw;
+       
+    }
+    
+    header {
+       
+        padding: 20px 4vw;
+        z-index: 1;
+       
+        
+    }
+
+}
+
+
+/*transformar o menu em lista de linhas colum direction rows*/
+@media screen and (max-width: 540px) {
+
+    header {    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex;
+        justify-content: space-between;
+        align-items: center;
+         
+    }
+  
+}
+
+/*tentar adicionar menu amburguer*/
+@media screen and (max-width: 540px) {
+
+ nav.navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex;
+    justify-content: space-between;
+    align-items: center;    
+   
+ }
+ 
+  
+}
