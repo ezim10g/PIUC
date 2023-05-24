@@ -96,5 +96,11 @@ class Usuario{
         $result = $this->usuarioDAO->getInfo($id);
         return $result;
     }
+
+    function getNome(){
+        return $this->nome;
+    }
+
+    
 }
 
