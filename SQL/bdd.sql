@@ -5,7 +5,7 @@ USE PIUC;
 CREATE TABLE usuario(
 idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 nomeUsuario VARCHAR(25) NOT NULL,
-email varchar(255) UNIQUE NOT NULL,
+emailUsuario varchar(255) UNIQUE NOT NULL,
 senhaUsuario CHAR(60) NOT NULL
 );
 
@@ -75,7 +75,15 @@ idPerfil INT NOT NULL,
 idComentario INT NOT NULL,
 FOREIGN KEY(idPerfil) REFERENCES perfil(idPerfil),
 FOREIGN KEY(idComentario) REFERENCES comentario(idComentario)
-)
+);
+
+CREATE TABLE security(
+idSecurity INT PRIMARY KEY,
+idUsuario INT NOT NULL,
+token VARCHAR(60) NOT NULL,
+lastAcess DATETIME,
+created_at DATETIME,
+);
 
 CREATE VIEW vw_infoUsuario AS SELECT 
 usuario.idUsuario,
