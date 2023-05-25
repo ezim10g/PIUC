@@ -16,8 +16,7 @@ if($usuario->LogarUsuario($email,$senha)){
 
     $token = bin2hex(random_bytes(32));
     $_SESSION['token'] = $token;
-    header("location: ../../FRONT-END/index.php?message=Login feito com sucesso!");
-    exit();   
+    
 }else{
     header("location: ../../FRONT-END/index.php?loginerror=algum problema com os dados!");
     exit(); 
