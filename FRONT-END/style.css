@@ -526,8 +526,10 @@ color: rgb(97, 1, 187);
 
 
 /*************************************Menu hamburguer*****************************/
-.hamburger {
-    display: none;
+
+
+.navigation{
+    border-style: dotted;
 }
 
 .bar {
@@ -535,11 +537,12 @@ color: rgb(97, 1, 187);
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: white;
     opacity: 0;
 }
+
+
 
 /*****************************************media query************************************/
 
@@ -550,6 +553,7 @@ color: rgb(97, 1, 187);
         font-size: 0.9em;        
         margin-left: 2vw;
     }
+    
 
     .logo {
         font-size: 1.5rem;     
@@ -563,12 +567,9 @@ color: rgb(97, 1, 187);
        
     }
     
-    header {
-       
+    header {        
         padding: 20px 4vw;
-        z-index: 1;
-       
-        
+        z-index: 1;  
     }
 
 }
@@ -586,30 +587,30 @@ color: rgb(97, 1, 187);
          
     }
 
- nav.navigation{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex;
-    justify-content: space-between;
-    align-items: center;  
-  /*  opacity: 0;  */
-   
- }
+    nav.navigation{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex;
+        justify-content: space-between;
+        align-items: center;  
+    /*   display: none;*/
+    
+    }
 
- .navigation a {        
-    font-size: 0.9em;        
-   
-}
+    .navigation a {        
+        font-size: 0.9em;        
+    
+    }
 
-/*huamburguer*/
-.hamburger {
-    display: flex;
-    z-index: 20;
-}
+    /*huamburguer*/
+    .hamburguer{
+        display: block;
+        z-index: 20;
+    }
 
-.bar {
-    opacity: 1;
-    z-index: 20;
-}
+    .bar {
+        opacity: 1;
+        z-index: 20;
+    }
   
 }

@@ -27,6 +27,7 @@ require_once('../BACK-END/autenticate.php');
     
     <header>     
         <h2 class="logo"> Logo </h2>  
+           
         <nav class="navigation">
             <a class="inicioLink">Home</a>
             <a class="dashLink">DashBoard</a>
@@ -42,12 +43,12 @@ require_once('../BACK-END/autenticate.php');
             ?>
 
         </nav>
-        <!--menu hamburguer-->
-        <div class="hamburguer">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <!--menu hamburguer-->
+        <div class="hamburguer">   
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
 
     <main>
