@@ -27,7 +27,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 20px 50px;
     display: flex;
     justify-content: flex;
     justify-content: space-between;
@@ -41,11 +41,13 @@ header {
     font-size: 2rem;
     color: #fff;
     user-select: none;
+    align-self: flex-start;
 }
 
 .navigation{
     display: flex;
     align-items: center;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .navigation a {
@@ -527,10 +529,11 @@ color: rgb(97, 1, 187);
 
 /*************************************Menu hamburguer*****************************/
 
-
-.navigation{
-    border-style: dotted;
+.hamburguer{
+    align-self: flex-start;
 }
+
+
 
 .bar {
     display: block;
@@ -577,32 +580,36 @@ color: rgb(97, 1, 187);
 
 /*transformar o menu em lista de linhas colum direction rows*/
 /*tentar adicionar menu amburguer*/
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 520px) {
     header {    
         display: flex;
-     /*   flex-direction: column;*/
         justify-content: flex;
         justify-content: space-between;
-        align-items: center;
-         
+        align-items: center;       
     }
 
     nav.navigation{
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        gap: 20px;
         display: flex;
         flex-direction: column;
         justify-content: flex;
         justify-content: space-between;
         align-items: center;  
-    /*   display: none;*/
+    
     
     }
 
     .navigation a {        
-        font-size: 0.9em;        
-    
+        font-size: 0.9em; 
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;  
+           
     }
 
-    /*huamburguer*/
+
     .hamburguer{
         display: block;
         z-index: 20;
@@ -612,5 +619,19 @@ color: rgb(97, 1, 187);
         opacity: 1;
         z-index: 20;
     }
+
+   
+    
+    .navigation.show {
+        opacity: 1;
+        height: auto;
+    }
+    
+    .navigation.show a {
+        opacity: 1;
+        transition-delay: 0.3s;
+        
+    }
   
 }
+

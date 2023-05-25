@@ -97,3 +97,9 @@ $(".hamburguer").click(function(){
   });
 
 */
+
+$(document).ready(function() {
+    $('.hamburguer').click(function() {
+        $('.navigation').toggleClass('show');
+    });
+});
