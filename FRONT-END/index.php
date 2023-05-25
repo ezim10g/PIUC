@@ -24,9 +24,9 @@ require_once('../BACK-END/autenticate.php');
 
 <body>
     <!--HEADER-->
-    <header>
-
-        <h2 class="logo"> Logo </h2>
+    
+    <header>     
+        <h2 class="logo"> Logo </h2>  
         <nav class="navigation">
             <a class="inicioLink">Home</a>
             <a class="dashLink">DashBoard</a>
@@ -42,6 +42,12 @@ require_once('../BACK-END/autenticate.php');
             ?>
 
         </nav>
+        <!--menu hamburguer-->
+        <div class="hamburguer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
     </header>
 
     <main>
@@ -477,6 +483,29 @@ require_once('../BACK-END/autenticate.php');
                 <div class="titulo-div">
                     <h2>Newsletter</h2>
                 </div>
+                
+                <div class="form-box login">
+                    <form action="">
+
+                        <div class="input-box">
+                            <span class="icon"> <ion-icon name="person"></ion-icon></span>
+                            <input type="text" name="nome" size="50%" required>
+                            <label>Nome</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="email" name="email" required>
+                            <label>Email</label>
+                        </div>                                        
+                        <br><br>
+                        <button type="submit" class="btn">Enviar</button>
+
+
+                    </form>
+                </div>
+
+
+
             </div>
         </section>
 

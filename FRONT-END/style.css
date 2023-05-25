@@ -525,6 +525,22 @@ color: rgb(97, 1, 187);
 }
 
 
+/*************************************Menu hamburguer*****************************/
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    opacity: 0;
+}
+
 /*****************************************media query************************************/
 
 /*Diminuir o espaço e diminuir as letras*/
@@ -559,34 +575,41 @@ color: rgb(97, 1, 187);
 
 
 /*transformar o menu em lista de linhas colum direction rows*/
+/*tentar adicionar menu amburguer*/
 @media screen and (max-width: 540px) {
-
     header {    
         display: flex;
-        flex-direction: column;
+     /*   flex-direction: column;*/
         justify-content: flex;
         justify-content: space-between;
         align-items: center;
          
     }
-  
-}
-
-/*tentar adicionar menu amburguer*/
-@media screen and (max-width: 540px) {
 
  nav.navigation{
     display: flex;
     flex-direction: column;
     justify-content: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;  
+  /*  opacity: 0;  */
    
  }
 
  .navigation a {        
     font-size: 0.9em;        
    
+}
+
+/*huamburguer*/
+.hamburger {
+    display: flex;
+    z-index: 20;
+}
+
+.bar {
+    opacity: 1;
+    z-index: 20;
 }
   
 }
