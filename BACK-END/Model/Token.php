@@ -14,25 +14,28 @@ class Token{
         $this->idUsuario = $idUsuario;
     }
 
+
     private function MakeToken(){
         $token = bin2hex(random_bytes(32)); 
         $this->token = $token;  
     }
 
+    private function verifyToken($idToken){
+        $result = $this->tokenDAO->getIdToken($idToken);
+        if(empty($result)){
+            return true;
+        }
+        return false;
+    }
     private function MakeIdToken(){
         $idToken = mt_rand(1, 5000);
-        if($this->tokenDAO->verifyToken($idToken)){
+        if($this->verifyToken($idToken)){
             $this->idToken = $idToken;
         }else{
             $this->MakeIdToken();
         }
         
     }
-
-    private function tempoSessao(){
-        $this->tempoSessao = "";
-    }
-
 
     function setToken(){
         $this->MakeToken();
@@ -41,5 +44,9 @@ class Token{
         $periodo = strtotime('+7 day');
         $this->tempoSessao = date("d/m/Y", $periodo); ;
         $this->tokenDAO->setToken($this->idToken,$this->idUsuario,$this->token,$this->tempoSessao, $this->createdAt);
+    }
+
+    function getToken(){
+        return $this->token;
     }
 }

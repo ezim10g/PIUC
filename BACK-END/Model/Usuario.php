@@ -3,6 +3,7 @@ include "../DAO/db_conn.php";
 include '../util/validateData.php';
 include '../DAO/UsuarioDAO.php';
 include "../DAO/PerfilDAO.php";
+include "./Token.php";
 class Usuario{
 
     public $id;
@@ -53,9 +54,9 @@ class Usuario{
         }
     }
 
-    function verifyEmail(){
-        $result = $this->usuarioDAO->getEmail($this->email);
-        if(count($result) == 0){
+    function verifyEmail($email){
+        $result = $this->usuarioDAO->getEmail($email);
+        if(empty($result)){
             return true;
         }
         $this->erroMessage = "Já existe conta com esse email!";
@@ -64,13 +65,17 @@ class Usuario{
     
 
     function RegistrarUsuario($nome,$email,$senha){
-        if($this->ValidarNome($nome) && $this->ValidarEmail($email) && $this->verifyEmail() ){
+
+        
+        if($this->ValidarNome($nome) && $this->ValidarEmail($email) && $this->verifyEmail($email) ){
             $senha = $this->CodificarSenha($senha);
             $this->usuarioDAO->setUsuario($nome,$email,$senha);
             $perfil = new PerfilDAO();
             $result = $this->usuarioDAO->getALL($email);
             $id = $result['idUsuario'];
             $perfil->setPerfil($id);
+            $objToken = new Token($this->id);
+            $objToken->setToken();
             return true;
         }else{
             return false;
