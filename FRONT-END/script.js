@@ -29,8 +29,8 @@ const inicioMenu = ['.inicioLink', '.inicio .caixa', '.inicio .caixa .icon-close
 const sobreMenu = ['.sobreLink', '.sobre .caixa', '.sobre .caixa .icon-close'];
 //const dashMenu = ['.dashLink', '.dash .caixa', '.dash .caixa .icon-close'];
 const dashMenuDark = ['.dashLink', '.dash-dark .caixa', '.dash-dark .caixa .icon-close'];
-const contatoMenu = ['.contatoLink', '.contato .caixa', '.contato .caixa .icon-close'];
-const newsMenu = ['.newsLink', '.news .caixa', '.news .caixa .icon-close'];
+const contatoMenu = ['.contatoLink', '.contato .caixa-form', '.contato .caixa-form .icon-close'];
+const newsMenu = ['.newsLink', '.news .caixa-form', '.news .caixa-form .icon-close'];
 const loginMenu = [`.btnLogin-popup`, `.login .wrapper`, `.login .wrapper .icon-close`];
 
 

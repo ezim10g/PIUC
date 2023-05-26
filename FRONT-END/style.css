@@ -105,8 +105,8 @@ header {
 .wrapper {
 
     position: absolute;
-    top: 18vh;
-    left: 40%;
+    top: 25vh;   
+    margin-left: -200px; /*centraliza*/
     width: 400px;
     height: 440px;
     background: transparent;
@@ -143,6 +143,7 @@ header {
 
 .wrapper .form-box.login{
     /*display: none;*/
+    width: 75%;
     transition: transform .18s ease; /**/
     transform: translateX(0);
     /*quando clica no link login da janela registrar */
@@ -152,6 +153,7 @@ header {
 /*quando recebe o comando active do js desloca a di form-box para o lado*/
 .wrapper.active .form-box.login{
     transition: none;
+    width: 75%;
     transform: translateX(-400px);
   
 }
@@ -163,6 +165,7 @@ header {
 
 .wrapper.active .form-box.register{
     /*display: none;*/
+    width: 75%;
     transition: transform .18s ease; /**/
     transform: translateX(0);
     /*quando clica no link registrar da janela login */
@@ -349,23 +352,43 @@ color: rgb(97, 1, 187);
 }
 
 
-.caixa{
+.caixa {
     position: absolute;
-    top: 3vh;
-    left:2vw;
-    width: 96vw; 
-    height: 93vh;
+    top: 10vh;
+    left: 4vw;
+    width: 93vw;
+    height: 85vh;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255) ;
+    border: 1px solid rgba(255, 255, 255);
     border-radius: 20px;
-    backdrop-filter: blur(3px); /*Efeito vidro jateado transparente*/
+    backdrop-filter: blur(3px);
     box-shadow: 0 0 30px rgba(0,0,0, .5);
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /*Esconde elementos que ultrapassam as bordas*/      
-    transform: scale(0); /*oculta a div para ela ser mostrada com o botão login do header*/
-    transition: transform .5s ease, height .2s ease; /*Faz a janela aparecer suavemente*/
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+    z-index: 1;
+}
+.caixa-form {
+    position: absolute;
+    top: 18vh;
+    left: 50%;
+    width: 500px;
+    margin-left: -250px;
+    padding: 10vh 50px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px rgba(0,0,0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
     z-index: 1;
 }
 
@@ -399,6 +422,23 @@ color: rgb(97, 1, 187);
 
 
 .caixa .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #ffffff9c;
+    font-size: 2em;
+    color: rgb(97, 1, 187);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 0px 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.caixa-form .icon-close{
     position: absolute;
     top: 0;
     right: 0;
