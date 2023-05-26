@@ -6,6 +6,7 @@ class Token{
     private $token;
     private $idToken;
     private $tokenDAO;
+    private $createdAt;
     private $tempoSessao;
 
     function __construct($idUsuario){
@@ -36,6 +37,9 @@ class Token{
     function setToken(){
         $this->MakeToken();
         $this->MakeIdToken();
-        //$this->tokenDAO->setToken($this->idToken,$this->idUsuario,$this->token);
+        $this->createdAt = date("d/m/Y");
+        $periodo = strtotime('+7 day');
+        $this->tempoSessao = date("d/m/Y", $periodo); ;
+        $this->tokenDAO->setToken($this->idToken,$this->idUsuario,$this->token,$this->tempoSessao, $this->createdAt);
     }
 }

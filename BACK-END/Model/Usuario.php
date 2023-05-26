@@ -9,6 +9,7 @@ class Usuario{
     public $nome;
     public $email;
     public $usuarioDAO;
+    public $erroMessage;
 
     function __construct(){
         $this->usuarioDAO = new UsuarioDAO();
@@ -20,6 +21,7 @@ class Usuario{
             $this->$nome = $nome;
             return true;
         }else{
+            $this->erroMessage = "Algum problema com o nome inserido!";
             return false;
         }
 
@@ -32,6 +34,7 @@ class Usuario{
             $this->$email = $email;
             return true;
         }else{
+            $this->erroMessage = "Algum problema com a E-mail inserido!";
             return false;
         }
     }
@@ -45,12 +48,23 @@ class Usuario{
         if(password_verify($senha, $senhaHash)){
             return true;
         }else{
+            $this->erroMessage = "Algum problema com a senha inserida!";
             return false;
         }
     }
 
+    function verifyEmail(){
+        $result = $this->usuarioDAO->getEmail($this->email);
+        if(count($result) == 0){
+            return true;
+        }
+        $this->erroMessage = "Já existe conta com esse email!";
+        return false;
+    }
+    
+
     function RegistrarUsuario($nome,$email,$senha){
-        if($this->ValidarNome($nome) && $this->ValidarEmail($email)){
+        if($this->ValidarNome($nome) && $this->ValidarEmail($email) && $this->verifyEmail() ){
             $senha = $this->CodificarSenha($senha);
             $this->usuarioDAO->setUsuario($nome,$email,$senha);
             $perfil = new PerfilDAO();
@@ -97,6 +111,5 @@ class Usuario{
     }
 
 
-    
 }
 
