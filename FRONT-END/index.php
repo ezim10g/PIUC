@@ -435,7 +435,7 @@ require_once('../BACK-END/autenticate.php');
 
         <!--CONTATO -->
         <section class="contato">
-            <div class="caixa">
+            <div class="caixa-form">
                 <span class="icon-close">
                     <ion-icon name="close"></ion-icon>
                 </span>
@@ -477,7 +477,7 @@ require_once('../BACK-END/autenticate.php');
 
         <!--NEWSLETTER -->
         <section class="news">
-            <div class="caixa">
+            <div class="caixa-form">
                 <span class="icon-close">
                     <ion-icon name="close"></ion-icon>
                 </span>
