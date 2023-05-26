@@ -2,6 +2,7 @@
 session_start();
 
 include "./LogarController.php";
+include "../util/CaptureErro.php";
 
 
 if(isset($_POST['email']) && isset($_POST['senha'])){
@@ -9,7 +10,6 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
     header("location: ../../FRONT-END/index.php?message=Login feito com sucesso!");
     exit();   
 }else{
-    header("location: ../../FRONT-END/index.php?loginerror=insira os dados corretamente!");
-    exit();
+    CaptureErro("loginerror","Insira os dados corretamente!");
 }
 

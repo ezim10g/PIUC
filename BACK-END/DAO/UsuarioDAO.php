@@ -65,4 +65,13 @@ class UsuarioDAO{
         return $result;
     }
 
+    function getEmail($email){
+        $sql = "Select email FROM usuario WHERE  email = :email";
+        $stmt = PrepareSQL($sql);
+        $stmt-> bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt-> execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
 }

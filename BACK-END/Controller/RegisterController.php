@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "./LogarController.php";
+include "../util/CaptureErro.php";
 
 if(isset($_POST['usuario']) && isset($_POST['email']) && isset($_POST['senha'])){
     $nome = $_POST['usuario'];
@@ -12,10 +13,8 @@ if(isset($_POST['usuario']) && isset($_POST['email']) && isset($_POST['senha']))
         header("location: ../../FRONT-END/index.php?message=USuário registrado com sucesso");
         exit();  
     }else{
-        header("location: ../../FRONT-END/index.php?registererror=dados incorretos!");
-        exit();  
+        CaptureErro("registererror",$usuario->erroMessage);
     }
 }else{
-    header("location: ../../FRONT-END/index.php?registererror=falta de dados no envio!");
-    exit();
+    CaptureErro("registererror","falta de dados");
 }

@@ -1,5 +1,6 @@
 <?php
 include "../Model/Usuario.php";
+
 function LogarController($email,$senha){
 
 $usuario = new Usuario();
@@ -18,7 +19,6 @@ if($usuario->LogarUsuario($email,$senha)){
     $_SESSION['token'] = $token;
     
 }else{
-    header("location: ../../FRONT-END/index.php?loginerror=algum problema com os dados!");
-    exit(); 
+    CaptureErro("loginerror",$usuario->erroMessage);
 }
 }
