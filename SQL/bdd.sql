@@ -77,12 +77,12 @@ FOREIGN KEY(idPerfil) REFERENCES perfil(idPerfil),
 FOREIGN KEY(idComentario) REFERENCES comentario(idComentario)
 );
 
-CREATE TABLE security(
-idSecurity INT PRIMARY KEY,
+CREATE TABLE token(
+idToken INT PRIMARY KEY,
 idUsuario INT NOT NULL,
 token VARCHAR(60) NOT NULL,
-lastAcess DATETIME,
-created_at DATETIME,
+tempoSessao DATETIME,
+createdAt DATETIME,
 );
 
 CREATE VIEW vw_infoUsuario AS SELECT 

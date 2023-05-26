@@ -8,7 +8,6 @@ class Usuario{
     public $id;
     public $nome;
     public $email;
-    public $perfil;
     public $usuarioDAO;
 
     function __construct(){
@@ -97,9 +96,6 @@ class Usuario{
         return $result;
     }
 
-    function getNome(){
-        return $this->nome;
-    }
 
     
 }
