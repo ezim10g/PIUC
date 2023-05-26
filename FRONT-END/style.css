@@ -29,19 +29,21 @@ header {
     width: 100%;
     padding: 20px 50px;
     display: flex;
-    justify-content: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    z-index: 99;
+    z-index: 1;  
     cursor: pointer;
 
 }
 
 .logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
     font-size: 2rem;
     color: #fff;
     user-select: none;
-    align-self: flex-start;
+   
 }
 
 .navigation{
@@ -349,10 +351,10 @@ color: rgb(97, 1, 187);
 
 .caixa{
     position: absolute;
-    top: 18vh;
-    left:5vw;
-    width: 90vw; 
-    height: 70vh;
+    top: 3vh;
+    left:2vw;
+    width: 96vw; 
+    height: 93vh;
     background: transparent;
     border: 1px solid rgba(255, 255, 255) ;
     border-radius: 20px;
@@ -376,11 +378,6 @@ color: rgb(97, 1, 187);
 
 .conteudo img {
     border-radius: 10px;
-}
-
-.nameFigcaption {
-    color: #fff;
-    text-align: center
 }
 
 /*.inicio .titulo-div img {
@@ -580,7 +577,7 @@ color: rgb(97, 1, 187);
 
 /*transformar o menu em lista de linhas colum direction rows*/
 /*tentar adicionar menu amburguer*/
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 600px) {
     header {    
         display: flex;
         justify-content: flex;
@@ -597,7 +594,8 @@ color: rgb(97, 1, 187);
         flex-direction: column;
         justify-content: flex;
         justify-content: space-between;
-        align-items: center;  
+        align-items: center;
+        width: 100vw;  
     
     
     }
