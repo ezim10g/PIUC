@@ -121,7 +121,6 @@ header {
     transform: scale(0); /*oculta a div para ela ser mostrada com o botão login do header*/
     transition: transform .5s ease, height .2s ease; /*Faz a janela aparecer suavemente*/
     z-index: 1;
-
 }
 
 /*recebe o comando do sj pelo botao login*/
@@ -137,8 +136,7 @@ header {
 
 .wrapper .form-box login {
     width: 100%;
-    height: 40px;
-   
+    height: 40px; 
 }
 
 .wrapper .form-box.login{
@@ -227,7 +225,6 @@ textarea{
     font-size: 1em;
     width: 100%;
     resize: none;
-   
 }
 textarea::placeholder {
     color: rgba(255,255,255);
@@ -252,7 +249,6 @@ textarea::placeholder {
     font-size: 1em;
     font-weight: 600;
     padding: 0 35px 0 5px;
-
 }
 
 .input-box .icon{
@@ -273,7 +269,6 @@ textarea::placeholder {
 
 .remember-forgot > label{
     color:#fff;
-    
 }
 
 .remember-forgot > label input{
@@ -303,9 +298,7 @@ textarea::placeholder {
     font-size: 1.1em;
     color: #fff;
     font-weight: 500;
-
     transition: .5s; /*Velocidade da animação do hover*/
-
 }
 
 
@@ -393,8 +386,7 @@ color: rgb(97, 1, 187);
 
 /*quando clicar no link o javascript ativa esse atributo deixando a div visível*/
 .caixa.ativar{
-    transform: scale(1);
-    
+    transform: scale(1);   
 }
 
 
@@ -458,7 +450,6 @@ color: rgb(97, 1, 187);
 }
 
 .imgBGx img {
-   
     position: absolute;
     top: 0;
     left: 0;
@@ -466,12 +457,7 @@ color: rgb(97, 1, 187);
     height: 100%;
     object-fit: cover;
     pointer-events: none;
-
-   
-    
-
 }
-
 
 
 /*********************Footer****************/
