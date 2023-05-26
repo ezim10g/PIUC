@@ -24,9 +24,9 @@ require_once('../BACK-END/autenticate.php');
 
 <body>
     <!--HEADER-->
-    
+    <h2 class="logo"> Logo </h2>
     <header>     
-        <h2 class="logo"> Logo </h2>  
+         
            
         <nav class="navigation">
             <a class="inicioLink">Home</a>
