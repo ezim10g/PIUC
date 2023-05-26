@@ -6,6 +6,7 @@ class Token{
     private $token;
     private $idToken;
     private $tokenDAO;
+    private $tempoSessao;
 
     function __construct($idUsuario){
         $this->tokenDAO = new TokenDAO();
@@ -35,6 +36,6 @@ class Token{
     function setToken(){
         $this->MakeToken();
         $this->MakeIdToken();
-        $this->tokenDAO->setToken($this->idToken,$this->idUsuario,$this->token);
+        //$this->tokenDAO->setToken($this->idToken,$this->idUsuario,$this->token);
     }
 }
