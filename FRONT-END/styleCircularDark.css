@@ -137,5 +137,26 @@
 
 
 
+@media screen and (max-width: 600px) {
+    .container-dark .card {
+        padding: 0;
+        gap: 10px;
+    }
 
+}
 
+@media screen and (max-height: 500px) {
+    .container-dark .card {
+        padding: 0;
+    }
+    .container-dark {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        scale: 0.9;
+    }
+
+}
