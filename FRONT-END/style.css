@@ -581,6 +581,16 @@ color: rgb(97, 1, 187);
         height: 92vh;       
     }
 
+    .caixa-form {
+      
+        top: 10vh;
+        left: 50%;
+        width: 90%;
+        height: 80%;
+        margin-left: -45%;
+        padding: 10vh 20px;
+    
+    }
 
     .navigation a {        
         font-size: 0.9em;        
