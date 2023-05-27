@@ -18,6 +18,7 @@ require_once('../BACK-END/autenticate.php');
     <link rel="stylesheet" href="styleCircularDark.css">
     <link rel="stylesheet" href="styleCards.css">
     <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="./styleCards3D.css">
 
     <title>PIUC Energia eólica</title>
 </head>
@@ -25,9 +26,9 @@ require_once('../BACK-END/autenticate.php');
 <body>
     <!--HEADER-->
     <h2 class="logo"> Logo </h2>
-    <header>     
-         
-           
+    <header>
+
+
         <nav class="navigation">
             <a class="inicioLink">Home</a>
             <a class="dashLink">DashBoard</a>
@@ -43,8 +44,8 @@ require_once('../BACK-END/autenticate.php');
             ?>
 
         </nav>
-            <!--menu hamburguer-->
-        <div class="hamburguer">   
+        <!--menu hamburguer-->
+        <div class="hamburguer">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -166,7 +167,15 @@ require_once('../BACK-END/autenticate.php');
 
                     <div class="container0">
                         <div class="container1"></div>
-                        <div class="container2"></div>
+                        <div class="container2">
+                            <div class="box">
+                                <div class="elements bg"></div>
+                                <div class="elements2 bg"></div>
+                                <div class="card"></div>
+
+                            </div>
+
+                        </div>
                     </div>
 
                     <div class="container">
@@ -484,7 +493,7 @@ require_once('../BACK-END/autenticate.php');
                 <div class="titulo-div">
                     <h2>Newsletter</h2>
                 </div>
-                
+
                 <div class="form-box login">
                     <form action="">
 
@@ -497,7 +506,7 @@ require_once('../BACK-END/autenticate.php');
                             <span class="icon"><ion-icon name="mail"></ion-icon></span>
                             <input type="email" name="email" required>
                             <label>Email</label>
-                        </div>                                        
+                        </div>
                         <br><br>
                         <button type="submit" class="btn">Enviar</button>
 
@@ -534,8 +543,8 @@ require_once('../BACK-END/autenticate.php');
 
     </section>
 
-<!-- Acrescentar linguagem em libras -->
- 
+    <!-- Acrescentar linguagem em libras -->
+
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -547,15 +556,16 @@ require_once('../BACK-END/autenticate.php');
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    
-     <!--  inportando icones de  ionic.io/ionicons -->   
+
+    <!--  inportando icones de  ionic.io/ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- Script -->
     <script src="script.js"></script>
     <script src="./profile.js"></script>
     <script src="scriptCircular.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./vanilla3DReal.js"></script>
 
 
 
