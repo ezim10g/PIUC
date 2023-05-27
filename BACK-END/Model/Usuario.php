@@ -3,7 +3,7 @@ include "../DAO/db_conn.php";
 include '../util/validateData.php';
 include '../DAO/UsuarioDAO.php';
 include "../DAO/PerfilDAO.php";
-include "./Token.php";
+include "Token.php";
 class Usuario{
 
     public $id;
@@ -74,8 +74,6 @@ class Usuario{
             $result = $this->usuarioDAO->getALL($email);
             $id = $result['idUsuario'];
             $perfil->setPerfil($id);
-            $objToken = new Token($this->id);
-            $objToken->setToken();
             return true;
         }else{
             return false;

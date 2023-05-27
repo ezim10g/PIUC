@@ -46,7 +46,14 @@ class Token{
         $this->tokenDAO->setToken($this->idToken,$this->idUsuario,$this->token,$this->tempoSessao, $this->createdAt);
     }
 
-    function getToken(){
-        return $this->token;
+    function verifyCredibilityToken($token){
+        
+    }
+
+    function autenticateToken($token){
+        if(!empty($this->tokenDAO->getToken($token))){
+            return true;
+        }
+        return false;
     }
 }

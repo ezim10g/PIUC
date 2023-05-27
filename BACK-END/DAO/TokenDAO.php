@@ -42,4 +42,15 @@ class TokenDAO{
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+
+
+    function getTempoSesssao($token){
+        $sql = "SELECT tempoSessao FROM token WHERE token = :token";
+        $stmt = PrepareSQL($sql);
+        $stmt-> bindParam(':token', $token, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+
+    }
 }
