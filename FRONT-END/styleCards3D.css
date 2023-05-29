@@ -10,9 +10,10 @@
 }
 
 .box .card {
-    top: -40%;
+    top: -32%;
     position: relative;
     background: rgba(255, 255, 255, 0.5);
+    margin-left: 18%;
     /***Definindo a altura e a largura do card a baixo*/
     width: 65%;
     height: 65%;
@@ -30,10 +31,10 @@
 
 .elements {
     position: relative;
-    top: 70px;
-    left: -30px;
-    width: 100px;
-    height: 100px;
+    top: 2%;
+    left: -2%;
+    width: 30%;
+    height: 25%;
     background: rgb(255, 255, 255, 0.1);
     transform: translateZ(80px);
     backdrop-filter: blur(10px);
@@ -46,10 +47,10 @@
 
 .elements2 {
     position: relative;
-    top: 330px;
-    left: 330px;
-    width: 100px;
-    height: 100px;
+    top: 49%;
+    left: 72%;
+    width: 30%;
+    height: 25%;
     background: rgb(255, 255, 255, 0.1);
     transform: translateZ(80px);
     backdrop-filter: blur(10px);
@@ -67,7 +68,7 @@
     position: absolute;
     inset: 0;
     background-image: url(./imagens/left-quote.png);
-    background-size: 60px;
+    background-size: 40%;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
@@ -79,7 +80,7 @@
     position: absolute;
     inset: 0;
     background-image: url(./imagens/left-quote.png);
-    background-size: 60px;
+    background-size: 40%;
     rotate: 180deg;
     background-position: center;
     background-repeat: no-repeat;
