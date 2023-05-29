@@ -471,7 +471,7 @@ require_once('../BACK-END/autenticate.php');
                             <label>Assunto</label>
                         </div>
 
-                        <textarea name="mensagem" rows="6" maxlength="300" placeholder="Mensagem"></textarea>
+                        <textarea class="mensagem" name="mensagem" rows="6" maxlength="300" placeholder="Mensagem"></textarea>
 
                         <button type="submit" class="btn">Enviar</button>
 
