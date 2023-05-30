@@ -1,9 +1,9 @@
 <?php
-include "../DAO/TokenDAO.php";
+require_once (__DIR__ . "/../DAO/TokenDAO.php");
 class Token{
 
     private $idUsuario;
-    private $token;
+    public $token;
     private $idToken;
     private $tokenDAO;
     private $createdAt;
@@ -40,18 +40,18 @@ class Token{
     function setToken(){
         $this->MakeToken();
         $this->MakeIdToken();
-        $this->createdAt = date("d/m/Y");
+        $this->createdAt = date("Y-m-d");
         $periodo = strtotime('+7 day');
-        $this->tempoSessao = date("d/m/Y", $periodo); ;
+        $this->tempoSessao = date("Y-m-d", $periodo); ;
         $this->tokenDAO->setToken($this->idToken,$this->idUsuario,$this->token,$this->tempoSessao, $this->createdAt);
     }
 
-    function verifyCredibilityToken($token){
-        
+    function getToken(){
+        return $this->token;
     }
-
     function autenticateToken($token){
-        if(!empty($this->tokenDAO->getToken($token))){
+        $result[] = $this->tokenDAO->getTokenById($this->idUsuario,$token);
+        if(empty($result) == 1){
             return true;
         }
         return false;

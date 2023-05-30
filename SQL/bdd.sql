@@ -81,8 +81,8 @@ CREATE TABLE token(
 idToken INT PRIMARY KEY,
 idUsuario INT NOT NULL,
 token VARCHAR(60) NOT NULL,
-tempoSessao DATETIME,
-createdAt DATETIME,
+tempoSessao DATE,
+createdAt DATE,
 );
 
 CREATE VIEW vw_infoUsuario AS SELECT 

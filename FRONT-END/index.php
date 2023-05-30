@@ -1,7 +1,9 @@
 ﻿<?php
-include "../BACK-END/view_dashboard.php";
+session_start();
+include '../BACK-END/Controller/autenticateController.php';
+print_r($_SESSION);
 
-require_once('../BACK-END/autenticate.php');
+
 
 ?>
 <!DOCTYPE html>
@@ -36,10 +38,10 @@ require_once('../BACK-END/autenticate.php');
             <a class="contatoLink">Contato</a>
             <a class="newsLink">Newsletter</a>
             <?php
-            if (!verificar_autenticacao()) {
-                include "../BACK-END/view_Btnlogin.php";
-            } else {
+            if (verificar_autenticacao()) {
                 include "../BACK-END/view_profileMenu.php";
+            } else {
+                include "../BACK-END/view_Btnlogin.php";
             }
             ?>
 

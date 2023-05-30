@@ -3,7 +3,6 @@ include "../DAO/db_conn.php";
 include '../util/validateData.php';
 include '../DAO/UsuarioDAO.php';
 include "../DAO/PerfilDAO.php";
-include "Token.php";
 class Usuario{
 
     public $id;

@@ -1,5 +1,6 @@
 <?php
 include "../Model/Usuario.php";
+include "../Model/Token.php";
 function LogarController($email,$senha){
 
 $usuario = new Usuario();
@@ -13,13 +14,11 @@ if($usuario->LogarUsuario($email,$senha)){
     $_SESSION['fotoPerfil'] = $result['fotoPerfil'];
     $_SESSION['newsLetter'] = $result['newsLetter'];
     $_SESSION['tipoPerfil'] = $result['tipoPerfil'];
-
-
-
-    $token = bin2hex(random_bytes(32));
-    $_SESSION['token'] = $token;
-    
+    $tokenObj = new Token($result['idUsuario']);
+    $tokenObj->setToken();
+    $_SESSION['token'] = $tokenObj->getToken();
 }else{
-    CaptureErro("loginerror",$usuario->erroMessage);
+CaptureErro("loginerror",$usuario->erroMessage);
+
 }
 }
