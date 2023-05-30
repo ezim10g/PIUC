@@ -19,6 +19,9 @@ body {
     background: url('assets/bg.png') no-repeat;   
     background-size: cover;
     background-position: center;
+    
+   
+
    
 }
 
@@ -557,7 +560,7 @@ color: rgb(97, 1, 187);
 }
 
 
-
+/*barras do hamburger*/
 .bar {
     display: block;
     width: 25px;
@@ -581,8 +584,7 @@ color: rgb(97, 1, 187);
         height: 92vh;       
     }
 
-    .caixa-form {
-      
+    .caixa-form {      
         top: 10vh;
         left: 50%;
         width: 90%;
@@ -614,6 +616,33 @@ color: rgb(97, 1, 187);
         padding: 20px 4vw;
         z-index: 1;  
     }
+
+/*media tela de login*/
+
+.wrapper {
+    position: absolute;
+    top: 5vh;   
+    margin-left: -140px; /*centraliza*/
+    width: 280px;
+    height: 320px;
+
+}
+.wrapper.active .form-box.register { 
+    width: 90%;
+}
+
+.wrapper .form-box.login{
+    /*display: none;*/
+    width: 90%;
+
+}
+
+.form-box h2{
+    margin-top: 1vh;
+    font-size: 1.3em;
+}
+/**********************/
+
 
 }
 
@@ -682,3 +711,73 @@ color: rgb(97, 1, 187);
   
 }
 
+@media only screen and (orientation: landscape) and (max-width: 900px){
+    
+    .caixa-form {      
+        top: 1vh;
+        left: 50%;
+        width: 90%;
+        height: 90%;
+        margin-left: -45%;
+        padding: 1vh 5px;        
+    }
+
+    textarea{
+       
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        padding-inline: 2vw;
+        padding-block: 1vh;        
+        font-size: 1em;
+        height: 20vh;
+     
+    }
+
+
+    .input-box{
+        position: relative;
+        width: 100%;
+        height: 40px;
+       
+    }
+    
+    .input-box label{      
+        font-size: 0.8em;
+    }
+
+    .input-box input{
+      
+        font-size: 1em;
+        font-weight: 600;
+        padding: 0 25px 0 5px;
+    }
+
+   
+/*media tela de login*/
+
+.wrapper {
+    position: absolute;
+    top: 5vh;   
+    margin-left: -140px; /*centraliza*/
+    width: 280px;
+    height: 320px;
+
+}
+.wrapper.active .form-box.register { 
+    width: 90%;
+}
+
+.wrapper .form-box.login{
+    /*display: none;*/
+    width: 90%;
+
+}
+
+.form-box h2{
+    margin-top: 1vh;
+    font-size: 1.3em;
+}
+/**********************/
+
+    
+}
