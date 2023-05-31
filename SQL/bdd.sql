@@ -1,11 +1,11 @@
-CREATE DATABASE PIUC;
+CREATE DATABASE piuc;
 
-USE PIUC;
+USE piuc;
 
 CREATE TABLE usuario(
 idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 nomeUsuario VARCHAR(25) NOT NULL,
-emailUsuario varchar(255) UNIQUE NOT NULL,
+emailUsuario varchar(191) UNIQUE NOT NULL,
 senhaUsuario CHAR(60) NOT NULL
 );
 
@@ -19,76 +19,32 @@ INSERT INTO tipo_perfil (nomeTipoPerfil)VALUES
 ("membro"),
 ("usuário");
 
-CREATE TABLE tag(
-idTag INT PRIMARY KEY AUTO_INCREMENT,
-nomeTag VARCHAR(30)
-);
-
-CREATE TABLE post(
-idPost INT PRIMARY KEY AUTO_INCREMENT,
-tituloPost VARCHAR(100) NOT NULL,
-imagemPost VARCHAR(255),
-conteudoPost TEXT NOT NULL,
-dataPost DATETIME NOT NULL
-);
 
 CREATE TABLE perfil(
 idPerfil INT PRIMARY KEY AUTO_INCREMENT,
 idUsuario INT UNIQUE,
 idTipoPerfil INT,
-fotoPerfil VARCHAR(255),
+fotoPerfil VARCHAR(191),
 newsLetter BOOLEAN,
-FOREIGN KEY(idTipoPerfil) REFERENCES tipo_perfil(idTipoPerfil)
-FOREIGN KEY(idUsuario) REFERENCES Usuario(idUsuario)
-);
-
-CREATE TABLE perfil_tag(
-idTag INT  NOT NULL,
-idPerfil INT  NOT NULL,
-PRIMARY KEY(idTag, idPerfil),
-FOREIGN KEY(idTag) REFERENCES tag(idTag),
-FOREIGN KEY(idPerfil) REFERENCES perfil(idPerfil)
+FOREIGN KEY(idTipoPerfil) REFERENCES tipo_perfil(idTipoPerfil),
+FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario)
 );
 
 
-CREATE TABLE post_tag(
-idTag INT  NOT NULL,
-idPost INT  NOT NULL,
-PRIMARY KEY(idTag, idPost),
-FOREIGN KEY(idTag) REFERENCES tag(idTag),
-FOREIGN KEY(idPost) REFERENCES post(idPost)
-);
 
-CREATE TABLE comentario(
-idComentario INT PRIMARY KEY AUTO_INCREMENT,
-conteudoComentario varchar(500) NOT NULL,
-idPerfil INT NOT NULL,
-idPost INT NOT NULL,
-FOREIGN KEY(idPerfil) REFERENCES perfil(idPerfil),
-FOREIGN KEY(idPost) REFERENCES post(idPost)
-);
-
-CREATE TABLE resposta(
-idResposta INT PRIMARY KEY AUTO_INCREMENT,
-conteudoResposta VARCHAR(500) NOT NULL,
-idPerfil INT NOT NULL,
-idComentario INT NOT NULL,
-FOREIGN KEY(idPerfil) REFERENCES perfil(idPerfil),
-FOREIGN KEY(idComentario) REFERENCES comentario(idComentario)
-);
 
 CREATE TABLE token(
 idToken INT PRIMARY KEY,
 idUsuario INT NOT NULL,
 token VARCHAR(60) NOT NULL,
 tempoSessao DATE,
-createdAt DATE,
+createdAt DATE
 );
 
 CREATE VIEW vw_infoUsuario AS SELECT 
 usuario.idUsuario,
 usuario.nomeUsuario AS nome,
-usuario.email,
+usuario.emailUsuario,
 perfil.idTipoPerfil AS tipoPerfil,
 perfil.fotoPerfil,
 perfil.newsLetter
