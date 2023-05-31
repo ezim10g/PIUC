@@ -28,7 +28,7 @@ class TokenDAO{
 
     function getTokenById($id,$token){
         $this->dbConn = new BDD();
-        $sql = "SELECT token FROM token WHERE idUsuario = :idUsuario AND token = :token ";
+        $sql = "SELECT token,tempoSessao FROM token WHERE idUsuario = :idUsuario AND token = :token ";
         $stmt = $this->dbConn->PrepareSQL($sql);
         $stmt-> bindParam(':idUsuario', $id, PDO::PARAM_INT);
         $stmt-> bindParam(':token', $token, PDO::PARAM_STR);
