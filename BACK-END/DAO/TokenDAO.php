@@ -28,9 +28,9 @@ class TokenDAO{
 
     function getTokenById($id,$token){
         $this->dbConn = new BDD();
-        $sql = "SELECT token FROM token WHERE idToken =:idToken AND token = :token ";
+        $sql = "SELECT token FROM token WHERE idUsuario = :idUsuario AND token = :token ";
         $stmt = $this->dbConn->PrepareSQL($sql);
-        $stmt-> bindParam(':idToken', $id, PDO::PARAM_INT);
+        $stmt-> bindParam(':idUsuario', $id, PDO::PARAM_INT);
         $stmt-> bindParam(':token', $token, PDO::PARAM_STR);
         $stmt-> execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -38,11 +38,11 @@ class TokenDAO{
         return $result;
     }
 
-    function deleteToken($idToken){
+    function deleteToken($idUsuario){
         $this->dbConn = new BDD();
-        $sql = "DELETE FROM token WHERE idToken = :idToken";
+        $sql = "DELETE FROM token WHERE idUsuario = :idUsuario";
         $stmt = $this->dbConn->PrepareSQL($sql);
-        $stmt-> bindParam(':idToken', $idToken, PDO::PARAM_INT);
+        $stmt-> bindParam(':idUsuario', $idUsuario, PDO::PARAM_INT);
         $stmt-> execute();
         $this->dbConn->CloseConn();
     }
@@ -70,4 +70,17 @@ class TokenDAO{
         return $result;
 
     }
+
+    function getToken($id){
+        $this->dbConn = new BDD();
+        $sql = "SELECT token FROM token WHERE idUsuario = :idUsuario";
+        $stmt = $this->dbConn->PrepareSQL($sql);
+        $stmt-> bindParam(':idUsuario', $id, PDO::PARAM_INT);
+        $stmt-> execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $this->dbConn->CloseConn();
+        return $result;
+    }
+
+
 }

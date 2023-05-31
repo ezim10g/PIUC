@@ -51,9 +51,21 @@ class Token{
     }
     function autenticateToken($token){
         $result[] = $this->tokenDAO->getTokenById($this->idUsuario,$token);
-        if(empty($result) == 1){
+        if(!empty($result)){
             return true;
         }
         return false;
+    }
+
+    function verifyIfIsToken(){
+        $result = $this->tokenDAO->getToken($this->idUsuario);
+        if(empty($result)){
+            return true;
+        }
+        return false;
+    }
+
+    function deleteToken(){
+        $this->tokenDAO->deleteToken($this->idUsuario);
     }
 }

@@ -1,7 +1,6 @@
 ﻿<?php
 session_start();
 include '../BACK-END/Controller/autenticateController.php';
-print_r($_SESSION);
 
 
 
@@ -57,7 +56,13 @@ print_r($_SESSION);
     <main>
         <!--LOGIN-->
         <section class="login">
-            <div class="wrapper">
+            <div class="wrapper <?php if (isset($_GET['loginerror'])) {
+                echo "ativar";
+            }
+            if (isset($_GET['registererror'])){
+                echo "ativar active";
+            }
+            ?> " >
                 <span class="icon-close">
                     <ion-icon name="close"></ion-icon>
                 </span>

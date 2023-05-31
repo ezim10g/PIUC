@@ -80,7 +80,7 @@ class Usuario{
     }
 
     function LogarUsuario($email,$senha){
-        if($this->ValidarEmail($email)){
+        if($this->ValidarEmail($email) && !$this->verifyEmail($email)){
             $result = $this->usuarioDAO->getALL($email);
             if($this->VerificarSenha($senha,$result['senhaUsuario'])){
                 $this->id = $result['idUsuario'];
@@ -92,6 +92,7 @@ class Usuario{
                 return false;
             }
         }else{
+            $this->erroMessage = "não existe conta com esse email!";
             return false;
         }
     }
@@ -111,7 +112,6 @@ class Usuario{
         $result = $this->usuarioDAO->getInfo($id);
         return $result;
     }
-
 
 }
 
