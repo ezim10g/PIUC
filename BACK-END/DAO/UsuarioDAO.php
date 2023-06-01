@@ -21,7 +21,7 @@ class UsuarioDAO{
 
     function setEmail($id,$email){
         $this->dbConn = new BDD();
-        $sql = "UPDATE usuario SET email= :email WHERE idUsuario=:id";
+        $sql = "UPDATE usuario SET emailUsuario= :email WHERE idUsuario=:id";
         $stmt = $this->dbConn->PrepareSQL($sql);
         $stmt-> bindParam(':email', $email, PDO::PARAM_STR);
         $stmt-> bindParam(':id', $id, PDO::PARAM_INT);
@@ -50,7 +50,7 @@ class UsuarioDAO{
 
     function SetUsuario($nome,$email,$senha){
         $this->dbConn = new BDD();
-        $sql = "INSERT INTO usuario(nomeUsuario,email, senhaUsuario) VALUES(:nome,:email,:senha)";
+        $sql = "INSERT INTO usuario(nomeUsuario,emailUsuario, senhaUsuario) VALUES(:nome,:email,:senha)";
         $stmt = $this->dbConn->PrepareSQL($sql);
         $stmt-> bindParam(':nome', $nome, PDO::PARAM_STR);
         $stmt-> bindParam(':email', $email, PDO::PARAM_STR);
@@ -62,7 +62,7 @@ class UsuarioDAO{
     function getALL($email){
         $this->dbConn = new BDD();
         try{
-            $sql = "SELECT * FROM usuario WHERE email = :email";
+            $sql = "SELECT * FROM usuario WHERE emailUsuario = :email";
             $stmt = $this->dbConn->PrepareSQL($sql);
             $stmt-> bindParam(':email', $email, PDO::PARAM_STR);
             $stmt-> execute();
@@ -89,7 +89,7 @@ class UsuarioDAO{
 
     function getEmail($email){
         $this->dbConn = new BDD();
-        $sql = "Select email FROM usuario WHERE  email = :email";
+        $sql = "Select emailUsuario FROM usuario WHERE  emailUsuario = :email";
         $stmt = $this->dbConn->PrepareSQL($sql);
         $stmt-> bindParam(':email', $email, PDO::PARAM_STR);
         $stmt-> execute();
