@@ -27,7 +27,8 @@ class TokenDAO{
     }
 
     function getTokenById($id,$token){
-        $this->dbConn = new BDD();
+        try{
+         $this->dbConn = new BDD();
         $sql = "SELECT token,tempoSessao FROM token WHERE idUsuario = :idUsuario AND token = :token ";
         $stmt = $this->dbConn->PrepareSQL($sql);
         $stmt-> bindParam(':idUsuario', $id, PDO::PARAM_INT);
@@ -35,7 +36,12 @@ class TokenDAO{
         $stmt-> execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         $this->dbConn->CloseConn();
-        return $result;
+        return $result;   
+        }catch(PDOException $erro){
+            echo "erro setToken bah : " . $erro->getMessage();
+            exit();
+        }
+        
     }
 
     function deleteToken($idUsuario){
@@ -48,6 +54,7 @@ class TokenDAO{
     }
 
     function getIdToken($idToken){
+        try{
         $this->dbConn = new BDD();
         $sql = "SELECT token FROM token WHERE idToken = :idToken";
         $stmt = $this->dbConn->PrepareSQL($sql);
@@ -56,10 +63,15 @@ class TokenDAO{
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         $this->dbConn->CloseConn();
         return $result;
+        }catch(PDOException $erro){
+            echo "erro setToken bah : " . $erro->getMessage();
+            exit();
+        }
     }
 
 
     function getTempoSesssao($token){
+        try{
         $this->dbConn = new BDD();
         $sql = "SELECT tempoSessao FROM token WHERE token = :token";
         $stmt = $this->dbConn->PrepareSQL($sql);
@@ -68,18 +80,27 @@ class TokenDAO{
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         $this->dbConn->CloseConn();
         return $result;
-
+    }catch(PDOException $erro){
+            echo "erro setToken bah : " . $erro->getMessage();
+            exit();
+        }
     }
 
     function getToken($id){
-        $this->dbConn = new BDD();
+        try{
+          $this->dbConn = new BDD();
         $sql = "SELECT token FROM token WHERE idUsuario = :idUsuario";
         $stmt = $this->dbConn->PrepareSQL($sql);
         $stmt-> bindParam(':idUsuario', $id, PDO::PARAM_INT);
         $stmt-> execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         $this->dbConn->CloseConn();
-        return $result;
+        return $result;  
+        }catch(PDOException $erro){
+            echo "erro setToken bah : " . $erro->getMessage();
+            exit();
+        }
+        
     }
 
 
