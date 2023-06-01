@@ -10,8 +10,8 @@ class BDD
 {
     private $conn;
     private $hostName = "localhost";
-    private $username = "ezio";
-    private $password = "26112008";
+    private $username = "root";
+    private $password = "";
     private $database = "piuc";
     private $port = "3306";
 
