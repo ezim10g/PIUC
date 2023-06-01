@@ -51,7 +51,8 @@ class Token{
     }
     function autenticateToken($token){
         $result[] = $this->tokenDAO->getTokenById($this->idUsuario,$token);
-        if(!empty($result)){
+      //  if(!empty($result)){
+          if(count($result == 0)){
             $tempoSessao = $result[0]['tempoSessao'];
             if(strtotime($tempoSessao) > strtotime(date("Y-m-d"))){
                 return true;
