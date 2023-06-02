@@ -54,7 +54,7 @@ class Token{
         print_r($result);
         if(!empty($result[0])){
        //   if(count($result[0] != 0)){
-            $tempoSessao = $result['tempoSessao'];
+            $tempoSessao = $result[0]['tempoSessao'];
             if(strtotime($tempoSessao) > strtotime(date("Y-m-d"))){
                 return true;
             }else{
