@@ -50,15 +50,17 @@ class Token{
         return $this->token;
     }
     function autenticateToken($token){
-        $result[] = $this->tokenDAO->getTokenById($this->idUsuario,$token);
-        print_r($result);
-        if(!empty($result[0])){
-       //   if(count($result[0] != 0)){
-            $tempoSessao = $result['tempoSessao'];
-            if(strtotime($tempoSessao) > strtotime(date("Y-m-d"))){
-                return true;
-            }else{
-                $this->tokenDAO->deleteToken($this->idUsuario);
+        $result[] = $this->tokenDAO->getToken($this->idUsuario);
+        foreach($result as $result){
+            if($result['token'] == $_SESSION['token']){
+                $tempoSessao = date_create($result['tempoSessao']);
+                $dataAtual = date_create(date("Y-m-d"));
+                $intervalo = date_diff($dataAtual, $tempoSessao);
+                if($intervalo->format('%R%a') >= 0){
+                    return true;
+                }else{
+                    $this->tokenDAO->deleteToken($this->idUsuario);
+                }
             }
         }
         return false;

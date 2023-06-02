@@ -3,7 +3,6 @@ session_start();
 require_once (dirname(__FILE__) ."../../BACK-END/Controller/AutenticateController.php");
 
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

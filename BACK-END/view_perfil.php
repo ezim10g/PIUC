@@ -50,25 +50,24 @@
                         <div class="titulo">
                                 <h2>escolha sua nova foto de perfil</h2>
                         </div>
-                        <form action="../BACK-END/Controller/MudarFotoPerfil.php" method="post">
+                        <form id="formulario" action="../BACK-END/Controller/MudarFotoPerfil.php" method="post">
                         <div class="fotos-perfil">
                              <div class="foto-escolha">
-                                        <input type="radio" name="foto"value="profile.jpg">
-                                        <img src="../FRONT-END/assets/profile.jpg" alt="">
+                                        <input id="radio1" type="radio" name="foto"value="profile.jpg" >
+                                        <img onclick="selecionarPerfil1()" src="../FRONT-END/assets/profile.jpg" width="125px" height="125px" alt="">
 
                                 </div>
                                 <div class="foto-escolha">
-                                        <input type="radio" name="foto"  value="profile2.png">
-                                        <img src="../FRONT-END/assets/profile2.png" alt="">
+                                        <input id="radio2" type="radio" name="foto"  value="profile2.png" >
+                                        <img onclick="selecionarPerfil2()" src="../FRONT-END/assets/profile2.png" width="125px" height="125px" alt="">
 
                                 </div>
                                 <div class="foto-escolha">
-                                        <input type="radio" name="foto"  value="profile3.png">
-                                        <img src="../FRONT-END/assets/profile3.png" alt="">
+                                        <input id="radio3" type="radio" name="foto"  value="profile3.png" >
+                                        <img onclick="selecionarPerfil3()" src="../FRONT-END/assets/profile3.png" width="125px" height="125px" alt="">
                                 </div>   
                         </div>
                                 
-                                <input type="submit" value="Enviar" name="enviarIMG">
                         </form>
 
 
@@ -77,7 +76,30 @@
 
         </div>
 </section>
+
 <script>
+        let botao=document.getElementById("formulario")
+
+
+        function selecionarPerfil1(){
+               // alert ("clicado")
+                let radio1=document.getElementById("radio1")
+                radio1.checked=true
+                botao.submit()
+        }
+        function selecionarPerfil2(){
+               // alert ("clicado 2")
+               let radio2=document.getElementById("radio2")
+               radio2.checked=true
+               botao.submit()
+        }
+
+        function selecionarPerfil3(){
+               // alert ("clicado 3")
+               let radio3=document.getElementById("radio3")
+               radio3.checked=true
+               botao.submit()
+        }
 
 
 </script>
