@@ -1,5 +1,5 @@
 <?php
-require_once (__DIR__ . "/../DAO/TokenDAO.php");
+require_once ( dirname(__FILE__) . "../../DAO/TokenDAO.php");
 class Token{
 
     private $idUsuario;
@@ -52,9 +52,9 @@ class Token{
     function autenticateToken($token){
         $result[] = $this->tokenDAO->getTokenById($this->idUsuario,$token);
         print_r($result);
-       // if(!empty($result[0])){
-          if(count($result != 0)){
-            $tempoSessao = $result[0]['tempoSessao'];
+        if(!empty($result[0])){
+       //   if(count($result[0] != 0)){
+            $tempoSessao = $result['tempoSessao'];
             if(strtotime($tempoSessao) > strtotime(date("Y-m-d"))){
                 return true;
             }else{

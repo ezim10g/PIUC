@@ -1,8 +1,8 @@
 <?php
-include "../DAO/db_conn.php";
-include '../util/validateData.php';
-include '../DAO/UsuarioDAO.php';
-include "../DAO/PerfilDAO.php";
+include (dirname(__FILE__). "../../DAO/db_conn.php");
+include (dirname(__FILE__) . "../../util/validateData.php");
+include (dirname(__FILE__) . "../../DAO/UsuarioDAO.php");
+include (dirname(__FILE__) . "../../DAO/PerfilDAO.php");
 class Usuario{
 
     public $id;

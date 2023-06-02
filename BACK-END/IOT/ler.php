@@ -6,7 +6,7 @@ esta pagina lêr os dados no redis criando um array com esses dados e envia em f
 
 */
             $redis = new Redis();
-               $redis->connect('192.168.0.71');            
+               $redis->connect('127.0.0.1');            
 
             if(isset($_GET['mostrar'])){
                 $vento = $redis->get('vento');                        
