@@ -1,6 +1,6 @@
 ﻿<?php
 session_start();
-include '../BACK-END/Controller/autenticateController.php';
+include_once ('../BACK-END/Controller/AutenticateController.php');
 
 
 
