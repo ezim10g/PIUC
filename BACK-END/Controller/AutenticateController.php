@@ -11,7 +11,7 @@ function verificar_autenticacao(){
     return false;
 }
 
-
+/*
 function verificar_autenticacao(){
     if (isset($_SESSION['token']) && isset($_SESSION['id'])) {        
         $tokenUsuario = $_SESSION['token'];
@@ -25,5 +25,5 @@ function verificar_autenticacao(){
 }
 
 
-
+*/
 ?>
