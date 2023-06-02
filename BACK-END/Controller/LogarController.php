@@ -15,10 +15,8 @@ if($usuario->LogarUsuario($email,$senha)){
     $_SESSION['newsLetter'] = $result['newsLetter'];
     $_SESSION['tipoPerfil'] = $result['tipoPerfil'];
     $tokenObj = new Token($result['idUsuario']);
-    if($tokenObj->verifyIfIsToken()){
-        $tokenObj->setToken();
-        $_SESSION['token'] = $tokenObj->getToken();
-    }
+    $tokenObj->setToken();
+    $_SESSION['token'] = $tokenObj->getToken();
     
 }else{
 CaptureErro("loginerror",$usuario->erroMessage);
