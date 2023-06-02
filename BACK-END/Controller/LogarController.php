@@ -1,6 +1,6 @@
 <?php
-include "../Model/Usuario.php";
-include "../Model/Token.php";
+include (dirname(__FILE__) . "../../Model/Usuario.php");
+include (dirname(__FILE__) . "../../Model/Token.php");
 function LogarController($email,$senha){
 
 $usuario = new Usuario();
