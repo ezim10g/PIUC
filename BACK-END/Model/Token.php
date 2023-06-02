@@ -52,10 +52,11 @@ class Token{
     function autenticateToken($token){
         $result[] = $this->tokenDAO->getTokenById($this->idUsuario,$token);
         print_r($result);
-        if(!empty($result[0])){
-       //   if(count($result[0] != 0)){
-            $tempoSessao = $result[0]['tempoSessao'];
-            if(strtotime($tempoSessao) > strtotime(date("Y-m-d"))){
+        if(!empty($result)){
+            $tempoSessao = date_create($result[0]['tempoSessao']);
+            $dataAtual = date_create(date("Y-m-d"));
+            $intervalo = date_diff($dataAtual, $tempoSessao);
+            if($intervalo->format('%R%a') >= 0){
                 return true;
             }else{
                 $this->tokenDAO->deleteToken($this->idUsuario);
