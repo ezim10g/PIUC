@@ -1,5 +1,5 @@
 ﻿const tema = (document.getElementById('tema').value);
-console.log(tema);
+
 
 class Menu {
 
