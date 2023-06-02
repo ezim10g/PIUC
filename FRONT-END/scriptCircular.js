@@ -1,6 +1,4 @@
 
-var dark = true;
-
 class CircularProgressBar{
   
   constructor(valorMax, medida,idProgressBar, idValueProgress, lineVento){
@@ -196,7 +194,7 @@ function lerRedis() {
 
  // console.log("Request ");
   
- if(!dark){
+ if(tema == 'claro'){
     $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
       circularProgressBarVento.getValue(data.vento);    
       circularProgressBarTensao.getValue(data.tensao);
@@ -204,7 +202,7 @@ function lerRedis() {
       circularProgressBarYAW.getValue(data.yaw);    
       circularProgressBarPitch.getValue(data.pitch);
     });
- }else{
+ }else if(tema == 'escuro'){
     $.get( "../BACK-END/IOT/ler.php/?mostrar", function( data) {  
       circularProgressBarVentoDark.getValueDark(data.vento);
       circularProgressBarTensaoDark.getValueDark(data.tensao);
@@ -221,7 +219,6 @@ function lerRedis() {
 }
 
 //const atualizarDados = setInterval(lerRedis, 1000);
-
 
 
 
