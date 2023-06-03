@@ -1,6 +1,7 @@
 ﻿const tema = (document.getElementById('tema').value);
 
 
+
 class Menu {
 
     constructor(btnAbrir, menuConteudo, btnFechar) {
@@ -37,12 +38,17 @@ const arrayMenutemp = [];
 const inicioMenu = ['.inicioLink', '.inicio .caixa', '.inicio .caixa .icon-close'];
 const sobreMenu = ['.sobreLink', '.sobre .caixa', '.sobre .caixa .icon-close'];
 
+/* Definição dos TEMA */
 if(tema == 'claro'){
     const dashMenu = ['.dashLink', '.dash .caixa', '.dash .caixa .icon-close'];
     arrayMenutemp.push(dashMenu);
+   
+
 }else if (tema == 'escuro'){
     const dashMenuDark = ['.dashLink', '.dash-dark .caixa', '.dash-dark .caixa .icon-close'];
     arrayMenutemp.push(dashMenuDark);
+    $(".imgBGx").css("background", "#042844c3");
+   
 }
 
 const contatoMenu = ['.contatoLink', '.contato .caixa-form', '.contato .caixa-form .icon-close'];
@@ -55,9 +61,6 @@ const loginMenu = [`.btnLogin-popup`, `.login .wrapper`, `.login .wrapper .icon-
 
 arrayMenutemp.push(inicioMenu);
 arrayMenutemp.push(sobreMenu);
-
-
-
 arrayMenutemp.push(contatoMenu);
 arrayMenutemp.push(newsMenu);
 arrayMenutemp.push(loginMenu);
@@ -107,7 +110,7 @@ $(document).ready(function() {
     $('.hamburguer').click(function() {
         $('.navigation').toggleClass('show');
     });
-
+   
 });
 
 

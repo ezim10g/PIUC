@@ -25,7 +25,7 @@ require_once (dirname(__FILE__) ."../../BACK-END/Controller/AutenticateControlle
 
 <body>
     <!-- TEMA -->
-    <input type="hiden" id="tema" value="<?php echo $_SESSION['tema']?>">
+    <input type="hidden" id="tema" <?php if(isset($_SESSION['tema']))  echo "value='{$_SESSION['tema']}' " ?>>
 
     <!--HEADER-->
     <h2 class="logo"> Logo </h2>
