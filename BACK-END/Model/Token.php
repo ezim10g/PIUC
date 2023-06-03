@@ -16,7 +16,7 @@ class Token{
 
 
     private function MakeToken(){
-        $token = bin2hex(random_bytes(32)); 
+        $token = bin2hex(random_bytes(30)); 
         $this->token = $token;  
     }
 
