@@ -9,7 +9,7 @@
     function setPerfil($idUsuario){
         try{
           $this->dbConn = new BDD();
-        $sql = "INSERT INTO perfil(idUsuario, idTipoPerfil, fotoPerfil, NewsLetter) VALUES (:idUsuario, 3, 'profile.jpg', true)";
+        $sql = "INSERT INTO perfil(idUsuario, idTipoPerfil, fotoPerfil, NewsLetter, temaSite) VALUES (:idUsuario, 3, 'profile.jpg', true, 'escuro')";
         $stmt = $this->dbConn->PrepareSQL($sql);
         $stmt-> bindParam(':idUsuario', $idUsuario,PDO::PARAM_INT);
         $stmt->execute();

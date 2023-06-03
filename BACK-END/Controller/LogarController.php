@@ -14,6 +14,7 @@ if($usuario->LogarUsuario($email,$senha)){
     $_SESSION['fotoPerfil'] = $result['fotoPerfil'];
     $_SESSION['newsLetter'] = $result['newsLetter'];
     $_SESSION['tipoPerfil'] = $result['tipoPerfil'];
+    $_SESSION['tema'] = $result['tema'];
     $tokenObj = new Token($result['idUsuario']);
     $tokenObj->setToken();
     $_SESSION['token'] = $tokenObj->getToken();
