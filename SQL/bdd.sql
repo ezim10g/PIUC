@@ -49,5 +49,5 @@ usuario.emailUsuario,
 perfil.idTipoPerfil AS tipoPerfil,
 perfil.fotoPerfil,
 perfil.newsLetter,
-perfil.temaPerfil As tema,
+perfil.temaSite As tema
 FROM usuario INNER JOIN perfil ON usuario.idUsuario = perfil.idUsuario; 
