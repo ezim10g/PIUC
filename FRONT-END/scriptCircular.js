@@ -214,11 +214,20 @@ function lerRedis() {
  }
 
 
-  // console.log("Response ok");
+  console.log("Response ok");
 
 }
 
 //const atualizarDados = setInterval(lerRedis, 1000);
 
 
+
+
+$('.dashLink').click(function(){
+  atualizarDados = setInterval(lerRedis, 1000);
+})
+
+$(".dash-dark .caixa .icon-close").click(function(){
+  clearInterval(atualizarDados);
+})
 
