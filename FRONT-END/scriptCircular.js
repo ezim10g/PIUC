@@ -230,5 +230,6 @@ $('.dashLink').click(function(){
 
 $(".dash-dark .caixa .icon-close").click(function(){
   clearInterval(atualizarDados);
+  $("#catavento").css("animation", "");
 })
 
