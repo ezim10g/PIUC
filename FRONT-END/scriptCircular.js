@@ -223,13 +223,4 @@ function lerRedis() {
 
 
 
-$('.dashLink').click(function(){
-  atualizarDados = setInterval(lerRedis, 1000);
-  $("#catavento").css("animation", "girar 1.5s linear infinite");
-})
-
-$(".dash-dark .caixa .icon-close").click(function(){
-  clearInterval(atualizarDados);
-  $("#catavento").css("animation", "");
-})
 

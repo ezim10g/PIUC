@@ -577,7 +577,23 @@ if(!verificar_autenticacao()){
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
+    <script>
+        <?php
+        if (verificar_autenticacao()) {
+            echo "$('.dashLink').click(function(){
+                atualizarDados = setInterval(lerRedis, 1000);
+                $('#catavento').css('animation', 'girar 1.5s linear infinite');
+              })
+              
+              $('.dash-dark .caixa .icon-close').click(function(){
+                clearInterval(atualizarDados);
+                $('#catavento').css('animation', '');
+              })
+              ";
+        } 
+        ?>
+        
+    </script>
 
     <!--  inportando icones de  ionic.io/ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
