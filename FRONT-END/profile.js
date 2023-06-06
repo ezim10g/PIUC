@@ -50,3 +50,7 @@ $('#btnFechar').click(function(){
 if(menuPerfilInfo){
     console.log('idi')
 }
+
+
+
+
