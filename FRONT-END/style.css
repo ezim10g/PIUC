@@ -486,7 +486,7 @@ color: rgb(97, 1, 187);
     left: 0;
     width: 100%;
     height: 100%;
-    background: #042844; /*MASCARA NOTURNA*/
+    /*background: #042844; /*MASCARA NOTURNA*/
     z-index: -1;
     pointer-events: none;
     mix-blend-mode: color;
