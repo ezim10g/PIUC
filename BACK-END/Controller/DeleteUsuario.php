@@ -11,6 +11,7 @@ if(verificar_autenticacao()){
    session_destroy();
    header("location: ../../FRONT-END/index.php?message= Usuário excluido com sucesso!");
    exit();  
+   
 }else{
     header("location: ../../FRONT-END/index.php?Erro= erro ao exluir usuário!");
    exit();
