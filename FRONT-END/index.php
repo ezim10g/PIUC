@@ -27,8 +27,18 @@ require_once (dirname(__FILE__) ."../../BACK-END/Controller/AutenticateControlle
     <!-- TEMA -->
     <input type="hidden" id="tema" value="<?php echo $_SESSION['tema']?>">
 
+    <!--LOGO-->
+    <h2 class="logo"> 
+        <svg id="catavento" viewBox="0 0 100 100">
+           <!-- <circle cx="50" cy="50" r="40" fill="none" stroke="black" /> -->
+            <line x1="50" y1="50" x2="50" y2="20" stroke="black" />
+            <line x1="50" y1="50" x2="76.6" y2="64.1" stroke="black" />
+            <line x1="50" y1="50" x2="23.4" y2="64.1" stroke="black" />
+        </svg>
+        </svg>
+    </h2>
+    
     <!--HEADER-->
-    <h2 class="logo"> Logo </h2>
     <header>
 
 

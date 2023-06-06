@@ -43,11 +43,37 @@ header {
     position: absolute;
     left: 20px;
     top: 20px;
-    font-size: 2rem;
+    /*font-size: 2rem;*/
     color: #fff;
     user-select: none;
+    z-index: 99;
    
 }
+#catavento {
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    animation: girar 1.5s linear infinite;
+}
+  
+#catavento path,circle,line {
+    stroke: #fff;
+    stroke-width: 5;
+    fill: none;
+}
+
+/*Animação do LOGO*/
+@keyframes girar {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
 
 .navigation{
     display: flex;
