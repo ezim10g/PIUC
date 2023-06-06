@@ -55,7 +55,7 @@ header {
     left: 0;
     width: 40px;
     height: 40px;
-    animation: girar 1.5s linear infinite;
+ /*   animation: girar 1.5s linear infinite;*/
 }
   
 #catavento path,circle,line {

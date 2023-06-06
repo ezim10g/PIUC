@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: red;
+  /*  background: red;*/
     height: 60%;
     
 }
@@ -20,7 +20,7 @@
 .container1 {
     height: 100%;
     width: 50%;
-    background: blue;
+ /*   background: blue;*/
 }
 
 .container2 {
@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: green;
+ /*   background: green;*/
 }
 
 .container {
@@ -38,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+ /*   background-color: white;*/
     gap: 1.5vw;
     
 }

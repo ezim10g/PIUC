@@ -43,7 +43,7 @@ if(tema == 'claro'){
 }else if (tema == 'escuro'){
     const dashMenuDark = ['.dashLink', '.dash-dark .caixa', '.dash-dark .caixa .icon-close'];
     arrayMenutemp.push(dashMenuDark);
-    $(".imgBGx").css("background", "#042844c3");
+    $(".imgBGx").css("background", "#042844c3");   
 }
 
 const contatoMenu = ['.contatoLink', '.contato .caixa-form', '.contato .caixa-form .icon-close'];
