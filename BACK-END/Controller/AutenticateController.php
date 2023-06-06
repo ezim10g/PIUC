@@ -19,7 +19,6 @@ function verificar_autenticacao(){
         if ($token->autenticateToken($tokenUsuario)) {
            return true;
        }
-       session_destroy();
         return false;
     }
 
