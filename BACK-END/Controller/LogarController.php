@@ -16,7 +16,7 @@ if($usuario->LogarUsuario($email,$senha)){
     $_SESSION['tipoPerfil'] = $result['tipoPerfil'];
     $_SESSION['tema'] = $result['tema'];
     $tokenObj = new Token($result['idUsuario']);
-    $tokenObj->setToken();
+    $tokenObj->setToken($result['idUsuario']);
     $_SESSION['token'] = $tokenObj->getToken();
     
 }else{

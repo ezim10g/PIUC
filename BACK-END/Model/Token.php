@@ -37,7 +37,8 @@ class Token{
         
     }
 
-    function setToken(){
+    function setToken($id){
+        $this->tokenDAO->deleteToken($id);
         $this->MakeToken();
         $this->MakeIdToken();
         $this->createdAt = date("Y-m-d");

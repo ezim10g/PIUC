@@ -1,6 +1,7 @@
 ﻿<?php
 session_start();
 require_once (dirname(__FILE__) ."../../BACK-END/Controller/AutenticateController.php");
+
 if(!verificar_autenticacao()){
     session_destroy();
 }
