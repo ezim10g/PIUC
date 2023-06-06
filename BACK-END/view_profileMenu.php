@@ -2,7 +2,7 @@
 <div class="profile" id="profileBtn">
     <img src="../FRONT-END/assets/<?php echo $_SESSION['fotoPerfil'];?>" class="profile-img" alt="imagem de perfil">
     <div class="profile-container">
-        <p><?php echo $_SESSION['nome'];?></p>
+        <p>Perfil</p>
     </div>
 </div>
 
@@ -14,8 +14,7 @@
 
             <div class="sub-menu-options">
                 <ul>
-                    <li><a class="itens-submenu btnPerfil" >Perfil</a></li>
-                    <li><a class="itens-submenu" href="#">Respostas</a></li>
+                    <li><a class="itens-submenu btnPerfil" >Editar</a></li>
                     <li><a class="itens-submenu" href="../BACK-END/Controller/LogoutController.php">Sair</a></li>
                 </ul>
             </div>

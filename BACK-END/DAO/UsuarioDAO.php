@@ -140,4 +140,18 @@ class UsuarioDAO{
         
     }
 
+    function deleteUser($id){
+        try{
+         $this->dbConn = new BDD();
+        $sql = "DELETE perfil, usuario FROM perfil INNER JOIN usuario on perfil.idUsuario = usuario.idUsuario WHERE usuario.idUsuario = :id";
+        $stmt = $this->dbConn->PrepareSQL($sql);
+        $stmt->bindParam('id', $id);
+        $stmt->execute();
+
+        
+        }catch(PDOException $erro){
+            echo "erro setUser: " . $erro->getMessage();
+            exit();
+        }
+    }
 }

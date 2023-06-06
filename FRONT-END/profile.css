@@ -119,9 +119,10 @@
 
   .infoPerfil{
     box-sizing: border-box;
-    width: 300px;
-    height: 300px;
-    padding:  40px 20px 0px 20px ;
+    text-align: center;
+    width: 25%;
+    height: 30%;
+    padding:  40px 20px 30px 20px ;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.199);
     border: 1px solid white;
@@ -132,7 +133,13 @@
 
   }
 
-  .infoPerfil button{
+  .text-Perfil{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .infoPerfil button, .form-Perfil input[type = submit]{
     background-color: #2b98a7; /* Green */
     border: none;
     color: rgb(255, 255, 255);
@@ -143,6 +150,7 @@
     font-size: 16px;
 
   }
+  
 
   .buttons{
     width: 100%;
@@ -154,7 +162,7 @@
 
 .Perfil{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   height: 100%;
   width: 100%;
@@ -211,15 +219,32 @@ border-radius: 100%;
   display: none; 
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 860px) {
+  .Perfil{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+  }
+
+  .img-perfil{
+    margin-bottom: 20px;
+  }
  
+  #profileBtn{
+    margin: 0;
+  }
+  .infoPerfil{
+    width: 80%;
+    height: 20%;
+  }
 .fotos-perfil{  
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 20px;
+
       
       
   }
@@ -231,3 +256,5 @@ border-radius: 100%;
     width: 50px;
     height: 50px;
   }
+}
+

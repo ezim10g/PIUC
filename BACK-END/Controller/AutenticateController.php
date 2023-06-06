@@ -1,6 +1,6 @@
 <?php
-include (dirname(__FILE__) ."../../DAO/db_conn.php");
-include (dirname(__FILE__) ."../../Model/Token.php");
+include_once (dirname(__FILE__) ."../../DAO/db_conn.php");
+include_once (dirname(__FILE__) ."../../Model/Token.php");
 
 
 /*

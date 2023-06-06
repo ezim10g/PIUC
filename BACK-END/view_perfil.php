@@ -17,14 +17,14 @@
 
                         <div class="infoPerfil" id="container-infoPerfil">
 
-                                <p><strong>Nome de Usuário:</strong>
+                                <p><span class="text-Perfil">Nome de Usuário:</span >
                                         <?php echo $_SESSION['nome']; ?>
                                 </p>
-                                <p><strong>Email:</strong>
+                                <p><span class="text-Perfil">Email:</span >
                                         <?php echo $_SESSION['email']; ?>
                                 </p>
-                                <p><strong>Interesses:</strong> nenhum</p>
-                                <p><strong>Envio de NewsLetter:</strong>
+                                <p><span class="text-Perfil">Interesses:</span > nenhum</p>
+                                <p><span class="text-Perfil">Envio de NewsLetter:</span >
                                         <?php if ($_SESSION['newsLetter']) {
                                                 echo "sim";
                                         } else {
@@ -32,7 +32,7 @@
                                         }
                                         ; ?>
                                 </p>
-                                <p><strong>Tipo Perfil:</strong>
+                                <p><span class="text-Perfil" >Tipo Perfil:</span >
                                         <?php if ($_SESSION['tipoPerfil'] == 1) {
                                                 echo "admin";
                                         } else if ($_SESSION['tipoPerfil'] == 1) {
@@ -42,8 +42,11 @@
                                         }
                                         ; ?>
                                 </p>
-                                <div class="buttons"><button id="btnEditar">Editar Perfil</button><button>Excluir Conta</button></div>
-
+                                <div class="buttons">
+                                        <button>Editar Dados</button>
+                                        <form action="../BACK-END/Controller/DeleteUsuario.php" class="form-Perfil " method="post"><input type="submit" value="Delete Usuario"></form>
+                                </div>
+                                
                         </div>
                 </div>
                 <div id="imgSelect" class="choose-imagens">

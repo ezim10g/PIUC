@@ -1,8 +1,8 @@
 <?php
-include (dirname(__FILE__). "../../DAO/db_conn.php");
-include (dirname(__FILE__) . "../../util/validateData.php");
-include (dirname(__FILE__) . "../../DAO/UsuarioDAO.php");
-include (dirname(__FILE__) . "../../DAO/PerfilDAO.php");
+include_once (dirname(__FILE__). "../../DAO/db_conn.php");
+include_once (dirname(__FILE__) . "../../util/validateData.php");
+include_once (dirname(__FILE__) . "../../DAO/UsuarioDAO.php");
+include_once (dirname(__FILE__) . "../../DAO/PerfilDAO.php");
 class Usuario{
 
     public $id;
@@ -113,5 +113,8 @@ class Usuario{
         return $result;
     }
 
+    function deletarUsuario($id){
+        $this->usuarioDAO->deleteUser($id);
+    }
 }
 

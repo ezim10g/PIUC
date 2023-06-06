@@ -25,7 +25,7 @@ require_once (dirname(__FILE__) ."../../BACK-END/Controller/AutenticateControlle
 
 <body>
     <!-- TEMA -->
-    <input type="hiden" id="tema" value="<?php echo $_SESSION['nome']?>">
+    <input type="hiden" id="tema" value="<?php echo $_SESSION['tema']?>">
 
     <!--HEADER-->
     <h2 class="logo"> Logo </h2>
@@ -582,3 +582,4 @@ require_once (dirname(__FILE__) ."../../BACK-END/Controller/AutenticateControlle
 
 
 </html>
+
