@@ -28,7 +28,7 @@ fotoPerfil VARCHAR(191),
 newsLetter BOOLEAN,
 temaPerfil varchar(10),
 FOREIGN KEY(idTipoPerfil) REFERENCES tipo_perfil(idTipoPerfil),
-FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario)
+FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario) ON DELETE CASCADE
 );
 
 
@@ -39,7 +39,8 @@ idToken INT PRIMARY KEY,
 idUsuario INT NOT NULL,
 token VARCHAR(60) NOT NULL,
 tempoSessao DATE,
-createdAt DATE
+createdAt DATE,
+FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario) ON DELETE CASCADE
 );
 
 CREATE VIEW vw_infoUsuario AS SELECT 
