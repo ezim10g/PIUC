@@ -6,11 +6,17 @@ include(dirname(__FILE__) . "../../Model/Usuario.php");
 
 $usuario = new Usuario();
 if (isset($_POST)) {
+
    if (verificar_autenticacao()) {
-      $usuario->deletarUsuario($_SESSION['id']);
-      session_destroy();
-      header("location: ../../FRONT-END/index.php?message= Usuário excluido com sucesso!");
-      exit();
+      try {
+         $usuario->deletarUsuario($_SESSION['id']);
+         session_destroy();
+         header("location: ../../FRONT-END/index.php?message= Usuário excluido com sucesso!");
+         exit();
+      }catch(Exception $erro){
+         echo "erro: " . $erro->getMessage();
+      }
+
 
    } else {
       header("location: ../../FRONT-END/index.php?Erro= erro ao exluir usuário!");
