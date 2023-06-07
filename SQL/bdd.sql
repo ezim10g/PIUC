@@ -26,9 +26,9 @@ idUsuario INT UNIQUE,
 idTipoPerfil INT,
 fotoPerfil VARCHAR(191),
 newsLetter BOOLEAN,
-temaSite varchar(10),
+temaPerfil varchar(10),
 FOREIGN KEY(idTipoPerfil) REFERENCES tipo_perfil(idTipoPerfil),
-FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario)
+FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario) ON DELETE CASCADE
 );
 
 
@@ -39,7 +39,8 @@ idToken INT PRIMARY KEY,
 idUsuario INT NOT NULL,
 token VARCHAR(60) NOT NULL,
 tempoSessao DATE,
-createdAt DATE
+createdAt DATE,
+FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario) ON DELETE CASCADE
 );
 
 CREATE VIEW vw_infoUsuario AS SELECT 
@@ -49,5 +50,5 @@ usuario.emailUsuario,
 perfil.idTipoPerfil AS tipoPerfil,
 perfil.fotoPerfil,
 perfil.newsLetter,
-perfil.temaPerfil As tema,
+perfil.temaPerfil As tema
 FROM usuario INNER JOIN perfil ON usuario.idUsuario = perfil.idUsuario; 

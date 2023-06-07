@@ -9,7 +9,7 @@
     function setPerfil($idUsuario){
         try{
           $this->dbConn = new BDD();
-        $sql = "INSERT INTO perfil(idUsuario, idTipoPerfil, fotoPerfil, NewsLetter, temaSite) VALUES (:idUsuario, 3, 'profile.jpg', false, 'escuro')";
+        $sql = "INSERT INTO perfil(idUsuario, idTipoPerfil, fotoPerfil, NewsLetter, temaPerfil) VALUES (:idUsuario, 3, 'profile.jpg', false, 'escuro')";
         $stmt = $this->dbConn->PrepareSQL($sql);
         $stmt-> bindParam(':idUsuario', $idUsuario,PDO::PARAM_INT);
         $stmt->execute();
@@ -36,6 +36,19 @@
         }
         
         
+    }
+
+    function deletePerfil($id){
+        try{
+            $sql = "DELETE FROM usuario WHERE idUsuario = :id";
+            $stmt = $this->dbConn->PrepareSQL($sql);
+            $stmt-> bindParam(':id',$id);
+            $stmt->execute();
+            $this->dbConn->CloseConn();
+        }catch(PDOException $erro){
+            echo "erro deleteUser: " .$erro->getMessage() ;
+            exit();
+        }
     }
 
 

@@ -10,7 +10,7 @@ if($usuario->LogarUsuario($email,$senha)){
     $result = $usuario->getInfoPerfil();
     $_SESSION['nome'] = $result['nome'];
     $_SESSION['id'] = $result['idUsuario'];
-    $_SESSION['email'] = $result['email'];
+    $_SESSION['email'] = $result['emailUsuario'];
     $_SESSION['fotoPerfil'] = $result['fotoPerfil'];
     $_SESSION['newsLetter'] = $result['newsLetter'];
     $_SESSION['tipoPerfil'] = $result['tipoPerfil'];
