@@ -1,19 +1,12 @@
 
-.container-geral {
-    width: 100%;
-    height: 100%;
-}
-
-
 .container {
     width: 100%;
-    height: 40%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
- /*   background-color: white;*/
-    gap: 1.5vw;
-    
+    /* background-color: white; */
+    gap: 10px;
 }
 
 .container .Cards { /*Mostramos na tela os CARDS*/
@@ -21,24 +14,19 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 16vw;
-    height: 14vw;
-    background: #2a2a2adb;
+    width: 160px;
+    height: 160px;
+    background: #3a3939db;
     border-radius: 18%;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0. 15);
-
-}
-
-.container .Cards:hover { /*Com hover damos a animação*/
-    height: 15vw;
 }
 
 .container .Cards .imgBx { /*Diferencia a parte da imagem com a do texto*/
     position: absolute;
-    top: 17px;
-    width: 12vw;
-    height: 10vw;
-    background: #3333331c;
+    top: 15%;
+    width: 70%;
+    height: 70%;
+    background: #7e797928;
     border-radius: 13%;
     overflow: hidden;
     transition: 0.05s;
@@ -54,7 +42,7 @@
 }
 
 .container .Cards:hover .imgBx {  /*Hover no imgBx e diminui*/
-    top: -6vw;
+    top: -75px;
     scale: 0.75;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0. 10);
 }
@@ -68,32 +56,35 @@
     object-fit: cover;
 }
 
-.container .Cards .content { /*Coloca oque está escrito para baixo e centraliza*/
+.container .Cards .content { /*Coloca oque estÃ¡ escrito para baixo e centraliza*/
 
-    position: absolute;
-    top: 11.8vw;
+    position: relative;
+    top: 25px;
     width: 100%;
-    padding: 0 30px;
-    height: 1px;
+    height: 0;
     overflow: hidden;
+    padding: 0px 5px;
     text-align: center;
     transition: 0.05s;
+   
+    
 }
 
 .container .Cards:hover .content {
-    top: 4vw;
-    height: 12vw;
+    
+   height: 100%;
+   
 }
 
 .container .Cards .content h2 {
-    font-size: 1.5vw;
+    font-size: 1.2em;
     font-weight: 750;
     color: var(--clr);
 }
 
 .p {
-    font-size: 1vw;
-    margin-top: 0.25vw;
+    font-size: 0.9rem;
+    
    
 }
 
@@ -102,8 +93,22 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: -1.2vw;  
-    height: 5.7vw;
+    padding: 10px;
     
-    
+   
+}
+
+
+@media only screen and (orientation: portrait) and (max-width: 900px){
+.container { 
+    height: 100%;    
+    display:flex;
+    flex-wrap: wrap;      
+    align-items: center;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+}
+
+
+
 }
