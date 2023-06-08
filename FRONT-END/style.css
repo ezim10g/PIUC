@@ -270,17 +270,24 @@ textarea::placeholder {
 }
 
 
-
 .input-box input{
     width: 100%;
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 1em;
     font-weight: 600;
     padding: 0 35px 0 5px;
+    caret-color: #ffffff;  
+}
+/* Estilo do Input Auto Completar*/
+input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px #00000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .input-box .icon{
