@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(dirname(__FILE__) . "../AutenticateController.php");
+require_once(dirname(__FILE__) . "/AutenticateController.php");
 
 include(dirname(__FILE__) . "../../Model/Usuario.php");
 
