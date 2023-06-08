@@ -42,7 +42,7 @@ header {
 .logo {
     position: absolute;
     left: 20px;
-    top: 20px;
+    top: 33px;
     /*font-size: 2rem;*/
     color: #fff;
     user-select: none;
@@ -373,7 +373,7 @@ color: rgb(97, 1, 187);
 .titulo-div{
     position: absolute;
     top:15px;
-    left: 30px;
+    left: 60px;
     font-size: 1em;
     color: rgba(255, 255, 255);
     text-align: center;
