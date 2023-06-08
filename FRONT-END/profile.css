@@ -238,8 +238,12 @@ border-radius: 100%;
     margin: 0;
   }
   .infoPerfil{
-    width: 80%;
-    height: 20%;
+    width: 120%;
+    height: 40%;
+  }
+
+  .infoPerfil button, .form-Perfil input[type = submit] {
+    font-size: 15px;
   }
 .fotos-perfil{  
       position: relative;
@@ -251,6 +255,26 @@ border-radius: 100%;
       
       
   }
+
+  #fotoPerfil #imgPerfil {
+    width: 150px;
+    height: 150px;
+  }
+
+  #fotoPerfil #cam-icon{
+    width: 60px;
+    height: 60px;
+    top: 100px;
+    right: 65px;
+  }
+
+  #fotoPerfil{
+    width: 150px;
+  }
+
+  .choose-imagens{
+    width: 80vw;
+  }
 .foto-escolha{
   height: 70px;
   }
@@ -258,6 +282,10 @@ border-radius: 100%;
   .foto-escolha img{
     width: 50px;
     height: 50px;
+  }
+
+  .sub-menu-profile{
+    top: 100%;
   }
 }
 

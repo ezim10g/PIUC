@@ -17,7 +17,6 @@ if (isset($_POST)) {
          echo "erro: " . $erro->getMessage();
       }
 
-
    } else {
       header("location: ../../FRONT-END/index.php?Erro= erro ao exluir usuário!");
       exit();
