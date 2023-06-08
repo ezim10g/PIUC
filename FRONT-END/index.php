@@ -185,22 +185,7 @@ if(!verificar_autenticacao()){
                     <h2>Sobre nós</h2>
                 </div>
 
-                <div class="container-geral">
-
-                    <div class="container0">
-                        <div class="container1"></div>
-                        <div class="container2">
-                            <div class="box">
-                                <div class="elements bg"></div>
-                                <div class="elements2 bg"></div>
-                                <div class="card"></div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="container">
+                <div class="container">
 
                         <div class="Cards" style="--clr:#000000;">
                             <div class="imgBx">
@@ -305,7 +290,7 @@ if(!verificar_autenticacao()){
 
                     </div>
 
-                </div>
+              
         </section>
 
         <!--DASH BOARD -->
