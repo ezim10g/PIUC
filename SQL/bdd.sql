@@ -52,3 +52,11 @@ perfil.fotoPerfil,
 perfil.newsLetter,
 perfil.temaPerfil As tema
 FROM usuario INNER JOIN perfil ON usuario.idUsuario = perfil.idUsuario; 
+
+
+CREATE TABLE contato(
+nomeContato VARCHAR(64),
+emailContato VARCHAR(191),
+assuntoContato VARCHAR(64),
+mensagemContato TEXT
+);

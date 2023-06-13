@@ -467,7 +467,7 @@ if(!verificar_autenticacao()){
                 </div>
 
                 <div class="form-box login">
-                    <form action="">
+                    <form action="../BACK-END/Controller/ContatoController.php" method="post">
 
                         <div class="input-box">
                             <span class="icon"> <ion-icon name="person"></ion-icon></span>
@@ -481,7 +481,7 @@ if(!verificar_autenticacao()){
                         </div>
                         <div class="input-box">
                             <span class="icon"><ion-icon name="information-circle"></ion-icon></span>
-                            <input type="text" name="Assunto" required>
+                            <input type="text" name="assunto" required>
                             <label>Assunto</label>
                         </div>
 
