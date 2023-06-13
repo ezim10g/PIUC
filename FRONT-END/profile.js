@@ -52,5 +52,17 @@ if(menuPerfilInfo){
 }
 
 
+// Troca de Tema Perfil
+$("#checkbox-tema").click(function(){
+    if($("#checkbox-tema").is(":checked")){
+        $.get("../BACK-END/Controller/ModificarTema.php?tema=escuro",function(data){
+            $(".imgBGx").css("background", "#042844c3");
+        })
+    }else{
+        $.get("../BACK-END/Controller/ModificarTema.php?tema=claro",function(data){
+            $(".imgBGx").css("background", "");
+        })
+    }
+})
 
 

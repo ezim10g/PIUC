@@ -19,7 +19,7 @@
             <li><a class="itens-submenu btnPerfil">Editar</a></li>
             <li><a>Tema escuro:</a>                   
                     <label class="switch">
-                    <input type="checkbox"  id="checkbox-tema">
+                    <input type="checkbox"  id="checkbox-tema" <?php if($_SESSION['tema'] == 'escuro')  echo "checked"?>>
                     <span class="slider round"></span>                    
                 </label></li>
 
