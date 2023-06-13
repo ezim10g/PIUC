@@ -151,7 +151,7 @@ if(!verificar_autenticacao()){
                             <label>Senha</label>
                         </div>
                         <div class="remember-forgot">
-                            <label><input type="checkbox"> Aceito os termos e condições </label>
+                            <label><input type="checkbox" required> Aceito os termos e condições </label>
 
                         </div>
                         <button type="submit" class="btn">Registrar</button>
