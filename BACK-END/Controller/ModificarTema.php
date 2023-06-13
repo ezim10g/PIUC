@@ -11,4 +11,5 @@ session_start();
             echo "Mudança de tema fora de sistema";
         }
 
+       // echo $_SESSION['tema'];
     }
