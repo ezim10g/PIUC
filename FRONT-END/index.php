@@ -109,7 +109,7 @@ if(!verificar_autenticacao()){
                             <label>Senha</label>
                         </div>
                         <div class="remember-forgot">
-                            <label><input type="checkbox"> Lembrar Senha </label>
+                            <label><input type="checkbox"> Lembrar de Mim </label>
                             <a href="#">Esqueceu a Senha?</a>
                         </div>
                         <button type="submit" class="btn">Login</button>
@@ -596,10 +596,6 @@ if(!verificar_autenticacao()){
     <script src="script.js"></script>
     <script src="./profile.js"></script>
     <script src="scriptCircular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./vanilla3DReal.js"></script>
-
-
 
 </body>
 
