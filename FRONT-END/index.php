@@ -21,7 +21,7 @@ if(!verificar_autenticacao()){
     <link rel="stylesheet" href="styleCircularDark.css">
     <link rel="stylesheet" href="styleCards.css">
     <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="./styleCards3D.css">
+    
     <!---favicon--->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
     <link rel="android-chrome-192x192-icon" sizes="192x192" href="./assets/android-chrome-192x192.png">
@@ -177,6 +177,8 @@ if(!verificar_autenticacao()){
 
                     <h2>Home</h2>
                 </div>
+
+                <iframe style="border-radius: 20px;" width="800" height="600" src="https://www.youtube.com/embed/b6hHmCi9kno" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             </div>
         </section>
