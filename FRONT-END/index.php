@@ -577,7 +577,7 @@ if(!verificar_autenticacao()){
         <?php
         if (verificar_autenticacao()) {
             echo "$('.dashLink').click(function(){
-                atualizarDados = setInterval(lerRedis, 1000);
+                atualizarDados = setInterval(lerRedis, 500);
                 $('#catavento').css('animation', 'girar 1.5s linear infinite');
               })
               
@@ -599,7 +599,7 @@ if(!verificar_autenticacao()){
     <script src="./profile.js"></script>
     <script src="scriptCircular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./vanilla3DReal.js"></script>
+    
 
 
 
