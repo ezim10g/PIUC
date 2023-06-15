@@ -8,7 +8,7 @@ if(!verificar_autenticacao()){
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -165,7 +165,6 @@ if(!verificar_autenticacao()){
             </div>
         </section>
 
-
         <!--INICIO-->
         <section class="inicio">
             <div class="caixa">
@@ -177,12 +176,14 @@ if(!verificar_autenticacao()){
 
                     <h2>Home</h2>
                 </div>
-
-                <iframe style="border-radius: 20px;" width="800" height="600" src="https://www.youtube.com/embed/b6hHmCi9kno" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+                <div class="video">
+                <iframe style="border-radius: 20px;" width="80%" height="80%" src="https://www.youtube.com/embed/jKaVswXZsLk" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+                </div>
+                
 
             </div>
         </section>
-
 
         <!--SOBRE-->
         <section class="sobre">
@@ -550,7 +551,7 @@ if(!verificar_autenticacao()){
 
     </main>
 
-
+    <!--Plano de fundo-->    
     <section class="imgBGx">
 
         <!--   <img src="./assets/./windpower.gif" id="bg">-->
@@ -559,8 +560,7 @@ if(!verificar_autenticacao()){
 
     </section>
 
-    <!-- Acrescentar linguagem em libras -->
-
+    <!-- Acessibilidade em libras -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -571,6 +571,8 @@ if(!verificar_autenticacao()){
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+   
+   <!--Autenticação -->
     <script>
         <?php
         if (verificar_autenticacao()) {
