@@ -1,12 +1,9 @@
 <?php
-$result = array(
-    array("teste 1"),
-    array("teste 2"),
-    array("teste 3")
-);
+include "DAO/QueryDAO.php";
 
-foreach($result as $result){
-    echo 'array: '.$result[0];
-    return true;
-}
-?>
+$query = new QUERY("perfil");
+
+$table = "perfil";
+$columns = array("nomeUsuario","emailUsuario", "fotoUsuario");
+$condition = array( "idUsuario");
+echo $query->Select($table,$columns,$condition);
